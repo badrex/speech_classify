@@ -158,7 +158,7 @@ handle_dirs(config_args['model_save_dir'])
 
 
 ##### HERE IT ALL STARTS ...
-# vectorizer ...
+# featurizer ...
 speech_df = pd.read_csv(config_args['speech_metadata'],
     delimiter="\t", encoding='utf-8')
 
@@ -170,7 +170,7 @@ speech_df = speech_df[(speech_df.duration!=0)]
 speech_df = speech_df[(speech_df['language'].isin(label_set))]
 
 ##### HERE IT ALL STARTS ...
-# source vectorizer ...
+# source featurizer ...
 speech_df = pd.read_csv(config_args['speech_metadata'],
     delimiter="\t", encoding='utf-8')
 
@@ -222,7 +222,7 @@ sess_speech_df.rename(columns={0:'uttr_id'}, inplace=True)
 print(sess_speech_df.head())
 
 
-speech_vectorizer = SpeechFeaturizer(
+speech_featurizer = SpeechFeaturizer(
     data_dir=config_args['preprocessed_data_dir'],
     feature_type= config_args['input_signal_params']['feature_type'],
     label_set=config_args['language_set'].split(), # split str into list of str
@@ -232,10 +232,10 @@ speech_vectorizer = SpeechFeaturizer(
     start_index=config_args['input_signal_params']['start_index'],
     end_index=config_args['input_signal_params']['end_index']
 )
-print(speech_vectorizer.index2label)
+print(speech_featurizer.index2label)
 
 # data loader ....
-speech_dataset = LID_Dataset(sess_speech_df, speech_vectorizer)
+speech_dataset = SpeechDataset(sess_speech_df, speech_featurizer)
 
 
 

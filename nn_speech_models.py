@@ -13,7 +13,7 @@ from torch.utils.data.dataset import Dataset
 from torch.autograd import Function
 
 
-##### CLASS SpeechFeaturizer
+##### CLASS SpeechFeaturizer: A featurizer for speech classification problems
 class SpeechFeaturizer(object):
     """ The Featurizer handles the low-level speech features and labels. """
 
@@ -148,25 +148,23 @@ class SpeechFeaturizer(object):
 
     def transform_label_y(self, label):
         """
-        Given the label of the data point (language), return label index
-        Args:
-            label (str): the target label in the dataset (e.g., 'RUS')
-        Returns:
-            the index of the label in the featurizer
+        Given the label of data point (language), return index (int)
+        e.g.,  'RUS' --> 4
         """
-        return self.label2index[label]
+        return self.label2index[label] # index of the label in the featurizer
 
 
-##### CLASS LID_Dataset
-class LID_Dataset(Dataset):
-    def __init__(self, speech_df, vectorizer):
+
+##### CLASS SpeechDataset: A data loader handles (batch) speech transformation
+class SpeechDataset(Dataset):
+    def __init__(self, speech_df, featurizer):
         """
         Args:
             speech_df (pandas.df): a pandas dataframe (label, split, file)
-            vectorizer (SpeechFeaturizer): the speech vectorizer
+            featurizer (SpeechFeaturizer): the speech featurizer
         """
         self.speech_df = speech_df
-        self._vectorizer = vectorizer
+        self._featurizer = featurizer
 
         # read data and make splits
         self.train_df = self.speech_df[self.speech_df.split=='TRA']
@@ -178,7 +176,8 @@ class LID_Dataset(Dataset):
         self.test_df = self.speech_df[self.speech_df.split=='EVA']
         self.test_size = len(self.test_df)
 
-        print(self.train_size, self.val_size, self.test_size)
+        print('Size of the splits (train, val, test): ',  \
+            self.train_size, self.val_size, self.test_size)
 
         self._lookup_dict = {
             'TRA': (self.train_df, self.train_size),
@@ -200,66 +199,68 @@ class LID_Dataset(Dataset):
 
 
     def __len__(self):
+        "Returns the number of the data points in the target split."
         return self._target_size
 
 
     def __getitem__(self, index):
-        """Data transformation logic for one data point.
+        """A data transformation logic for one data point in the dataset.
         Args:
-            index (int): the index to the data point in the dataframe
+            index (int): the index to the data point in the target dataframe
         Returns:
-            a dictionary holding the point representation:
-                signal (x_data), label (y_target), and uttr ID (uttr_id)
+            a dictionary holding the point representation, e.g.,
+                signal (x_data), label (y_target)
         """
         uttr = self._target_df.iloc[index]
 
-        # enable random segmentation during training
+        # to enable random segmentation during training
         is_training = (self._target_split=='TRA')
 
-        feature_sequence = self._vectorizer.transform_input_X(uttr.uttr_id,
+        spectral_sequence = self._featurizer.transform_input_X(uttr.uttr_id,
             segment_random = is_training,
             num_frames=None, # it is important to set this to None
             feature_dim=None
         )
 
-        lang_idx = self._vectorizer.transform_label_y(uttr.language)
+        lang_idx = self._featurizer.transform_label_y(uttr.language)
 
         return {
-            'x_data': feature_sequence,
+            'x_data': spectral_sequence,
             'y_target': lang_idx,
-            'uttr_id': uttr.uttr_id
+            #'uttr_id': uttr.uttr_id
         }
 
 
     def get_num_batches(self, batch_size):
-        """Given a batch size, return the number of batches in the dataset
-
-        Args:
-            batch_size (int)
-        Returns:
-            number of batches in the dataset
+        """
+        Given batch size (int), return the number of dataset batches (int)
         """
         return len(self) // batch_size
 
 
-##### A METHOD TO GENERATE BATCHES
-def generate_batches(dataset, batch_size, shuffle=True,
-                     drop_last=True, device="cpu"):
+##### A METHOD TO GENERATE BATCHES WITH A DATALOADER WRAPPER
+def generate_batches(speech_dataset, batch_size, shuffle_batches=True,
+    drop_last_batch=False, device="cpu"):
     """
-    A generator function which wraps the PyTorch DataLoader. It will
-      ensure each tensor is on the write device location.
+    A generator function which wraps the PyTorch DataLoader and ensures that
+      each tensor is on the right device (i.e., CPU or GPU).
     """
-    dataloader = DataLoader(dataset=dataset, batch_size=batch_size,
-                            shuffle=shuffle, drop_last=drop_last)
+    dataloader = DataLoader(dataset=speech_dataset, batch_size=batch_size,
+        shuffle=shuffle_batches, drop_last=drop_last_batch)
 
+    # for each batch, yield a dictionay with keys: x_data, y_target
     for data_dict in dataloader:
-        out_data_dict = {}
-        for name, tensor in data_dict.items():
-            if name != 'uttr_id':
-                out_data_dict[name] = data_dict[name].to(device)
+        # an dict object to yield in each iteration
+        batch_data_dict = {}
+
+        for var_key in data_dict:
+            # when using uttr_id in data_dict, keep uttr_id on CPU and not GPU
+            if var_key != 'uttr_id':
+                batch_data_dict[var_key] = data_dict[var_key].to(device)
             else:
-                out_data_dict[name] = data_dict[name]
-        yield out_data_dict
+                batch_data_dict[var_key] = data_dict[var_key]
+
+        yield batch_data_dict
 
 
 ##### A custome layer for frame dropout
