@@ -222,11 +222,11 @@ class SpeechDataset(Dataset):
             feature_dim=None
         )
 
-        lang_idx = self._featurizer.transform_label_y(uttr.language)
+        label_idx = self._featurizer.transform_label_y(uttr.language)
 
         return {
             'x_data': spectral_sequence,
-            'y_target': lang_idx,
+            'y_target': label_idx,
             #'uttr_id': uttr.uttr_id
         }
 
@@ -263,7 +263,7 @@ def generate_batches(speech_dataset, batch_size, shuffle_batches=True,
         yield batch_data_dict
 
 
-##### A custome layer for frame dropout
+##### CLASS FrameDropout: A custome layer for frame dropout
 class FrameDropout(nn.Module):
     def __init__(self, dropout_prob=0.2):
         """Applies dropout on the frame level so entire feature vector will be
@@ -286,15 +286,16 @@ class FrameDropout(nn.Module):
         return x_in
 
 
-##### A custome layer for frame dropout
-class FeatureDropout(nn.Module):
+##### CLASS SpectralDropout: A custome layer for spectral (coefficient) dropout
+class SpectralDropout(nn.Module):
     def __init__(self, dropout_prob=0.2, feature_idx=None):
-        """Applies dropout on the feature level so feature accross vectors are
-            are replaced with zero vector with probability p.
+        """Applies dropout on the feature level so spectral component accross
+             vectors are replaced with zero (row-)vector with probability p.
         Args:
             p (float): dropout probability
+            feature_idx (int): to mask specific spectral coeff. during inference
         """
-        super(FeatureDropout, self).__init__()
+        super(SpectralDropout, self).__init__()
         self.dropout_prob = dropout_prob
 
     def forward(self, x_in):
@@ -410,7 +411,7 @@ class ConvNet_LID(nn.Module):
             self.signal_dropout = FrameDropout(self.signal_dropout_prob)
 
         elif self.dropout_features: # if frame dropout is enables
-            self.signal_dropout = FeatureDropout(self.signal_dropout_prob)
+            self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
 
         # frame reversal layer
         self.frame_reverse = FrameReverse()
@@ -843,7 +844,7 @@ class ConvNet_LID_DA(nn.Module):
             self.signal_dropout = FrameDropout(self.signal_dropout_prob)
 
         elif self.dropout_features: # if frame dropout is enables
-            self.signal_dropout = FeatureDropout(self.signal_dropout_prob)
+            self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
 
         # frame reversal layer
         self.frame_reverse = FrameReverse()
@@ -1051,7 +1052,7 @@ class ConvNet_LID_DA_wDropout(nn.Module):
             self.signal_dropout = FrameDropout(self.signal_dropout_prob)
 
         elif self.dropout_features: # if frame dropout is enables
-            self.signal_dropout = FeatureDropout(self.signal_dropout_prob)
+            self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
 
         # frame reversal layer
         self.frame_reverse = FrameReverse()
@@ -1256,7 +1257,7 @@ class ConvNet_LID_DA_2(nn.Module):
             self.signal_dropout = FrameDropout(self.signal_dropout_prob)
 
         elif self.dropout_features: # if frame dropout is enables
-            self.signal_dropout = FeatureDropout(self.signal_dropout_prob)
+            self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
 
         # frame reversal layer
         self.frame_reverse = FrameReverse()
@@ -1473,7 +1474,7 @@ class ConvNet_LID_DA_3(nn.Module):
             #self.signal_dropout = FrameDropout(self.signal_dropout_prob)
 
         #elif self.dropout_features: # if frame dropout is enables
-            #self.signal_dropout = FeatureDropout(self.signal_dropout_prob)
+            #self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
 
         # frame reversal layer
         #self.frame_reverse = FrameReverse()
