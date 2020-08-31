@@ -1,0 +1,1017 @@
+	language	split	speaker id	native language	raised in	dialect	sex	age	occupation	cold or allergy	smoker	supervisor	record date	topic article	tapelabel	record place	environment noise	record conditions	comments
+BUL058	BUL	train	058	BG	BG	no	male	21	Engineer	NaN	nonsmoking	Aneliya Mircheva	28.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL039	BUL	train	039	Bulgarian	Bulgaria	no	female	40	Teacher	NaN	nonsmoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL048	BUL	train	048	BG	BG	no	female	45	NaN	NaN	smoking	Aneliya Mircheva	28.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL054	BUL	train	054	BG	BG	no	female	55	Technician	NaN	nonsmoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL063	BUL	train	063	BG	BG	no	male	22	Engineer	NaN	nonsmoking	Aneliya Mircheva	30.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL078	BUL	train	078	BG	BG	no	male	23	Student	NaN	nonsmoking	Aneliya Mircheva	31.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL114	BUL	train	114	bg	bg	no	male	22	Student	NaN	nonsmoking	Aneliya Mircheva	11.08.205		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL069	BUL	train	069	BG	BG	no	female	40	Psychologist	NaN	nonsmoking	Aneliya Mircheva	30.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL075	BUL	train	075	BG	BG	no	male	25	Student	NaN	smoking	Aneliya Mircheva	31.07.2005		 --new prompting tool--	middle	loud	Sennheiser HM420	NaN
+BUL113	BUL	train	113	BG	BG	no	male	44	Architect	NaN	nonsmoking	Aneliya Mircheva	08.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	tennis player
+BUL053	BUL	train	053	BG	BG	no	female	44	Geodesist	NaN	nonsmoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL064	BUL	train	064	BG	BG	no	male	23	Student	NaN	nonsmoking	Aneliya Mircheva	30.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL096	BUL	train	096	BG	BG	no	female	21	Student	NaN	nonsmoking	Aneliya Mircheva	04.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL095	BUL	train	095	BG	Bg	no	female	35	NaN	NaN	smoking	Aneliya Mircheva	04.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL084	BUL	train	084	BG	BG	no	male	22	Student	NaN	nonsmoking	Aneliya Mircheva	01.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL059	BUL	train	059	BG	BG	no	male	23	NaN	NaN	nonsmoking	Aneliya Mircheva	29.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL100	BUL	train	100	BG	BG	no	female	23	Student	NaN	nonsmoking	Aneliya Mircheva	05.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL032	BUL	train	032	NaN	NaN	NaN	female	15	NaN	NaN	nonsmoking	Aneliya Mircheva	26.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL089	BUL	train	089	BG	BG	no	female	20	Student	NaN	nonsmoking	Aneliya Mircheva	02.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL021	BUL	train	021	Bulgarian	BG	no	female	28	NaN	NaN	nonsmoking	Aneliya Mircheva	26.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL023	BUL	train	023	NaN	NaN	NaN	male	33	NaN	NaN	nonsmoking	Aneliya Mircheva	26.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL090	BUL	train	090	BG	BG	no	male	66	NaN	NaN	nonsmoking	Aneliya Mircheva	03.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL102	BUL	train	102	BG	BG	no	female	53	Worker	NaN	nonsmoking	Aneliya Mircheva	05.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL027	BUL	train	027	Bulgarian	Bulgaria	no	male	59	NaN	NaN	nonsmoking	Aneliya Mircheva	26.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL047	BUL	train	047	BG	BG	no	female	20	Student	NaN	nonsmoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL111	BUL	train	111	BG	BG	no	male	41	Engineer	NaN	smoking	Aneliya Mircheva	07.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL067	BUL	train	067	BG	BG	no	female	61	Worker	NaN	nonsmoking	Aneliya Mircheva	30.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL109	BUL	train	109	BG	BG	no	female	18	Student	NaN	nonsmoking	Aneliya Mircheva	07.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL026	BUL	train	026	Bulgarian	Bulgaria	no	male	30	NaN	NaN	nonsmoking	Aneliya Mircheva	26.07.05		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL097	BUL	train	097	BG	BG	no	male	15	Student	NaN	nonsmoking	Aneliya Mircheva	04.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL094	BUL	train	094	BG	BG	no	female	40	Librarian	NaN	nonsmoking	Aneliya Mircheva	04.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL040	BUL	train	040	BG	BG	no	female	26	Teacher	NaN	nonsmoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL065	BUL	train	065	BG	BG	no	female	23	Musician	NaN	nonsmoking	Aneliya Mircheva	30.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL072	BUL	train	072	BG	NaN	NaN	male	20	NaN	NaN	nonsmoking	Aneliya Mircheva	31.07.05		 --new prompting tool--	middle	loud	Sennheiser HM420	NaN
+BUL025	BUL	train	025	Bulgarian	Bulgaria	no	female	26	NaN	NaN	smoking	Aneliya Mircheva	26.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL107	BUL	train	107	BG	BG	no	female	47	NaN	NaN	nonsmoking	Aneliya Mircheva	05.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL073	BUL	train	073	BG	BG	no	female	18	Student	NaN	nonsmoking	Aneliya Mircheva	31.07.2005		 --new prompting tool--	middle	loud	Sennheiser HM420	NaN
+BUL099	BUL	train	099	BG	BG	no	male	28	Student	NaN	nonsmoking	Aneliya Mircheva	04.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL041	BUL	train	041	BG	BG	no	male	24	NaN	NaN	nonsmoking	Aneliya Mircheva	NaN		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL085	BUL	train	085	BG	BG	no	female	23	Student	NaN	smoking	Aneliya Mircheva	01.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL082	BUL	train	082	BG	BG	no	male	22	Student	NaN	nonsmoking	Aneliya Mircheva	01.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL046	BUL	train	046	BG	BG	no	male	25	Worker	NaN	smoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL052	BUL	train	052	BG	BG	no	female	45	Technician	NaN	smoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL055	BUL	train	055	BG	BG	no	female	55	Engineer	NaN	smoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL104	BUL	train	104	BG	BG	no	female	18	NaN	NaN	nonsmoking	Aneliya Mircheva	05.08.2005		 --new prompting tool--	loud	middle	Sennheiser HM420	NaN
+BUL098	BUL	train	098	BG	BG	no	male	15	Student	NaN	nonsmoking	Aneliya Mircheva	04.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL062	BUL	train	062	BG	BG	no	male	23	IT Specialist	NaN	nonsmoking	Aneliya Mircheva	30.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL077	BUL	train	077	BG	BG	no	male	23	Student	NaN	nonsmoking	Aneliya Mircheva	31.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL112	BUL	train	112	BG	BG	no	female	23	Student	NaN	smoking	Aneliya Mircheva	07.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL070	BUL	train	070	BG	BG	no	male	34	Student	NaN	nonsmoking	Aneliya Mircheva	31.07.2005		 --new prompting tool--	middle	loud	Sennheiser HM420	NaN
+BUL043	BUL	train	043	BG	BG	no	female	57	Electrician	NaN	nonsmoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+BUL045	BUL	train	045	BG	BG	no	female	21	Student	NaN	nonsmoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL093	BUL	train	093	BG	BG	no	female	54	Librarian	NaN	nonsmoking	Aneliya Mircheva	04.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL042	BUL	train	042	BG	BG	no	female	51	NaN	NaN	smoking	Aneliya Mircheva	26.07.2005		 --new prompting tool--	quiet	middle	Sennheiser HM420	NaN
+BUL101	BUL	train	101	BG	BG	no	female	49	Economist	NaN	nonsmoking	Aneliya Mircheva	05.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL066	BUL	train	066	BG	BG	no	female	57	IT Specialist	NaN	smoking	Aneliya Mircheva	30.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL020	BUL	train	020	Bulgarian	Bulgaria	no	female	33	NaN	NaN	nonsmoking	Aneliya Mircheva	26.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL079	BUL	train	079	BG	BG	no	female	22	Student	NaN	nonsmoking	Aneliya Mircheva	01.08.2005		 --new prompting tool--	middle	quiet	Sennheiser HM420	NaN
+BUL060	BUL	train	060	BG	BG	no	male	23	IT Specialist	NaN	nonsmoking	Aneliya Mircheva	29.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL018	BUL	train	018	Bulgarian	Bulgarian	no	female	23	Student	NaN	nonsmoking	Aneliya Mircheva	05.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL105	BUL	train	105	BG	BG	no	male	35	Teacher	NaN	smoking	Aneliya Mircheva	05.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL068	BUL	train	068	BG	BG	no	female	18	Student	NaN	nonsmoking	Aneliya Mircheva	30.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL051	BUL	train	051	BG	BG	no	female	35	Engineer	NaN	nonsmoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL087	BUL	train	087	BG	BG	no	male	23	Student	NaN	nonsmoking	Aneliya Mircheva	01.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL056	BUL	train	056	BG	BG	no	female	24	Editor	NaN	nonsmoking	Aneliya Mircheva	28.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL092	BUL	train	092	BG	BG	no	female	28	Teacher	NaN	nonsmoking	Aneliya Mircheva	04.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL083	BUL	train	083	BG	BG	no	female	22	Student	NaN	nonsmoking	Aneliya Mircheva	01.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL035	BUL	train	035	Bulgarian	Bulgaria	no	male	56	NaN	NaN	nonsmoking	Aneliya Mircheva	26.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL106	BUL	dev	106	BG	BG	no	female	31	Teacher	NaN	nonsmoking	Aneliya Mircheva	05.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL091	BUL	train	091	BG	BG	no	male	51	Architect	NaN	smoking	Aneliya Mircheva	03.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL088	BUL	train	088	BG	BG	no	female	23	Student	NaN	nonsmoking	Aneliya Mircheva	02.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL110	BUL	eval	110	BG	BG	no	female	20	Student	NaN	nonsmoking	Aneliya Mircheva	07.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL049	BUL	train	049	BG	BG	no	male	48	Engineer	NaN	nonsmoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL071	BUL	train	071	BG	BG	no	male	20	Student	NaN	nonsmoking	Aneliya Mircheva	31.07.2005		 --new prompting tool--	middle	loud	Sennheiser HM420	NaN
+BUL103	BUL	train	103	BG	BG	no	female	66	Economist	NaN	nonsmoking	Aneliya Mircheva	05.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL080	BUL	train	080	BG	BG	no	male	25	Engineer	NaN	smoking	Aneliya Mircheva	01.08.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+BUL050	BUL	train	050	BG	BG	no	female	52	Technician	NaN	nonsmoking	Aneliya Mircheva	27.07.2005		 --new prompting tool--	middle	middle	Sennheiser HM420	NaN
+HRV033	HRV	train	033 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	27 	student	well 	smoking 	Sanela HABIBIJA 	August 08, 1996		cro4 	private big 	quiet 	ohne Zuhoerer 	 
+HRV019	HRV	train	019 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	47 	petroleum expert	well 	nonsmoking 	Sanela HABIBIJA 	August 06, 1996		cro3 	private small 	quiet 	ein Zuhoerer 	 
+HRV094	HRV	train	094 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	female 	42 	telephonist	well 	nonsmoking 	Sanela HABIBIJA 	NaN		cro12 	Wohnzimmer 	quiet 	keine andere Person anwesend 	Papierrascheln, Pausen 
+HRV070	HRV	train	070 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	22 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private small 	quiet 	keine Zuhoerer, aber dafuer die Autos 	 
+HRV035	HRV	train	035 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	27 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 09, 1996		cro5 	private big 	quiet 	ohne Zuhoerer 	 
+HRV049	HRV	train	049 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	22 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 12, 1996		cro6 	private big 	quiet 	mehrere Zuhoerer 	 
+HRV057	HRV	train	057 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	17 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private big 	quiet 	 	 
+HRV088	HRV	train	088 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	35 	homemaker	well 	nonsmoking 	Sanela HABIBIJA 	NaN		cro11 	Wohnzimmer 	middle 	3 Personen sitzen am Tisch 	Geraeusche im Hintergrund (Tuer, Papierrascheln, Kochtopf, Kartofelschaelen, andere Leute) 
+HRV053	HRV	train	053 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	22 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro6 	private small 	quiet 	keine anderen Zuhoerer 	 
+HRV058	HRV	train	058 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	28 	electrical engineer	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private big 	quiet 	 	 
+HRV006	HRV	train	006 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	female 	70 	pensioner	well 	nonsmoking 	Sanela HABIBIJA 	August 04, 1996		cro1 	private small 	quiet 	sehr entspannt 	 
+HRV086	HRV	train	086 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	16 	student	well 	nonsmoking 	Sanela HABIBIJA 	NaN		cro11 	Wohnzimmer 	middle 	4 Personen sitzen am Tisch 	Geraeusche im Hintergrund (die Tuer geht auf); Papierrascheln 
+HRV081	HRV	train	081 	Bosnian 	Sarajevo, Bosnia-Hercegovina 	Bosnian 	female 	33 	salesperson	well 	nonsmoking 	Sanela HABIBIJA 	August 14, 1996		cro9 	private small 	quiet 	Das Kind wurde wach und schrie laut 	 
+HRV041	HRV	train	041 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	female 	25 	journalist	well 	nonsmoking 	Sanela HABIBIJA 	August 10, 1996		cro5 	private small 	quiet 	ohne Zuhoerer 	 
+HRV029	HRV	train	029 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	female 	16 	student	well 	smoking 	Sanela HABIBIJA 	August 07, 1996		cro4 	private small 	middle 	mehrere Zuhoerer 	 
+HRV042	HRV	train	042 	Bosnian 	Sarajevo, Bosnia-Hercegovina 	Bosnian 	female 	17 	student	well 	smoking 	Sanela HABIBIJA 	August 11, 1996		cro5 	private small 	middle 	Strassengeraeusche 	 
+HRV011	HRV	train	011 	Croatian 	Zagorje, Croatia 	Kajkav 	female 	53 	deliverywoman	well 	nonsmoking 	Sanela HABIBIJA 	August 05, 1996		cro2 	private big 	middle 	ohne Zuhoerer 	 
+HRV051	HRV	train	051 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	50 	civil servant	well 	smoking 	Sanela HABIBIJA 	August 12, 1996		cro6 	private small 	quiet 	mehrere Zuhoerer 	 
+HRV047	HRV	train	047 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	24 	soldier	well 	nonsmoking 	Sanela HABIBIJA 	August 12, 1996		cro6 	private small 	quiet 	 	 
+HRV037	HRV	train	037 	Croatian 	Gospic, Croatia 	Standard Croatian 	female 	33 	economist	well 	nonsmoking 	Sanela HABIBIJA 	August 09, 1996		cro5 	office small 	quiet 	ohne Zuhoerer 	 
+HRV013	HRV	train	013 	Croatian 	Zagreb, Croatia 	Kajkav 	female 	53 	civil servant	well 	nonsmoking 	Sanela HABIBIJA 	August 05, 1996		cro2 	private small 	quiet 	andere Frau putzte und war schlecht gelaunt  	 
+HRV063	HRV	train	063 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	29 	bartender	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	public place 	quiet 	Autos fahren vorbei, andere Zuhoerer 	leider zu viele zu laute Autos 
+HRV065	HRV	train	065 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	50 	precision engineer	well 	smoking 	Sanela HABIBIJA 	August 12, 1996		cro7 	private small 	quiet 	keine Zuhoerer 	 
+HRV010	HRV	train	10 	Croatian 	province 	Kajkav 	male 	25 	welder	well 	nonsmoking 	Sanela HABIBIJA 	August 05, 1996		cro2 	private small 	quiet 	keine anderen Zuhoerer 	 
+HRV034	HRV	train	034 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	28 	engineer	well 	nonsmoking 	Sanela HABIBIJA 	August 08, 1996		cro4 	private big 	quiet 	ohne Zuhoerer 	 
+HRV054	HRV	train	054 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	16 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private small 	quiet 	keine anderen Zuhoerer 	 
+HRV074	HRV	train	074 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	24 	student	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro7 	private big 	quiet 	keine Zuhoerer 	 
+HRV059	HRV	train	059 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	19 	student	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private small 	quiet 	 	 
+HRV039	HRV	train	039 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	28 	transportation engineer	well 	nonsmoking 	Sanela HABIBIJA 	August 10, 1996		cro5 	private big 	quiet 	ohne Zuhoerer 	 
+HRV052	HRV	train	052 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	53 	civil servant	well 	smoking 	Sanela HABIBIJA 	August 12, 1996		cro6 	private small 	quiet 	mehrere Zuhoerer 	 
+HRV061	HRV	train	061 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	50 	teacher	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	public place 	quiet 	Autos fahren vorbei 	leider zu viele zu laute Autos 
+HRV084	HRV	train	084 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	45 	homemaker	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro9 	private small 	quiet 	 	 
+HRV064	HRV	train	064 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	45 	homemaker	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro7 	private big 	quiet 	keine Zuhoerer 	 
+HRV077	HRV	train	077 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	38 	nurse	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private big 	quiet 	keine Zuhoerer 	 
+HRV023	HRV	train	023 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	female 	58 	civil servant	well 	nonsmoking 	Sanela HABIBIJA 	August 06, 1996		cro3 	private small 	quiet 	sehr entspannt 	 
+HRV083	HRV	train	083 	Croatian 	Osijek, Croatia 	Standard Croatian 	female 	19 	student	well 	nonsmoking 	Sanela HABIBIJA 	September 15, 1997		cro10 	private small 	quiet 	keine Zuhoerer 	lebt in Deutschland seit 4 Jahren 
+HRV093	HRV	train	093 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	27 	programmer	well 	smoking 	Sanela HABIBIJA 	NaN		cro12 	Buero 	middle 	Die Person ist alleine 	Ploetzliche Stimmen im Gang; vorbeifahrende Autos 
+HRV009	HRV	train	009 	Croatian 	Zagorje, Croatia 	Kajkav 	male 	32 	salesperson	sick 	smoking 	Sanela HABIBIJA 	August 05, 1996		cro2 	private small 	middle 	keine anderen Zuhoerer, aber Kinder im Gang 	 
+HRV062	HRV	train	062 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	19 	homemaker	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	public place 	quiet 	Autos fahren vorbei, andere Zuhoerer 	leider zu viele zu laute Autos 
+HRV012	HRV	train	012 	Croatian 	Zagorje, Croatia 	Kajkav 	male 	27 	locksmith	well 	nonsmoking 	Sanela HABIBIJA 	August 05, 1996		cro2 	private big 	middle 	ohne Zuhoerer 	 
+HRV090	HRV	train	090 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	21 	unemployed	well 	smoking 	Sanela HABIBIJA 	NaN		cro11 	Wohnzimmer 	quiet 	eine Person sitzen am Tisch nebenan und isst 	Papierrascheln; Kuehlschrank, Tuer, Husten 
+HRV091	HRV	train	091 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	16 	student	well 	nonsmoking 	Sanela HABIBIJA 	NaN		cro11 	Wohnzimmer 	quiet 	Person sitzt alleine am Tisch; jemand geht staendig raus und rein 	Papierrascheln; Boden, tuer, leises Gespraech im Hintergrund 
+HRV017	HRV	train	017 	Croatian 	Nothern Bosnia 	Standard Croatian 	male 	40 	driver	well 	smoking 	Sanela HABIBIJA 	August 05, 1996		cro2 	private small 	loud 	der Nachbar baut sein haus um 	 
+HRV038	HRV	train	038 	Croatian 	Karlovac, Croatia 	Standard Croatian 	male 	40 	engineer	well 	nonsmoking 	Sanela HABIBIJA 	August 10, 1996		cro5 	private big 	quiet 	ohne Zuhoerer 	 
+HRV005	HRV	train	005 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	female 	78 	pensioner	well 	nonsmoking 	Sanela HABIBIJA 	August 04, 1996		cro1 	private small 	quiet 	sehr entspannt 	 
+HRV004	HRV	train	004 	Croatian 	Slavonski Brod, Croatia 	Standard Croatian 	male 	43 	pharmacist	sick 	smoking 	Sanela HABIBIJA 	August 03, 1996		cro1 	private small 	quiet 	keine anderen Zuhoerer 	 
+HRV026	HRV	train	026 	Croatian 	Zagreb, Croatia 	Standard Croatian 	male 	25 	musician	well 	smoking 	Sanela HABIBIJA 	August 07, 1996		cro4 	office small 	quiet 	keine Zuhoerer 	 
+HRV069	HRV	train	069 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	20 	student	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private small 	quiet 	Laute Strassengeraeusche  (Autos); einige Zuhoerer  	 
+HRV089	HRV	train	089 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	16 	student	well 	nonsmoking 	Sanela HABIBIJA 	NaN		cro11 	Wohnzimmer 	middle 	3 Personen sitzen am Tisch nebenan 	Papierrascheln 
+HRV044	HRV	train	044 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	17 	student	well 	smoking 	Sanela HABIBIJA 	August 11, 1996		cro6 	private small 	middle 	Strassengeraeusche 	 
+HRV016	HRV	train	016 	Croatian 	Nothern Bosnia 	Standard Croatian 	male 	37 	electrician	well 	nonsmoking 	Sanela HABIBIJA 	August 05, 1996		cro2 	private small 	loud 	Laeute nebenan laut (anderer Raum) 	 
+HRV030	HRV	train	030 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	16 	student	well 	smoking 	Sanela HABIBIJA 	August 07, 1996		cro4 	private small 	loud 	noch jemand anwesend 	Strassengeraeusche umvermeidbar 
+HRV025	HRV	train	025 	Croatian 	Zagreb, Croatia 	Standard Croatian 	female 	72 	pensioner	well 	nonsmoking 	Sanela HABIBIJA 	August 06, 1996		cro3 	private small 	quiet 	sehr entspannt 	 
+HRV068	HRV	train	068 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	35 	technician	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private small 	quiet 	Laute Strassengeraeusche  (Autos) 	 
+HRV076	HRV	train	076 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	40 	salesperson	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro7 	private small 	quiet 	keine Zuhoerer 	 
+HRV087	HRV	train	087 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	34 	tailor	well 	smoking 	Sanela HABIBIJA 	NaN		cro11 	Wohnzimmer 	middle 	4 Personen sitzen am Tisch 	Geraeusche im Hintergrund (die Tuer geht auf, das Telefon klingelt); Papierrascheln 
+HRV056	HRV	train	056 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	18 	student	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private small 	quiet 	 	 
+HRV066	HRV	train	066 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	40 	worker	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro7 	private small 	quiet 	keine Zuhoerer 	 
+HRV015	HRV	train	015 	Croatian 	Nothern Bosnia 	Standard Croatian 	female 	37 	consultant	well 	nonsmoking 	Sanela HABIBIJA 	August 05, 1996		cro2 	private big 	middle 	Ein Nachbar baut sein Haus um 	 
+HRV043	HRV	train	043 	Bosnian 	Sarajevo, Bosnia-Hercegovina 	Bosnian 	female 	19 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 11, 1996		cro5 	private small 	middle 	Strassengeraeusche 	 
+HRV067	HRV	train	067 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	40 	salesperson	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro7 	private small 	quiet 	keine Zuhoerer 	 
+HRV085	HRV	train	085 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	39 	civil engineer	well 	smoking 	Sanela HABIBIJA 	NaN		cro11 	Wohnzimmer 	middle 	4 Personen sitzen am Tisch 	Geraeusche im Hintergrund (die Tuer geht auf, das Kind ruft seine Mutter); Papierrascheln 
+HRV078	HRV	train	078 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	42 	salesperson	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private big 	quiet 	keine zuhoerer 	 
+HRV036	HRV	train	036 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	27 	economist	well 	nonsmoking 	Sanela HABIBIJA 	August 09, 1996		cro5 	office small 	quiet 	ohne Zuhoerer 	 
+HRV028	HRV	train	028 	Croatian 	Zagreb, Croatia 	Purgerian, street slang	male 	25 	musician	well 	smoking 	Sanela HABIBIJA 	August 07, 1996		cro4 	office small 	quiet 	keine Zuhoerer 	 
+HRV082	HRV	train	082 	Bosnian 	Sarajevo, Bosnia-Hercegovina 	Bosnian 	female 	35 	worker	well 	smoking 	Sanela HABIBIJA 	August 14, 1996		cro9 	private small 	quiet 	 	 
+HRV072	HRV	train	072 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	40 	homemaker	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private small 	quiet 	einige Zuhoerer 	 
+HRV079	HRV	train	079 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	23 	homemaker	well 	smoking 	Sanela HABIBIJA 	August 14, 1996		cro9 	private small 	quiet 	 	 
+HRV024	HRV	train	024 	Croatian 	Zagreb, Croatia 	Standard Croatian 	female 	65 	lawyer	sick 	nonsmoking 	Sanela HABIBIJA 	August 06, 1996		cro3 	private small 	quiet 	sehr entspannt 	 
+HRV060	HRV	train	060 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	19 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private small 	quiet 	 	 
+HRV001	HRV	train	001 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	27 	student	well 	smoking 	Sanela HABIBIJA 	August 03, 1996		cro1 	private small 	quiet 	keine anderen Zuhoerer 	 
+HRV003	HRV	train	003 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	65 	pensioner	well 	nonsmoking 	Sanela HABIBIJA 	August 03, 1996		cro1 	private small 	quiet 	keine anderen Zuhoerer 	 
+HRV031	HRV	train	031 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	17 	student	well 	smoking 	Sanela HABIBIJA 	August 07, 1996		cro4 	private small 	loud 	noch jemand anwesend 	Strassengeraeusche unvermeidbar 
+HRV050	HRV	train	050 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	18 	student	well 	smoking 	Sanela HABIBIJA 	August 12, 1996		cro6 	private big 	quiet 	mehrere Zuhoerer 	 
+HRV073	HRV	train	073 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	20 	nursery-school teacher	sick 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private big 	quiet 	ein Zuhoerer 	 
+HRV048	HRV	train	048 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	24 	student	well 	smoking 	Sanela HABIBIJA 	August 12, 1996		cro6 	private small 	quiet 	 	 
+HRV027	HRV	train	027 	Bosnian 	Nothern Bosnia 	Northern Bosnian 	male 	24 	unemployed	well 	smoking 	Sanela HABIBIJA 	August 05, 1996		cro4 	office small 	quiet 	ohne Zohoerer 	 
+HRV007	HRV	train	007 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	female 	NaN	architect	well 	nonsmoking 	Sanela HABIBIJA 	August 04, 1996		cro1 	private small 	quiet 	keine anderen Zuhoerer 	 
+HRV018	HRV	train	018 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	27 	student	well 	smoking 	Sanela HABIBIJA 	August 09, 1996		cro2 	private big 	quiet 	ohne Zuhoerer 	 
+HRV080	HRV	train	080 	Bosnian 	Sarajevo, Bosnia-Hercegovina 	Bosnian 	female 	43 	homemaker	well 	nonsmoking 	Sanela HABIBIJA 	August 14, 1996		cro9 	private small 	quiet 	 	 
+HRV092	HRV	train	092 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	male 	31 	qualified electrical engineer	well 	nonsmoking 	Sanela HABIBIJA 	NaN		cro12 	Wohnzimmer 	middle 	Person sitzt alleine am Tisch 	Im Zimmer nebenan reden die Leute; die Tuer geht auf und zu ...   
+HRV045	HRV	train	045 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	47 	nurse	well 	smoking 	Sanela HABIBIJA 	August 11, 1996		cro6 	private small 	quiet 	 	 
+HRV002	HRV	train	002 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	female 	18 	student	well 	smoking 	Sanela HABIBIJA 	August 03, 1996		cro1 	private small 	quiet 	keine anderen Zuhoerer 	 
+HRV075	HRV	train	075 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	21 	student	sick 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private big 	quiet 	keine Zuhoerer 	 
+HRV032	HRV	train	032 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	female 	25 	economist	well 	nonsmoking 	Sanela HABIBIJA 	August 07, 1996		cro4 	private big 	quiet 	ohne Zuhoerer 	 
+HRV055	HRV	train	055 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	50 	teacher	well 	smoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private small 	quiet 	 	 
+HRV040	HRV	train	040 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	31 	athlete	well 	nonsmoking 	Sanela HABIBIJA 	August 10, 1996		cro5 	private small 	quiet 	ohne Zuhoerer 	 
+HRV008	HRV	train	008 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	19 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 04, 1996		cro2 	private small 	quiet 	sehr entspannt 	 
+HRV071	HRV	train	071 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	31 	salesperson	well 	nonsmoking 	Sanela HABIBIJA 	August 13, 1996		cro8 	private small 	quiet 	keine Zuhoerer 	 
+HRV020	HRV	train	020 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	16 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 06, 1996		cro3 	private small 	quiet 	keine Zuhoerer 	 
+HRV046	HRV	train	046 	Bosnian 	Konjic, Bosnia-Hercegovina 	Bosnian 	female 	21 	student	well 	smoking 	Sanela HABIBIJA 	August 12, 1996		cro6 	private small 	quiet 	 	 
+HRV022	HRV	train	022 	Croatian 	Dalmatien, Croatia 	Shtokav 	female 	28 	anesthesiologist	well 	smoking 	Sanela HABIBIJA 	August 06, 1996		cro3 	private small 	quiet 	 	 
+HRV021	HRV	train	021 	Croatian 	Zagreb, Croatia 	Zagreb dialect 	male 	12 	student	well 	nonsmoking 	Sanela HABIBIJA 	August 06, 1996		cro3 	private small 	quiet 	keine Zuhoerer 	 
+HRV014	HRV	train	014 	Croatian 	Nothern Bosnia 	Standard Croatian 	female 	41 	homemaker	sick 	nonsmoking 	Sanela HABIBIJA 	August 05, 1996		cro2 	private big 	middle 	Ein Nachbar baut sein Haus um 	 
+CZE011	CZE	train	011	Czech	NaN	common Czech	female	47	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 100
+CZE036	CZE	train	036	Czech	NaN	common Czech	male	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský 111
+CZE026	CZE	train	026	Czech	NaN	common Czech	male	25	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 140
+CZE100	CZE	eval	100	Czech	NaN	common Czech	female	25	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Praha 104
+CZE091	CZE	dev	091	Czech	NaN	common Czech	female	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Èeské Budìjovice ráèkuje 103
+CZE023	CZE	train	023	Czech	NaN	common Czech	female	25	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 140
+CZE082	CZE	train	082	Czech	NaN	common Czech	female	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík nic 29
+CZE008	CZE	train	008	Czech	NaN	common Czech	male	27	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK UFAL II.3 nic 69
+CZE010	CZE	train	010	Czech	NaN	common Czech	male	51	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK nic 2
+CZE037	CZE	train	037	Czech	NaN	common Czech	male	25	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský Liberec, ¹patné ø, kolej, pr¹elo 140
+CZE061	CZE	train	061	Czech	NaN	common Czech	female	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Ostrava 104
+CZE004	CZE	train	004	Czech	NaN	common Czech	female	58	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK UFAL nic 140
+CZE086	CZE	eval	086	Czech	NaN	common Czech	male	19	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Ústí nad Labem 103
+CZE094	CZE	eval	094	Czech	NaN	common Czech	male	47	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Kolín 103
+CZE009	CZE	train	009	Czech	NaN	common Czech	male	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK nic 140
+CZE075	CZE	train	075	Czech	NaN	common Czech	male	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Kyjov 104
+CZE084	CZE	eval	084	Czech	NaN	common Czech	male	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Praha 104
+CZE083	CZE	dev	083	Czech	NaN	common Czech	male	19	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Praha 103
+CZE027	CZE	train	027	Czech	NaN	common Czech	male	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 37
+CZE041	CZE	train	041	Czech	NaN	common Czech	female	18	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 117
+CZE062	CZE	train	062	Czech	NaN	common Czech	male	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek ïár nad Sázavou 104
+CZE080	CZE	train	080	Czech	NaN	common Czech	male	18	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík bruèoun 54
+CZE031	CZE	train	031	Czech	NaN	common Czech	male	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 140
+CZE032	CZE	train	032	Czech	NaN	common Czech	female	24	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 140
+CZE063	CZE	train	063	Czech	NaN	common Czech	male	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Zlín 104
+CZE050	CZE	train	050	Czech	NaN	common Czech	female	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský Ji¾ní Èechy, kolej 140
+CZE024	CZE	train	024	Czech	NaN	common Czech	female	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský Slovácko, kolej, foukal vítr 140
+CZE099	CZE	dev	099	Czech	NaN	common Czech	male	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Praha 103
+CZE012	CZE	train	012	Czech	NaN	common Czech	male	17	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 100
+CZE005	CZE	train	005	Czech	NaN	common Czech	male	28	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK Pankrác nic 140
+CZE034	CZE	train	034	Czech	NaN	common Czech	female	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 36
+CZE040	CZE	train	040	Czech	NaN	common Czech	female	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský kolej 140
+CZE025	CZE	train	025	Czech	NaN	common Czech	male	74	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 140
+CZE014	CZE	train	014	Czech	NaN	common Czech	female	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 140
+CZE019	CZE	train	019	Czech	NaN	common Czech	male	33	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 140
+CZE065	CZE	train	065	Czech	NaN	common Czech	male	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Èeské {Budìjovice;} sykavky 104
+CZE064	CZE	train	064	Czech	NaN	common Czech	male	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Dvùr Králové n. L. 100
+CZE073	CZE	train	073	Czech	NaN	common Czech	female	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Písek 104
+CZE079	CZE	train	079	Czech	NaN	common Czech	female	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Beneovsko 102
+CZE097	CZE	dev	097	Czech	NaN	common Czech	female	16	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Praha 103
+CZE074	CZE	train	074	Czech	NaN	common Czech	male	23	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Kyjov 104
+CZE085	CZE	dev	085	Czech	NaN	common Czech	male	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Beneovsko 103
+CZE022	CZE	train	022	Czech	NaN	common Czech	male	47	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 140
+CZE006	CZE	train	006	Czech	NaN	common Czech	female	26	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK Ufal II.3 nic 140
+CZE060	CZE	train	060	Czech	NaN	common Czech	male	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek ternberk (Olomouc) 104
+CZE096	CZE	eval	096	Czech	NaN	common Czech	male	18	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Praha 103
+CZE069	CZE	train	069	Czech	NaN	common Czech	female	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Blansko 104
+CZE046	CZE	train	046	Czech	NaN	common Czech	female	25	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 47
+CZE067	CZE	train	067	Czech	NaN	common Czech	male	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Frýdek Místek 104
+CZE078	CZE	train	078	Czech	NaN	common Czech	male	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Praha 27
+CZE017	CZE	train	017	Czech	NaN	common Czech	female	46	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 140
+CZE052	CZE	train	052	Czech	NaN	common Czech	male	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský Ostrava, velmi ¹patná artikulace 140
+CZE071	CZE	train	071	Czech	NaN	common Czech	female	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Vrchlabí 104
+CZE092	CZE	eval	092	Czech	NaN	common Czech	female	19	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Kolín 103
+CZE028	CZE	train	028	Czech	NaN	common Czech	female	24	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 141
+CZE047	CZE	train	047	Czech	NaN	common Czech	male	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 140
+CZE095	CZE	dev	095	Czech	NaN	common Czech	male	18	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík okr.Kolín 103
+CZE053	CZE	train	053	Czech	NaN	common Czech	male	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek okr. Pøíbram 99
+CZE089	CZE	dev	089	Czech	NaN	common Czech	female	18	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík nic 3
+CZE057	CZE	train	057	Czech	NaN	common Czech	female	48	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Dvùr Králové n.L 100
+CZE088	CZE	eval	088	Czech	NaN	common Czech	female	69	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Praha 103
+CZE087	CZE	dev	087	Czech	NaN	common Czech	female	44	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Praha 103
+CZE059	CZE	train	059	Czech	NaN	common Czech	female	46	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek nic Dvùr Králové {n.L.;} patná výsl. sykavek 100
+CZE048	CZE	train	048	Czech	NaN	common Czech	male	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský severní èechy 139
+CZE056	CZE	train	056	Czech	NaN	common Czech	male	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Karlovy Vary 100
+CZE066	CZE	train	066	Czech	NaN	common Czech	female	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Kyjov 104
+CZE068	CZE	train	068	Czech	NaN	common Czech	female	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Podìbrady 104
+CZE102	CZE	eval	102	Czech	NaN	common Czech	male	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík 103
+CZE018	CZE	train	018	Czech	NaN	common Czech	female	26	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 140
+CZE039	CZE	train	039	Czech	NaN	common Czech	male	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský ventilátor 140
+CZE076	CZE	train	076	Czech	NaN	common Czech	male	25	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Olomouc 104
+CZE015	CZE	train	015	Czech	NaN	common Czech	male	17	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 140
+CZE035	CZE	train	035	Czech	NaN	common Czech	female	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 140
+CZE033	CZE	train	033	Czech	NaN	common Czech	male	18	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 140
+CZE016	CZE	train	016	Czech	NaN	common Czech	male	48	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK nar. v Prostìjovì 140
+CZE054	CZE	train	054	Czech	NaN	common Czech	male	23	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Jablonec nad Nisou 100
+CZE044	CZE	train	044	Czech	NaN	common Czech	male	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský kolej 140
+CZE093	CZE	dev	093	Czech	NaN	common Czech	male	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Kolín 103
+CZE029	CZE	train	029	Czech	NaN	common Czech	female	19	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 125
+CZE038	CZE	train	038	Czech	NaN	common Czech	male	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Mrva spatna vyslovnost 140
+CZE101	CZE	dev	101	Czech	NaN	common Czech	female	18	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Praha 103
+CZE007	CZE	train	007	Czech	NaN	common Czech	male	33	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK U Michala nic 140
+CZE072	CZE	train	072	Czech	NaN	common Czech	female	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Valaské Meziøíèí 104
+CZE077	CZE	train	077	Czech	NaN	common Czech	male	26	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Dìèín 104
+CZE030	CZE	train	030	Czech	NaN	common Czech	male	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský nic 74
+CZE081	CZE	train	081	Czech	NaN	common Czech	male	48	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík nic 5
+CZE042	CZE	train	042	Czech	NaN	common Czech	female	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský kolej 140
+CZE098	CZE	eval	098	Czech	NaN	common Czech	female	16	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík nic 1
+CZE070	CZE	train	070	Czech	NaN	common Czech	female	23	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Kolín 104
+CZE003	CZE	train	003	Czech	NaN	common Czech	female	26	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK Ufal nic 98
+CZE001	CZE	train	001	Czech	NaN	common Czech	female	51	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK doma 140 nic 140
+CZE020	CZE	train	020	Czech	NaN	common Czech	female	25	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK 140
+CZE055	CZE	train	055	Czech	NaN	common Czech	male	23	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Bruntál 100
+CZE013	CZE	train	013	Czech	NaN	common Czech	male	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK nic 134
+CZE002	CZE	train	002	Czech	NaN	common Czech	female	20	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK doma nic 47
+CZE058	CZE	train	058	Czech	NaN	common Czech	male	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Macháèek Dvùr Králové n.L. 100
+CZE045	CZE	train	045	Czech	NaN	common Czech	male	23	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský kolej 140
+CZE021	CZE	train	021	Czech	NaN	common Czech	female	19	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	JK nic 11
+CZE051	CZE	train	051	Czech	NaN	common Czech	male	25	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský 129
+CZE090	CZE	eval	090	Czech	NaN	common Czech	female	21	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	general news from Lidove Noviny newspaper	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	evèík Pelhøimov 103
+CZE043	CZE	train	043	Czech	NaN	common Czech	male	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský kolej 140
+CZE049	CZE	train	049	Czech	NaN	common Czech	male	22	NaN	NaN	nonsmoking	Hajic/Peterek	August 1998	economic news from Ceskomoravsky Profit Journal	notape	NaN	quiet	Sennheiser HMD410 close-talking microphone	Podveský Podkrkono¹í, kolej 140
+FRA006	FRA	train	006	French	NaN	NaN	female	21	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA019	FRA	train	019	French	NaN	NaN	male	27	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA065	FRA	train	065	French	NaN	NaN	female	27	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA001	FRA	train	001	French	NaN	NaN	male	23	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA003	FRA	train	003	French	NaN	NaN	male	26	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA030	FRA	train	030	French	NaN	NaN	female	30	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA064	FRA	train	064	French	NaN	NaN	male	32	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA094	FRA	eval	094	French	NaN	NaN	male	38	NaN	NaN	nonsmoking	Dominique Vaufreydaz	18/05/00	news	NaN	NaN	NaN	NaN	NaN
+FRA090	FRA	train	090	French	NaN	NaN	male	29	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA046	FRA	train	046	French	NaN	NaN	male	37	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA063	FRA	train	063	French	NaN	NaN	female	29	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA078	FRA	train	078	French	NaN	NaN	male	60	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA068	FRA	train	068	French	NaN	NaN	male	40	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA033	FRA	train	033	French	NaN	NaN	male	28	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA036	FRA	train	036	French	NaN	NaN	male	24	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA031	FRA	train	031	French	NaN	NaN	female	47	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA011	FRA	train	011	French	NaN	NaN	male	35	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA074	FRA	train	074	French	NaN	NaN	male	43	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA054	FRA	train	054	French	NaN	NaN	female	61	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA048	FRA	train	048	French	NaN	NaN	male	32	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA086	FRA	dev	086	French	NaN	NaN	male	24	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA018	FRA	train	018	French	NaN	NaN	female	34	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA013	FRA	train	013	French	NaN	NaN	female	29	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA095	FRA	eval	095	French	NaN	NaN	male	24	NaN	NaN	nonsmoking	Dominique Vaufreydaz	18/05/00	news	NaN	NaN	NaN	NaN	NaN
+FRA066	FRA	train	066	French	NaN	NaN	female	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA083	FRA	dev	083	French	NaN	NaN	female	51	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA075	FRA	train	075	French	NaN	NaN	female	29	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA007	FRA	train	007	French	NaN	NaN	male	54	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA059	FRA	train	059	French	NaN	NaN	female	24	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA084	FRA	dev	084	French	NaN	NaN	female	42	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA080	FRA	train	080	French	NaN	NaN	male	33	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA073	FRA	train	073	French	NaN	NaN	male	41	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA056	FRA	train	056	French	NaN	NaN	male	23	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA072	FRA	train	072	French	NaN	NaN	female	36	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA082	FRA	dev	082	French	NaN	NaN	female	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA025	FRA	train	025	French	NaN	NaN	male	21	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA010	FRA	train	010	French	NaN	NaN	female	29	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA087	FRA	dev	087	French	NaN	NaN	female	31	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA039	FRA	train	039	French	NaN	NaN	female	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA044	FRA	train	044	French	NaN	NaN	male	21	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA037	FRA	train	037	French	NaN	NaN	female	33	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA009	FRA	train	009	French	NaN	NaN	male	62	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA071	FRA	train	071	French	NaN	NaN	female	24	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA079	FRA	train	079	French	NaN	NaN	female	46	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA076	FRA	train	076	French	NaN	NaN	male	15	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA015	FRA	train	015	French	NaN	NaN	female	54	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA049	FRA	train	049	French	NaN	NaN	male	25	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA051	FRA	train	051	French	NaN	NaN	female	29	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA016	FRA	train	016	French	NaN	NaN	male	27	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA052	FRA	train	052	French	NaN	NaN	female	41	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA005	FRA	train	005	French	NaN	NaN	female	36	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA008	FRA	train	008	French	NaN	NaN	male	26	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA038	FRA	train	038	French	NaN	NaN	female	23	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA069	FRA	train	069	French	NaN	NaN	male	37	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA058	FRA	train	058	French	NaN	NaN	male	23	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA014	FRA	train	014	French	NaN	NaN	male	52	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA081	FRA	train	081	French	NaN	NaN	female	21	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA060	FRA	train	060	French	NaN	NaN	male	25	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA100	FRA	train	100	French	NaN	NaN	male	25	NaN	NaN	nonsmoking	Dominique Vaufreydaz	26/09/00	news	NaN	NaN	NaN	NaN	NaN
+FRA020	FRA	train	020	French	NaN	NaN	male	23	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA099	FRA	train	099	French	NaN	NaN	female	38	NaN	NaN	nonsmoking	Dominique Vaufreydaz	26/09/00	news	NaN	NaN	NaN	NaN	NaN
+FRA027	FRA	train	027	French	NaN	NaN	male	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA096	FRA	eval	096	French	NaN	NaN	female	47	NaN	NaN	nonsmoking	Dominique Vaufreydaz	18/05/00	news	NaN	NaN	NaN	NaN	NaN
+FRA002	FRA	train	002	French	NaN	NaN	female	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA067	FRA	train	067	French	NaN	NaN	female	63	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA093	FRA	eval	093	French	NaN	NaN	male	28	NaN	NaN	nonsmoking	Dominique Vaufreydaz	18/05/00	news	NaN	NaN	NaN	NaN	NaN
+FRA062	FRA	train	062	French	NaN	NaN	female	21	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA085	FRA	dev	085	French	NaN	NaN	male	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA098	FRA	eval	098	French	NaN	NaN	male	53	NaN	NaN	nonsmoking	Dominique Vaufreydaz	18/05/00	news	NaN	NaN	NaN	NaN	NaN
+FRA023	FRA	train	023	French	NaN	NaN	male	24	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA092	FRA	eval	092	French	NaN	NaN	female	23	NaN	NaN	nonsmoking	Dominique Vaufreydaz	18/05/00	news	NaN	NaN	NaN	NaN	NaN
+FRA041	FRA	train	041	French	NaN	NaN	female	30	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA026	FRA	train	026	French	NaN	NaN	female	48	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA035	FRA	train	035	French	NaN	NaN	male	54	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA034	FRA	train	034	French	NaN	NaN	male	43	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA088	FRA	dev	088	French	NaN	NaN	male	47	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA061	FRA	train	061	French	NaN	NaN	female	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA022	FRA	train	022	French	NaN	NaN	female	40	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA091	FRA	eval	091	French	NaN	NaN	female	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	18/05/00	news	NaN	NaN	NaN	NaN	NaN
+FRA042	FRA	train	042	French	NaN	NaN	female	23	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA047	FRA	train	047	French	NaN	NaN	female	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA032	FRA	train	032	French	NaN	NaN	male	21	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA055	FRA	train	055	French	NaN	NaN	male	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA045	FRA	train	045	French	NaN	NaN	male	24	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA017	FRA	train	017	French	NaN	NaN	female	57	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA024	FRA	train	024	French	NaN	NaN	female	54	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA050	FRA	train	050	French	NaN	NaN	male	42	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA097	FRA	eval	097	French	NaN	NaN	female	23	NaN	NaN	nonsmoking	Dominique Vaufreydaz	18/05/00	news	NaN	NaN	NaN	NaN	NaN
+FRA029	FRA	train	029	French	NaN	NaN	female	NaN	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA028	FRA	train	028	French	NaN	NaN	male	23	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA077	FRA	train	077	French	NaN	NaN	male	NaN	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA070	FRA	train	070	French	NaN	NaN	female	51	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA089	FRA	dev	089	French	NaN	NaN	male	24	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA043	FRA	train	043	French	NaN	NaN	female	54	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA057	FRA	train	057	French	NaN	NaN	male	24	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA021	FRA	train	021	French	NaN	NaN	female	19	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA012	FRA	train	012	French	NaN	NaN	female	32	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA053	FRA	train	053	French	NaN	NaN	female	21	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA004	FRA	train	004	French	NaN	NaN	female	22	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+FRA040	FRA	train	040	French	NaN	NaN	female	17	NaN	NaN	nonsmoking	Dominique Vaufreydaz	13/03/01	news	NaN	NaN	NaN	NaN	NaN
+DEU015	DEU	train	015 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU061	DEU	train	061 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU059	DEU	train	059 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU004	DEU	train	004 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU036	DEU	train	036 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU069	DEU	train	069 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU052	DEU	train	052 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU066	DEU	train	066 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU040	DEU	train	040 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU038	DEU	train	038 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU001	DEU	train	001 	German 	 	 	male 	 	professor	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU019	DEU	train	019 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU071	DEU	train	071 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU013	DEU	train	013 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU041	DEU	train	041 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU077	DEU	train	077 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU057	DEU	train	057 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU067	DEU	train	067 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU068	DEU	train	068 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU064	DEU	train	064 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU074	DEU	train	074 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU037	DEU	train	037 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU034	DEU	train	034 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU049	DEU	train	049 	German 	 	 	female 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU014	DEU	train	014 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU047	DEU	train	047 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU021	DEU	train	021 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU044	DEU	train	044 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU010	DEU	train	010 	German 	 	 	female 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU011	DEU	train	011 	German 	 	 	female 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU028	DEU	train	028 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU054	DEU	train	054 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU027	DEU	train	027 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU023	DEU	train	023 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU017	DEU	train	017 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU056	DEU	train	056 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU065	DEU	train	065 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU048	DEU	train	048 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU012	DEU	train	012 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU062	DEU	train	062 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU022	DEU	train	022 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU058	DEU	train	058 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU025	DEU	train	025 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU050	DEU	train	050 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU030	DEU	train	030 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU055	DEU	train	055 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU020	DEU	train	020 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU002	DEU	train	002 	German 	 	 	male 	 	office worker	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU051	DEU	train	051 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU029	DEU	train	029 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU024	DEU	train	024 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU070	DEU	train	070 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU031	DEU	train	031 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU073	DEU	train	073 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU053	DEU	train	053 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU075	DEU	train	075 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU042	DEU	train	042 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU063	DEU	train	063 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU005	DEU	train	005 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU026	DEU	train	026 	German 	 	 	female 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU008	DEU	train	008 	German 	 	 	female 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU009	DEU	train	009 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU006	DEU	train	006 	German 	 	 	male 	 	office worker	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU016	DEU	train	016 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU007	DEU	train	007 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU033	DEU	train	033 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU039	DEU	train	039 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU003	DEU	train	003 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU035	DEU	train	035 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU072	DEU	train	072 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU076	DEU	train	076 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU046	DEU	train	046 	German 	 	 	female 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU043	DEU	train	043 	German 	 	 	male 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU018	DEU	train	018 	German 	 	 	female 	 	PhD student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU060	DEU	train	060 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU032	DEU	train	032 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+DEU045	DEU	train	045 	German 	 	 	male 	 	student	 	 	Thomas Kemp 	NaN	 	notape 	office small 	quiet 	Sun recording under Solaris	 
+POL080	POL	train	080	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL069	POL	train	069	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL054	POL	train	054	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL018	POL	train	018	Polish	Poland	NaN	male	25	NaN	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL019	POL	train	019	Polish	Poland	NaN	male	23	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL100	POL	train	100	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL052	POL	train	052	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL041	POL	dev	041	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL057	POL	train	057	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL029	POL	train	029	Polish	Poland	NaN	NaN	NaN	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL059	POL	train	059	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL020	POL	train	020	Polish	Poland	NaN	male	25	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL047	POL	train	047	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL095	POL	train	095	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL038	POL	train	038	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL070	POL	train	070	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL044	POL	eval	044	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL051	POL	train	051	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL016	POL	train	016	Polish	Poland	NaN	female	23	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL053	POL	train	053	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL009	POL	eval	009	Polish	Poland	NaN	female	50	NaN	NaN	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL003	POL	train	003	Polish	Poland	NaN	male	40	NaN	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL039	POL	train	039	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL043	POL	eval	043	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL022	POL	train	022	Polish	Poland	NaN	female	43	NaN	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL045	POL	train	045	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL074	POL	train	074	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL037	POL	train	037	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL065	POL	train	065	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL026	POL	train	026	Polish	Poland	NaN	female	42	office assistant	ok	smoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL088	POL	train	088	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL084	POL	train	084	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL014	POL	train	014	Polish	Poland	NaN	female	51	NaN	NaN	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL058	POL	train	058	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL093	POL	train	093	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL091	POL	train	091	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL079	POL	train	079	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL040	POL	dev	040	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL013	POL	train	013	Polish	Poland	NaN	male	25	NaN	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL030	POL	dev	030	Polish	Poland	NaN	NaN	NaN	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL035	POL	train	035	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL023	POL	eval	023	Polish	Poland	NaN	female	24	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL055	POL	train	055	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL031	POL	eval	031	Polish	Poland	NaN	NaN	NaN	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL092	POL	train	092	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL015	POL	train	015	Polish	Poland	NaN	male	49	NaN	NaN	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL078	POL	train	078	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL034	POL	train	034	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL004	POL	eval	004	Polish	Poland	NaN	female	44	NaN	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL071	POL	train	071	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL085	POL	train	085	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL046	POL	dev	046	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL024	POL	train	024	Polish	Poland	NaN	female	36	NaN	ok	smoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL081	POL	train	081	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL036	POL	train	036	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL010	POL	train	010	Polish	Poland	NaN	female	40	NaN	NaN	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL089	POL	train	089	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL028	POL	train	028	Polish	Poland	NaN	NaN	NaN	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL090	POL	dev	090	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL073	POL	train	073	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL086	POL	train	086	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL076	POL	train	076	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL012	POL	dev	012	Polish	Poland	NaN	male	22	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL033	POL	eval	033	Polish	Poland	NaN	NaN	NaN	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL002	POL	train	002	Polish	Poland	NaN	male	21	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL094	POL	train	094	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL042	POL	train	042	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL099	POL	train	099	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL050	POL	eval	050	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL062	POL	train	062	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL077	POL	train	077	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL068	POL	train	068	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL060	POL	train	060	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL072	POL	train	072	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL061	POL	train	061	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL056	POL	train	056	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL096	POL	train	096	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL005	POL	dev	005	Polish	Poland	NaN	female	23	NaN	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL006	POL	train	006	Polish	Poland	NaN	male	40	NaN	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL017	POL	train	017	Polish	Poland	NaN	female	23	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL007	POL	train	007	Polish	Poland	NaN	male	42	NaN	ok	smoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL082	POL	train	082	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL075	POL	train	075	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL049	POL	train	049	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL098	POL	eval	098	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL087	POL	train	087	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL097	POL	dev	097	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL083	POL	train	083	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL025	POL	train	025	Polish	Poland	NaN	female	35	NaN	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL008	POL	train	008	Polish	Poland	NaN	male	53	NaN	NaN	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL027	POL	train	027	Polish	Poland	NaN	NaN	NaN	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL011	POL	dev	011	Polish	Poland	NaN	female	21	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL021	POL	train	021	Polish	Poland	NaN	male	44	NaN	ok	smoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL066	POL	train	066	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL048	POL	train	048	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL067	POL	train	067	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL001	POL	eval	001	Polish	Poland	NaN	female	22	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL032	POL	train	032	Polish	Poland	NaN	NaN	NaN	student	ok	nonsmoking	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL063	POL	dev	063	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POL064	POL	train	064	Polish	Poland	NaN	NaN	NaN	NaN	NaN	NaN	Patrycja H	NaN	NaN	notape	NaN	NaN	NaN	NaN
+POR115	POR	train	115 	Portuguese 	Sao Paulo 	Paulista 	female 	44 	salesperson	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 26, 1997		PO21 	private small 	middle 	Sitzt am Tisch  	 
+POR312	POR	train	312 	Portuguese 	Parana 	Sulista 	female 	56 	professor	well 	nonsmoking 	Caleb EVERETT 	June 15, 1996		C 	private small 	middle 	Testperson sitzt an einem Tisch. 	Einige Voegel und Huehner im Hintergrund. 
+POR015	POR	train	015 	Portuguese 	Rondonia 	 	female 	24 	student	well 	nonsmoking 	Caleb EVERETT 	June 19, 1996		D 	private small 	quiet 	Testperson sitzt an einem Tisch, niemand in der Umgebung. 	Artikel 3b wurde unterbrochen und anschliessend erneut gelesen. 
+POR005	POR	train	005 	Portuguese 	Rio de Janeiro 	Carioca 	female 	31 	missionary	well 	nonsmoking 	Caleb EVERETT 	June 13, 1996		B 	private small 	quiet 	Testperson sitzt auf dem Boden. 	Der erste Artikel hat Hintergrudgeraeusche (Wind). 
+POR138	POR	train	138 	Portuguese 	Sao Paulo 	Paulista 	male 	22 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO24 	office big 	middle 	Sitzt am Tisch 	 
+POR122	POR	train	122 	Portuguese 	Buenos Aires 	 	female 	23 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 30, 1997		PO22` 	office big 	middle 	Sitzt am Tisch 	 
+POR127	POR	train	127 	Portuguese 	Sao Paulo 	Paulista 	male 	24 	bank employee	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 31, 1997		PO23 	private big 	middle 	Sitzt am Boden 	 
+POR056	POR	train	056 	Portuguese 	Santa Catarina 	Sulista 	female 	36 	homemaker	well 	nonsmoking 	Caleb EVERETT 	August 16, 1996		P 	private big 	middle 	Testperson sitzt auf einer Kouch, mehrere Kindern in der Umgebung. 	 
+POR044	POR	train	044 	Portuguese 	Rondonia 	 	female 	22 	student	well 	nonsmoking 	Caleb EVERETT 	August 04, 1996		M 	private big 	middle 	Testperson sitzt auf dem Boden, zwei weitere sind im Zimmer. 	"Testperson gibt einen Kommentar zu beginn von Artikel 2y.
+ "
+POR008	POR	train	008 	Portuguese 	Minas Gerais 	Sulista 	male 	33 	missionary	well 	nonsmoking 	Caleb EVERETT 	June 13, 1996		B und C 	private small 	middle 	Testperson sitzt an einem Tisch gegenueber dem Tester. 	Keine Pausen zwischen den Saetzen des ersten Textes. Sprecher hat vor dem vorlesen des Textes 3b etwas gesprochen. Artikel 7b wurde nicht beendet. Artikel 2f wurde unterbrochen. 
+POR150	POR	train	150 	Portuguese 	Sao Paulo 	Paulista 	male 	24 	student	well 	smoking 	Caleb EVERETT + Raul FALLER 	November 29, 1997		PO26 	private big 	quiet 	Sitzt am Tisch 	 
+POR134	POR	train	134 	Portuguese 	Sao Paulo 	Paulista 	female 	22 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO24 	office big 	middle 	Sitzt am Tisch 	 
+POR113	POR	train	113 	Portuguese 	Sao Paulo 	Paulista 	male 	27 	technician	sick 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 26, 1997		PO21 	private small 	middle 	Sitzt am Tisch 	 
+POR103	POR	train	103 	Portuguese 	Sao Paulo 	Paulista 	male 	28 	insurance agent	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 20, 1997		PO20 	private big 	quiet 	Sitzt am Tisch 	 
+POR143	POR	train	143 	Portuguese 	Sao Paulo 	Paulista 	female 	14 	student	sick 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 15, 1997		PO25 	private big 	middle 	Sitzt am Tisch 	 
+POR117	POR	train	117 	Portuguese 	Piracicaba 	Paulista 	male 	22 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 30, 1997		PO22 	office big 	middle 	Sitzt am Tisch 	 
+POR034	POR	train	034 	Portuguese 	Minas Gerais 	Mineiro 	female 	33 	homemaker	well 	nonsmoking 	Caleb EVERETT 	July 24, 1996		K 	private small 	loud 	Testperson sitzt an einem Tisch. Ein Kind im Hintergrund. 	Die meisten Artikel sind nutzlos, da viel Geraeusch im Hintergrund. 
+POR141	POR	train	141 	Portuguese 	Sao Paulo 	Paulista 	male 	20 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO25 	office big 	middle 	Sitzt am Tisch 	 
+POR007	POR	train	007 	Portuguese 	Rio Grande do Sul 	Gaucho 	male 	30 	student	well 	nonsmoking 	Caleb EVERETT 	June 13, 1996		B 	private small 	quiet 	Testperson sitzt auf einem Kissen auf dem Fussboden, niemand in der Umgebung 	Sprecher hat keine Pausen zwischen den Saetzten des ersten Textes gemacht. 
+POR068	POR	train	068 	Portuguese 	Fortaleza 	Nordestino 	male 	28 	student	well 	nonsmoking 	Caleb EVERETT 	August 20, 1996		R 	private small 	quiet 	Testperson sitzt an einem Tisch, niemand in der Umgebung. 	Testperson hat einen Sprachfehler. 
+POR120	POR	train	120 	Portuguese 	Sao Paulo 	Paulista 	male 	22 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 30, 1997		PO22 	office big 	middle 	Sitzt am Tisch 	 
+POR148	POR	train	148 	Portuguese 	Sao Paulo 	Paulista 	male 	31 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	January 28, 1997		PO25 	private big 	quiet 	Sitzt am Tisch 	 
+POR031	POR	train	031 	Portuguese 	Rio de Janeiro 	Carioca 	female 	30 	missionary	well 	nonsmoking 	Caleb EVERETT 	July 23, 1996		J 	private big 	quiet 	Testperson sitzt an einem Tisch. 	Artikel 4b wird frueher beendet. 
+POR024	POR	train	024 	Portuguese 	Rio Grande do Sul 	Gaucho 	male 	24 	student	well 	nonsmoking 	Caleb EVERETT 	July 15, 1996		G 	private small 	quiet 	Testperson sitzt an einem Tisch. 	 
+POR107	POR	train	107 	Portuguese 	Sao Paulo 	Paulista 	male 	62 	lawyer	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 21, 1997		PO20 	private small 	quiet 	Sitzt am Tisch 	 
+POR036	POR	train	036 	Portuguese 	Sao Paulo 	Paulista 	male 	19 	student	well 	nonsmoking 	Caleb EVERETT 	July 24, 1996		K 	no audience 	quiet 	Testperson sitzt auf einer Kauch. 	Record level sehr hoch bei Artikel 1e. 
+POR119	POR	train	119 	Portuguese 	Sao Paulo 	Paulista 	female 	22 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 30, 1997		PO22 	office big 	middle 	Sitzt am Tisch 	 
+POR146	POR	train	146 	Portuguese 	Israel 	 	male 	25 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 18, 1997		PO25 	office big 	middle 	Sitzt am Tisch 	 
+POR025	POR	train	025 	Portuguese 	Acre 	 	male 	21 	missionary	well 	nonsmoking 	Caleb EVERETT 	June 18, 1996		H 	private small 	quiet 	Testperson sitzt auf dem Fussboden, niemand in der naehe. 	Waehrend der Aufnahme war das Mikrophon nicht richtig positioniert. Testperson hat einmal gelacht. 
+POR121	POR	train	121 	Portuguese 	Campinas 	Paulista 	male 	24 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 30, 1997		PO22 	office big 	middle 	Sitzt am Tisch 	 
+POR022	POR	train	022 	Portuguese 	Brasilia 	 	male 	35 	missionary	well 	nonsmoking 	Caleb EVERETT 	July 15, 1996		G 	private small 	quiet 	Testperson sitzt auf einer Kauch, niemand in der naehe. 	 
+POR125	POR	train	125 	Portuguese 	Sao Paulo 	Paulista 	male 	25 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 30, 1997		PO23 	office big 	middle 	Sitzt am Tisch 	 
+POR045	POR	train	045 	Portuguese 	Minas Gerais 	Mineiro 	male 	30 	student	well 	nonsmoking 	Caleb EVERETT 	August 07, 1996		N 	private big 	middle 	Testperson sitzt auf einem Bett, mehrere Leute im Raum. 	 
+POR069	POR	train	069 	Portuguese 	Fortaleza 	Nordestino 	female 	20 	student	well 	nonsmoking 	Caleb EVERETT 	August 24, 1996		S 	private small 	quiet 	Testperson sitzt an einem Tisch, niemand in der Umgebung. 	 
+POR029	POR	train	029 	Portuguese 	Paraiba 	Paraibense 	female 	29 	homemaker	well 	nonsmoking 	Caleb EVERETT 	July 21, 1996		I 	private small 	loud 	Testperson sitzt auf dem Bett. 	Artikel 4f wurde aufgenommen nachdem ausversehen auf Stop gedrueckt habe. 
+POR059	POR	train	059 	Portuguese 	Rio Grabde do Sul 	Gaucho 	female 	39 	businesswoman	well 	smoking 	Caleb EVERETT 	August 17, 1996		Q 	private small 	quiet 	Testperson sitzt auf einer Kouch. 	 
+POR112	POR	train	112 	Portuguese 	Sao Paulo 	Paulista 	female 	23 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 26, 1997		PO21 	private small 	middle 	Sitzt am Tisch 	 
+POR114	POR	train	114 	Portuguese 	Sao Paulo 	Paulista 	male 	34 	architect	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 26, 1997		PO21 	private small 	middle 	Sitzt am Tisch 	 
+POR140	POR	train	140 	Portuguese 	Sao Paulo 	Paulista 	male 	21 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO25 	office big 	middle 	Sitzt am Tisch 	 
+POR037	POR	train	037 	Portuguese 	Sao Paulo 	Paulista 	female 	23 	student	well 	nonsmoking 	Caleb EVERETT 	August 03, 1996		L 	private big 	middle 	Testperson sitzt auf einer Kauch, mehrere Person in der Umgebung. 	Artikel 7f wurde frueher beendet. Record level zu niedrig. Pause anstatt Stop gedrueckt zwischen diesem und naechsten Sprecher. 
+POR212	POR	train	212 	Portuguese 	Belo Horizonte 	Mineiro 	male 	37 	missionary	well 	nonsmoking 	Caleb EVERETT 	June 15, 1996		C 	private small 	middle 	Testperson sitzt an einem Tisch. 	Im Hintergrung laeuft ein Fernseher. 
+POR021	POR	train	021 	Portuguese 	Para 	Paranaense 	female 	37 	missionary	well 	nonsmoking 	Caleb EVERETT 	June 21, 1996		F 	private small 	loud 	Testperson sitzt an einem Tisch. 	Kreissaege im Hintergrund. 
+POR149	POR	train	149 	Portuguese 	Sao Paulo 	Paulista 	male 	25 	student	well 	smoking 	Caleb EVERETT + Raul FALLER 	November 29, 1997		PO26 	private big 	quiet 	Sitzt am Tisch 	 
+POR017	POR	train	017 	Portuguese 	Para 	Paranaense 	female 	27 	student	well 	nonsmoking 	Caleb EVERETT 	June 20, 1996		E 	private small 	middle 	Testperson sitzt an einem Tisch, niemand in der naehe. 	Voegel im Hintergrund. 
+POR049	POR	train	049 	Portuguese 	Minas Gerais 	Mineiro 	female 	23 	chef	well 	nonsmoking 	Caleb EVERETT 	August 07, 1996		N 	public place 	middle 	Testperson sitzt auf einem Stuhl. 	Record level war zu hoch bei Artikeln 1y,2y,3y. Artikel 7y,9y,10y wurden durch ein Stromausfall unterbrochen. 
+POR004	POR	train	004 	Portuguese 	Fortaleza 	Nordestino 	female 	30 	missionary	well 	nonsmoking 	Caleb EVERETT 	June 10, 1996		A 	private big 	middle 	Testperson sitzt an einem Tisch, keine Leute in der Umgebung. 	Voegel ausserhalb des Raumes. 
+POR033	POR	train	033 	Portuguese 	Sao Paulo 	Paulista 	female 	34 	homemaker	well 	nonsmoking 	Caleb EVERETT 	July 23, 1996		J 	private small 	loud 	Testperson sitzt auf einer Kauch, ein einjaehriges Kind in der Umgebung. 	Recording level bei Artikel 1e-6e zu leise. Artikel 3f wurde unterbrochen. 
+POR070	POR	train	070 	Portuguese 	Espirito Santo 	 	female 	21 	missionary	well 	nonsmoking 	Caleb EVERETT 	August 24, 1996		S 	private small 	middle 	Testperson sitzt auf dem Boden, mehrere Leute in der Umgebung. 	 
+POR118	POR	train	118 	Portuguese 	Sao Paulo 	Paulista 	male 	24 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 30, 1997		PO22 	office big 	middle 	Sitzt am Tisch 	 
+POR009	POR	train	009 	Portuguese 	Manaus 	 	male 	54 	self employed	well 	nonsmoking 	Caleb EVERETT 	June 15, 1996		"C	 "	private small 	loud 	Testperson sitzt an einem Tisch mit vier anderen Leuten. 	Testperson wollte nur einen Text lesen. 
+POR135	POR	train	135 	Portuguese 	Sao Paulo 	Paulista 	male 	23 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO24 	office big 	middle 	Sitzt am Tisch 	 
+POR042	POR	train	042 	Portuguese 	Cuiaba 	Mato Grossense 	male 	20 	student	well 	nonsmoking 	Caleb EVERETT 	August 04, 1996		M 	private small 	quiet 	Testperson sitzt auf einem Bett, zwei weitere im Raum. 	 
+POR072	POR	train	072 	Portuguese 	Bahia 	Nordestino 	female 	20 	student	well 	nonsmoking 	Caleb EVERETT 	August 24, 1996		S 	private big 	middle 	Testperson sitzt auf dem Boden, eine weitere Person im Raum. 	Artikel 26aa wurde unterbrochen. 
+POR105	POR	train	105 	Portuguese 	Sao Paulo 	Paulista 	female 	30 	lawyer	sick 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 21, 1997		PO20 	private small 	quiet 	Sitzt am Tisch 	 
+POR109	POR	train	109 	Portuguese 	Sao Paulo 	Paulista 	male 	13 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 22, 1997		PO21 	private small 	quiet 	Sitzt am Tisch 	 
+POR132	POR	train	132 	Portuguese 	Sao Paulo 	Paulista 	male 	23 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO23 	office big 	middle 	Sitzt am Tisch 	 
+POR016	POR	train	016 	Portuguese 	Rondonia 	 	female 	26 	student	well 	nonsmoking 	Caleb EVERETT 	June 20, 1996		E 	private small 	middle 	Testperson sitzt an einem Tisch und eine weitere Person befindet sich im Raum. 	Im Hintergrund Wind, Voegel, Hund. 
+POR101	POR	train	101 	Portuguese 	Sao Paulo 	Paulista 	female 	48 	artist	well 	smoking 	Caleb EVERETT + Raul FALLER 	October 20, 1997		PO20 	private big 	quiet 	Testperson sitzt am Tisch, Aufnahmeleiter gegenueber  	 
+POR019	POR	train	019 	Portuguese 	Minas Gerais 	Mineiro 	female 	22 	student	sick 	nonsmoking 	Caleb EVERETT 	June 21, 1996		F 	private small 	middle 	Testperson sitzt an einem Tisch. 	Der erste Artikel wurde ueber einer Testaufnahme aufgenommen. Artikel 3b, 7b, 4d wurde unterbrochen, angehalten und nach einer Pause weiter aufgenommen.  
+POR116	POR	train	116 	Portuguese 	Sao Paulo 	Paulista 	female 	31 	marketing employee	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 26, 1997		PO21 	private small 	middle 	Sitzt am Tisch 	 
+POR126	POR	train	126 	Portuguese 	Sao Paulo 	Paulista 	female 	22 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 30, 1997		PO23 	office big 	middle 	Sitzt am Tisch 	 
+POR014	POR	train	014 	Portuguese 	Parana 	Sulista 	female 	47 	student	well 	nonsmoking 	Caleb EVERETT 	June 19, 1996		D 	private small 	middle 	Testperson sitzt an einem Tisch. 	Testperson wurde unterbrochen als sie Artikel 1b las. Der Recorder wurde angehalten und erneut gestart. 
+POR108	POR	train	108 	Portuguese 	Sao Paulo 	Paulista 	female 	56 	lawyer	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 21, 1997		PO20 	private small 	quiet 	Sitzt am Tisch 	Testperson wurde am Hals operiert, und hat seitdem eine rauhe Stimme! 
+POR133	POR	train	133 	Portuguese 	Sao Paulo 	Paulista 	male 	23 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO24 	office big 	middle 	Sitzt am Tisch 	 
+POR002	POR	train	002 	Portuguese 	Ceara 	Nordestino 	female 	32 	missionary	well 	nonsmoking 	Caleb EVERETT 	June 10, 1996		A 	private big 	quiet 	Testperson sitzt an einem Tisch 	 
+POR010	POR	train	010 	Portuguese 	Minas Gerais 	Mineiro 	male 	23 	missionary	well 	nonsmoking 	Caleb EVERETT 	June 15, 1996		C 	public place 	quiet 	Testperson sitzt an einem Tisch, eine weitere Person befindet sich im Raum. 	 
+POR055	POR	train	055 	Portuguese 	Manaus 	Amazonense 	male 	38 	priest	well 	nonsmoking 	Caleb EVERETT 	August 16, 1996		P 	private small 	middle 	Testperson sitzt auf einer Kouch. 	 
+POR001	POR	train	001 	Portuguese 	Rio de Janeiro 	Carioca 	female 	29 	nurse	well 	nonsmoking 	Caleb EVERETT 	June 10, 1996		A 	private big 	quiet 	Sitzt an einem ttisch gegenueber des Testers 	Sprecherin wurde durch ein vorbeifliegendes Flugzeug gestoert 
+POR102	POR	train	102 	Portuguese 	Sao Paulo 	Paulista 	female 	19 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 20, 1997		PO20 	private big 	quiet 	Testperson sitzt am Tisch, Aufnahmeleiter gegenueber 	 
+POR110	POR	train	110 	Portuguese 	Sao Paulo 	Paulista 	male 	22 	marketing trainee	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 22, 1997		PO21 	private big 	quiet 	Sitzt am Tisch 	 
+POR147	POR	train	147 	Portuguese 	Sao Paulo 	Paulista 	male 	23 	student	well 	smoking 	Caleb EVERETT + Raul FALLER 	November 18, 1997		PO25 	office big 	middle 	Sitzt am Tisch 	 
+POR043	POR	train	043 	Portuguese 	Rondonia 	 	male 	23 	student	well 	nonsmoking 	Caleb EVERETT 	August 04, 1996		M 	private big 	middle 	Testperson sitzt auf dem Boden, zwei weitere Person in der Umgebung 	 
+POR030	POR	train	030 	Portuguese 	Belo Horizonte 	Mineiro 	female 	36 	midwife	sick 	nonsmoking 	Caleb EVERETT 	July 21, 1996		I 	private small 	middle 	Testperson sitzt auf einer Kauch, niemand in der naehe.  	Artikel 1c wurde unterbrochen. Testperson macht Kommentare im Artikel 1c und 3c. Tape ausversehen gestopt bevor Artikel 6a gelesen wurde. 
+POR131	POR	train	131 	Portuguese 	Sao Paulo 	Paulista 	male 	25 	student	well 	smoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO23 	office big 	middle 	Sitzt am Tisch 	 
+POR111	POR	train	111 	Portuguese 	Sao Paulo 	Paulista 	female 	37 	journalist	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 26, 1997		PO21 	private small 	middle 	Sitzt am Tisch 	 
+POR129	POR	train	129 	Portuguese 	Sao Paulo 	Paulista 	female 	19 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 03, 1997		PO23 	private big 	quiet 	Sitzt am Tisch 	 
+POR026	POR	train	026 	Portuguese 	Maranhao 	Maranhaense 	female 	33 	missionary	well 	nonsmoking 	Caleb EVERETT 	June 18, 1996		H 	private small 	middle 	Testperson sitzt auf dem Bett. 	Kinder im Hintergrund. Testperson hat einen Kommentar waehren des Artikels 4b gemacht. 
+POR054	POR	train	054 	Portuguese 	Goias 	Goiano 	female 	 	homemaker	well 	nonsmoking 	Caleb EVERETT 	August 16, 1996		P 	private small 	middle 	Testperson sitzt auf einer Kouch, nur eine Person in der Umgenbung. 	 
+POR136	POR	train	136 	Portuguese 	Sao Paulo 	Paulista 	male 	20 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO24 	office big 	middle 	Sitzt am Tisch 	 
+POR048	POR	train	048 	Portuguese 	Maceio 	 	male 	21 	student	well 	nonsmoking 	Caleb EVERETT 	August 07, 1996		N 	private small 	middle 	Testperson sitzt auf einer Kouch. 	Keine Pause zwischen Artikel 5y,6y und 9y,10y. 
+POR142	POR	train	142 	Portuguese 	Sao Paulo 	Paulista 	female 	20 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO25 	office big 	middle 	Sitzt am Tisch 	 
+POR023	POR	train	023 	Portuguese 	Maranhao 	Maranhaense 	male 	33 	student	well 	nonsmoking 	Caleb EVERETT 	July 15, 1996		G 	office small 	quiet 	Testperson sitzt an einem Tisch. 	Klimaanlage laeuft im Hintergrund. 
+POR104	POR	train	104 	Portuguese 	Sao Paulo 	Paulista 	female 	71 	pensioner	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 21, 1997		PO20 	private big 	quiet 	Sitzt am Tisch 	 
+POR071	POR	train	071 	Portuguese 	Esperito Santo 	 	female 	27 	missionary	well 	nonsmoking 	Caleb EVERETT 	August 24, 1996		S 	private small 	loud 	Testperson sitzt auf dem Boden, mehrere Leute in der Umgebung. 	 
+POR018	POR	train	018 	Portuguese 	Minas Gerais 	Mineiro 	female 	24 	student	sick 	nonsmoking 	Caleb EVERETT 	June 20, 1996		E 	private small 	quiet 	Testperson sitzt an einem Tisch, niemand in der naehe. 	Testperson hat Kommentare auf das Band gesprochen, wenn sie einen Fehler gemacht hat. Artikel 4b wurde unterbrochen, angehalten und erst dann zu ende gemacht. 
+POR064	POR	train	064 	Portuguese 	Minas Gerais 	Mineiro 	male 	24 	student	well 	nonsmoking 	Caleb EVERETT 	August 20, 1996		R 	private small 	quiet 	Testperson sitzt auf einem Bett. 	Dies war die erste Aufnahme mit den neuen Richtlinien. 
+POR011	POR	train	011 	Portuguese 	Parana 	Sulista 	male 	23 	boatswain	sick 	nonsmoking 	Caleb EVERETT 	June 15, 1996		C 	public place 	middle 	Testperson sitzt an einem Tisch 	 
+POR013	POR	train	013 	Portuguese 	Rondonia 	 	female 	29 	teacher	sick 	nonsmoking 	Caleb EVERETT 	June 19, 1996		D 	private small 	middle 	Testperson sitzt an einem Tisch, niemand in der naehe. 	Hund im Hitergrund. Die Testperson hat manchmal bei Fehler Kommentare gemacht und Satzt erneut gelesen. Artikel 4b unterbrochen und anschliessend erneut gelesen. 
+POR130	POR	train	130 	Portuguese 	Sao Paulo 	Paulista 	female 	48 	artist	well 	smoking 	Caleb EVERETT + Raul FALLER 	November 03, 1997		PO23 	private big 	quiet 	Sitzt am Tisch 	 
+POR053	POR	train	053 	Portuguese 	Sao Paulo 	Paulista 	male 	20 	student	well 	nonsmoking 	Caleb EVERETT 	August 12, 1996		O 	office small 	loud 	Testperson sitzt auf einem Tisch. 	 
+POR060	POR	train	060 	Portuguese 	Bahia 	Nordestino 	male 	31 	missionary	sick 	nonsmoking 	Caleb EVERETT 	August 17, 1996		Q 	private small 	middle 	Testperson sitzt auf einer Kouch. 	Testperson macht einen Kommentar zu beginn von Artikel 9y. 
+POR047	POR	train	047 	Portuguese 	Brasilia 	Brasiliense 	male 	33 	manager	well 	nonsmoking 	Caleb EVERETT 	August 07, 1996		N 	private small 	middle 	Testperson sitzt auf einer Kouch. 	 
+POR128	POR	train	128 	Portuguese 	Sao Paulo 	Paulista 	female 	38 	engineer	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 31, 1997		PO23 	private big 	middle 	Sitzt am Boden 	 
+POR051	POR	train	051 	Portuguese 	Curitiba 	 	male 	29 	student	well 	nonsmoking 	Caleb EVERETT 	August 12, 1996		N 	private big 	quiet 	Testperson sitzt auf einem Bett, noch eine Person im Raum. 	 
+POR003	POR	train	003 	Portuguese 	Bahia 	Nordestino 	female 	24 	missionary	well 	nonsmoking 	Caleb EVERETT 	June 10, 1996		A 	private big 	quiet 	Testperson sitzt an einem Tisch gegenueber des Testers 	Sprecher hat nicht so fliessend wie die vorrigen Sprecher vorgelesen. Nicht alle Saetzte wurden korrekt vorgelesen oder anschliessend korrigiert wegen mangelnder Zeit. 
+POR139	POR	train	139 	Portuguese 	Sao Paulo 	Paulista 	male 	20 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO24 	office big 	middle 	Sitzt am Tisch 	 
+POR106	POR	train	106 	Portuguese 	Sao Paulo 	Paulista 	male 	19 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	October 21, 1997		PO20 	private small 	quiet 	Sitzt am Tisch 	 
+POR006	POR	train	006 	Portuguese 	Parana 	 	male 	30 	student	well 	nonsmoking 	Caleb EVERETT 	June 13, 1996		B 	private small 	middle 	Testperson sitzt auf einem Kissen, auf dem Boden; niemand in der Umgebung. 	Sprecher hat Kommentare zu den gelesenen Texten gegeben, wie z.B. es ist zu Ende.  
+POR144	POR	train	144 	Portuguese 	Sao Paulo 	Paulista 	male 	26 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 18, 1997		PO25 	private big 	middle 	Sitzt am Tisch 	 
+POR058	POR	train	058 	Portuguese 	Rio Grande do Sul 	Gaucho 	male 	40 	businessman	well 	smoking 	Caleb EVERETT 	August 12, 1996		P 	private small 	loud 	Testperson sitzt auf einer Kouch, mehrere Leute in der Umgegung. Im Hintergrund Kinder und Hunde. 	 
+POR137	POR	train	137 	Portuguese 	Sao Paulo 	Paulista 	male 	24 	student	well 	smoking 	Caleb EVERETT + Raul FALLER 	November 04, 1997		PO24 	office big 	middle 	Sitzt am Tisch 	 
+POR145	POR	train	145 	Portuguese 	Sao Paulo 	Paulista 	male 	22 	student	well 	nonsmoking 	Caleb EVERETT + Raul FALLER 	November 18, 1997		PO25 	private big 	middle 	Sitzt am Tisch 	 
+RUS006	RUS	train	006 	Russian 	Dresden, Norilsk 	 	male 	25 	graduated	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B1 -  07 	Zimmer 	middle 	muede nach der Arbeit 	ziemlich grobe Stimme 
+RUS031	RUS	train	031 	Russian 	Minsk 	 	female 	22 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B4-7 	grosses Zimmer 	middle 	 	 
+RUS094	RUS	train	094 	Russian 	Lemberg 	 	female 	26 	graduate student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B12-6,7,8 	kleines Zimmer 	quiet 	 	 
+RUS082	RUS	train	082 	Russian 	Minsk 	 	female 	21 	Abitur	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B11-2 	grosses Zimmer 	middle 	 	 
+RUS029	RUS	train	029 	Russian 	Minsk 	 	male 	21 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B4-5 	mittelgrosses Zimmer 	quiet 	 	029_002(0,5),  
+RUS045	RUS	train	045 	Russian 	Minsk 	 	male 	20 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B6_5 	normales Zimmer 	middle 	aleine 	 
+RUS053	RUS	train	053 	Russian 	Nizhnij Novgorod 	 	female 	49 	qualified engineer	sick 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B7_5 	kleines Zimmer 	middle 	aleine 	 
+RUS001	RUS	train	001 	Russian 	MINSK 	 	male 	27 	PhD degree	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		Band1 1 	kleines Zimmer 	quiet 	"aleine im ruhigen Zimmer	 "	 
+RUS069	RUS	train	069 	Russian 	Minsk 	 	male 	25 	graduate student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B9-5 	mittelgrosses Zimmer 	quiet 	 	 
+RUS120	RUS	train	120 	Russian 	Minsk 	 	female 	18 	electrician college student	well 	nonsmoking 	Natalia MIKHAILIOUK 	September 01, 1997		B15_5 	Arbeitszimmer 	quiet 	Man lachte im Zimmer drueben 	Sprachdeffekt(schip) 
+RUS122	RUS	train	122 	Russian 	Minsk 	 	male 	24 	dental technician	well 	smoking 	Natalia MIKHAILIOUK 	September 02, 1997		B15_7 	Kinderzimmer 	quiet 	 	 
+RUS004	RUS	train	004 	Russian 	Minsk 	 	female 	21 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		 	 	quiet 	 	 
+RUS099	RUS	train	099 	Russian 	Minsk 	 	female 	50 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B13-3 	grosses Zimmer 	quiet 	 	 
+RUS042	RUS	train	042 	Russian 	Ussurijskij kraj 	rein Russisch 	male 	54 	NaN	sick 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		b6_2 	kleines Zimmer 	middle 	aleine 	042_020 (0,5)  
+RUS049	RUS	train	049 	Russian 	Minsk 	 	male 	20 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		b7_1 	unmoebliertes Zimmer 	middle 	aleine 	 
+RUS121	RUS	train	121 	Russian 	Minsk 	 	female 	25 	qualified engineer	well 	nonsmoking 	Natalia MIKHAILIOUK 	September 01, 1997		B15_6 	Saal 	quiet 	Kind im Zimmer drueben 	 
+RUS070	RUS	train	070 	Russian 	Minsk 	 	female 	27 	graduate student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B9-6 	grosses Zimmer 	middle 	 	 
+RUS105	RUS	train	105 	Russian 	Minsk 	 	female 	21 	salesperson	sick 	smoking 	Natalia MIKHAILIOUK 	August 27, 1997		B14_5 	Saal 	middle 	Kinderschrei in einem anderen Zimmer 	getrockenes Hals 
+RUS092	RUS	train	092 	Russian 	Minsk 	 	female 	22 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B12-4 	grosses Zimmer 	loud 	 	 
+RUS066	RUS	train	066 	Russian 	Minsk 	 	female 	39 	graduate student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B9-2 	mittelgrosses Zimmer 	quiet 	 	 
+RUS033	RUS	train	033 	Russian 	Minsk 	 	male 	21 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B5-1 	kleines Zimmer 	quiet 	 	 
+RUS024	RUS	train	024 	Russian 	Minsk 	 	male 	21 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B3_8 	mittelgrosses Zimmer 	middle 	 	 
+RUS080	RUS	train	080 	Russian 	Minsk 	 	female 	21 	student	sick 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B10-8 	mittelgrosses Zimmer 	loud 	 	 
+RUS037	RUS	train	037 	Russian 	Belgorodsk Bezirk 	bestimmt aber welchen.... 	female 	41 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B5_5 	grosses Zimmer 	middle 	 	 
+RUS057	RUS	train	057 	Russian 	Minsk 	 	male 	20 	graduate student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B8_1 	kleines Zimmer 	middle 	alein 	 
+RUS014	RUS	train	014 	Russian 	Moskau 	 	male 	50 	qualified engineer	sick 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B2 - 06 	mittelgroisses Zimmer 	quiet 	 	hustet, denn er ist nicht an langes Vorlesen gewoehnt. 
+RUS068	RUS	train	068 	Russian 	Minsk 	 	male 	25 	graduate student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B9-4 	mittelgrosses Zimmer 	quiet 	 	 
+RUS023	RUS	train	023 	Russian 	Minsk 	 	male 	21 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B3-7 	Mittetgrosses Zimmer 	middle 	 	 
+RUS090	RUS	train	090 	Russian 	Minsk 	 	male 	27 	graduate student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B12-2 	mittelgrosses Zimmer 	loud 	 	 
+RUS055	RUS	train	055 	Russian 	Orjol 	 	female 	50 	qualified engineer	sick 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B7_7 	mittelgrosses Zimmer 	middle 	aleine  	Es kann Echo da sein 
+RUS065	RUS	train	065 	Russian 	Vitebsk 	 	male 	27 	graduate student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B9-1 	grosses Zimmer 	middle 	 	 
+RUS062	RUS	train	062 	Russian 	Brjansk stadtkreis 	ja 	male 	45 	qualified engineer	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B8_6 	mittelsgrosses Zimmer 	middle 	aleine 	koennen Geraeusche vorkommen 
+RUS030	RUS	train	030 	Russian 	Minsk 	 	male 	21 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B4-6 	kleines Zimmer 	quiet 	 	 
+RUS083	RUS	train	083 	Russian 	Minsk 	 	male 	25 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B11-4 	mittelgrosses Zimmer 	middle 	 	 
+RUS114	RUS	train	114 	Russian 	Minsk 	 	female 	21 	qualified historian	well 	nonsmoking 	Natalia MIKHAILIOUK 	August 29, 1997		B15_2 	Schlafzimmer 	quiet 	 	 
+RUS007	RUS	train	007 	Russian 	Minsk 	 	female 	20 	student	sick 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B1 08 	 	middle 	 	 
+RUS027	RUS	train	027 	Russian 	Minsk 	 	female 	25 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B4-3 	mitteigrosses Zimmer 	middle 	Regengereuche 	 
+RUS047	RUS	train	047 	Russian 	Minsk 	 	male 	21 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B6_7 	leeres Zimmer 	middle 	ungestoert, aber noch eine Person befindet sich im Raum. 	 
+RUS041	RUS	train	041 	Russian 	Lipezk 	 	female 	47 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B6_1 	arztPraxis klein 	middle 	aleine 	 
+RUS088	RUS	train	088 	Russian 	Minsk 	 	male 	24 	qualified medic	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B11-9 	mittelgrosses Zimmer 	middle 	 	 
+RUS098	RUS	train	098 	Russian 	Minsk 	 	male 	25 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B13-2 	grosses Zimmer 	quiet 	 	 
+RUS003	RUS	train	003 	Russian 	Moskau 	 	male 	26 	manager	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		Band1-3 	Zimmer kein Echo 	middle 	ungestoert 	verdammt schnell! Er war kaum zustopen. 
+RUS060	RUS	train	060 	Russian 	Svetlogorsk 	 	male 	23 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B8_4 	leeres Zimmer 	middle 	alein 	 
+RUS015	RUS	train	015 	Russian 	Minsk 	 	male 	21 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		"B2-07	 "	kleines Zimmer 	middle 	 	nuschelt 
+RUS101	RUS	train	101 	Russian 	Minsk 	 	female 	19 	trainee	well 	nonsmoking 	Natalia MIKHAILIOUK 	August 26, 1997		B14-1 	Schlafzimmer 	quiet 	 	 
+RUS036	RUS	train	036 	Russian 	Minsk 	 	female 	49 	graduate student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		Band5 4 	 	quiet 	 	 
+RUS043	RUS	train	043 	Russian 	Minsk 	 	female 	38 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		b6-3 	mittelgrosses Zimmer 	middle 	 	 
+RUS079	RUS	train	079 	Russian 	Tver' 	 	female 	33 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B10-7 	kleines Zimmer 	middle 	 	 
+RUS072	RUS	train	072 	Russian 	Vilnjus 	 	female 	49 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B9-8 	grosses Zimmer 	quiet 	 	 
+RUS002	RUS	train	002 	Russian 	Nesvizh 	 	female 	22 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B1-2 	kleines Zimmer 	quiet 	ungestoert 	 
+RUS020	RUS	train	020 	Russian 	Minsk 	 	male 	20 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B3-04 	kleines Zimmer 	middle 	 	70,5<merken 
+RUS017	RUS	train	017 	Russian 	in der Naehe von Minsk 	? ?,aber man kann es merken 	male 	24 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B3 - 01 	 	middle 	 	 
+RUS067	RUS	train	067 	Russian 	Minsk 	 	male 	30 	graduate student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B9-3 	mittelgrosses Zimmer 	quiet 	 	 
+RUS019	RUS	train	019 	Russian 	Minsk 	 	male 	20 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B3-03 	grosses Zimmer 	quiet 	 	 
+RUS095	RUS	train	095 	Russian 	Minsk 	 	male 	25 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B12-9 	kleines Zimmer 	quiet 	 	 
+RUS038	RUS	train	038 	Russian 	Voronezhbezirk 	kaum zu merken  	female 	47 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B5_6 	mittelgrosses Zimmer 	middle 	grosse Spannung, wie so denn ..?.... 	 
+RUS058	RUS	train	058 	Russian 	Nizhnij Novgorod 	"unbetonter ""o"" liest man immer als ""o"" "	male 	48 	qualified engineer	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B8_2 	 	 	 	"""o"" -wird typisch fuer den Dialekt ausgesprochen. "
+RUS074	RUS	train	074 	Russian 	Duschanbe 	 	male 	21 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B10-2 	mittelgrosses Zimmer 	middle 	 	 
+RUS089	RUS	train	089 	Russian 	Minsk 	 	male 	21 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B12-1 	mittelgrosses Zimmer 	middle 	 	089_030(0.75) 
+RUS071	RUS	train	071 	Russian 	Minsk 	 	female 	25 	graduate student	sick 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B9-7 	grosses Zimmer 	middle 	 	 
+RUS021	RUS	train	021 	Russian 	Minsk 	 	male 	21 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B3 -5 	mittelgrosses Zimmer 	middle 	ungestoert 	 
+RUS054	RUS	train	054 	Russian 	Primorskij kraj 	 	female 	52 	qualified engineer	sick 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B7_6 	kleines Zimmer 	middle 	aleine 	 
+RUS044	RUS	train	044 	Russian 	Minsk 	 	male 	20 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		b6_4 	mittelgrosse Zimmer 	middle 	einige sitzen im gleichen Zimmer 	ziemmlich unbequem  
+RUS012	RUS	train	012 	Russian 	Minsk 	 	female 	26 	graduated	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B2- 04 	Zimmer ( mittelgross) 	middle 	 	abends 
+RUS117	RUS	train	117 	Russian 	Minsk 	 	female 	16 	electrician college student	well 	nonsmoking 	Natalia MIKHAILIOUK 	September 01, 1997		B1Eng_12 	Arbeitszimmer 	middle 	Man lachte im Zimmer drueben 	 
+RUS040	RUS	train	040 	Russian 	Luban' 	 	female 	25 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B5_8 	grosses Zimmer 	middle 	ungestoert  	 
+RUS073	RUS	train	073 	Russian 	Odessa 	 	male 	50 	qualified engineer	sick 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B10-1 	grosses Zimmer 	quiet 	 	 
+RUS048	RUS	train	048 	Russian 	Minsk's Bezirk 	 	male 	19 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B6_8 	mittelgrosses Zimmer 	middle 	aleine 	 
+RUS085	RUS	train	085 	Russian 	Mogiljov 	 	female 	21 	Abitur	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B11-6 	grosses Zimmer 	middle 	 	 
+RUS093	RUS	train	093 	Russian 	Minsk 	 	female 	21 	student	sick 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B13-5 	mittelgrosses Zimmer 	middle 	Schnupfen 	 
+RUS116	RUS	train	116 	Russian 	Minsk 	weissrussisch 	female 	18 	electrician college student	well 	smoking 	Natalia MIKHAILIOUK 	September 01, 1997		B1Eng_11 	Arbeitszimmer 	middle 	Man sprach und lachte im Zimmer drueben 	 
+RUS115	RUS	train	115 	Russian 	 	Minsk 	female 	26 	qualified pedagogue	well 	smoking 	Natalia MIKHAILIOUK 	August 29, 1997		B15_3 	Schlafzimmer 	quiet 	 	die Aufnahme war unterbrochen geworden 
+RUS106	RUS	train	106 	Russian 	Minsk 	 	male 	17 	computer science college student	well 	smoking 	Natalia MIKHAILIOUK 	August 27, 1997		B14_6 	kleines Schlafzimmer 	middle 	Ab und zu kammen Zuege draussen vorbei 	Das Haus befindet sich in der Naehe von der Eisenbahn  
+RUS084	RUS	train	084 	Russian 	Minsk 	 	male 	27 	Abitur	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B11-5 	grosses Zimmer 	middle 	 	 
+RUS025	RUS	train	025 	Russian 	Minsk 	 	male 	21 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B4-1 	mitteigrosses Zimmer 	middle 	 	 
+RUS063	RUS	train	063 	Russian 	Moskau 	kaum zu spueren 	male 	40 	qualified medic	 	 	Orest MIKHAILIOUK 	July 1997 		B8-7 	mittelgrosses Zimmer 	middle 	aleine  	 
+RUS086	RUS	train	086 	Russian 	Minsk 	 	male 	21 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B11-7 	grosses Zimmer 	middle 	 	 
+RUS078	RUS	train	078 	Russian 	Taschkent 	 	female 	38 	graduate student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B10-6 	grosses Zimmer 	middle 	 	078_043(0.6) 
+RUS091	RUS	train	091 	Russian 	Minsk 	 	female 	27 	graduate student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B12-3 	mittelgrosses Zimmer 	loud 	 	 
+RUS097	RUS	train	097 	Russian 	Minsk 	 	female 	25 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B13-1 	grosses Zimmer 	quiet 	 	 
+RUS081	RUS	train	081 	Russian 	Minsk 	 	female 	24 	graduate student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B11-1,2 	grosses Zimmer 	loud 	 	 
+RUS059	RUS	train	059 	Russian 	Orscha 	 	male 	23 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B8-3 	kleines Zimmer 	middle 	alein  	 
+RUS076	RUS	train	076 	Russian 	Minsk 	 	male 	21 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B10-4 	kleines Zimmer 	loud 	 	 
+RUS032	RUS	train	032 	Russian 	Minsk 	 	male 	25 	graduate student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B4-8 	mittelgrosses Zimmer 	quiet 	 	032_010(0.25) 
+RUS077	RUS	train	077 	Russian 	Minsk 	 	female 	23 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B10-5 	mittelgrosses Zimmer 	loud 	 	 
+RUS039	RUS	train	039 	Russian 	Narocz 	 	male 	30 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B5_7 	grosses Zimmer 	middle 	aleine  	 
+RUS103	RUS	train	103 	Russian 	Minsk 	 	female 	18 	qualified economist	well 	nonsmoking 	Natalia MIKHAILIOUK 	August 26, 1997		B14-3 	Saal 	quiet 	Klopfen 	der TExt war zulang 
+RUS102	RUS	train	102 	Russian 	Minsk,Vilejka 	weissrussisch 	male 	43 	architect	well 	smoking 	Natalia MIKHAILIOUK 	August 26, 1997		B14-2 	Schlafzimmer 	quiet 	 	 
+RUS005	RUS	train	005 	Russian 	Minsk 	 	female 	21 	graduated	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B1-06 	Zimmer  	middle 	 	 
+RUS028	RUS	train	028 	Russian 	Minsk 	 	male 	26 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B4-4 	mittelgrosses Zimmer 	middle 	Regengereuche 	 
+RUS008	RUS	train	008 	Russian 	Minsk 	 	female 	25 	qualified engineer	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B1   09,10,11 (pausen wegen der UEberspannung) 	kleines Zimmer 	middle 	 	 
+RUS104	RUS	train	104 	Russian 	Minsk 	weissrussisch 	female 	49 	architect	sick 	smoking 	Orest MIKHAILIOUK 	August 26, 1997		B14-4 	Saal 	quiet 	Wasserleitung wurde im Badzimmer angeschaltet 	 
+RUS056	RUS	train	056 	Russian 	Taschkent 	 	male 	20 	qualified technician	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B7_8 	kleines Zimmer 	middle 	aleine 	 
+RUS110	RUS	train	110 	Russian 	Minsk 	 	male 	39 	architect	well 	nonsmoking 	Natalia MIKHAILIOUK 	August 28, 1997		B14_10 	Arbeitszimmer 	quiet 	 	 
+RUS123	RUS	train	123 	Russian 	Minsk 	 	female 	18 	student	well 	nonsmoking 	Natalia MIKHAILIOUK 	September 03, 1997		B1Eng_15 	Kueche 	quiet 	 	 
+RUS109	RUS	train	109 	Russian 	Vitebsk 	weissrussisch 	male 	46 	architect	well 	nonsmoking 	Natalia MIKHAILIOUK 	August 28, 1997		B14_9 	Arbeitszimmer 	quiet 	Telephon, Klopfen 	 
+RUS051	RUS	train	051 	Russian 	Saratov Bezirk 	 	female 	41 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B7-3 	normales Zimmer  	middle 	aleine 	 
+RUS087	RUS	train	087 	Russian 	Minsk 	 	male 	22 	qualified engineer	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B11-8 	mittelgrosses Zimmer 	middle 	 	 
+RUS035	RUS	train	035 	Russian 	Minsk 	 	female 	49 	graduate student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		Band5 3 	 	quiet 	 	 
+RUS064	RUS	train	064 	Russian 	Minsk 	 	female 	30 	Abitur	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B8_8 	kleines Zimmer 	middle 	 	 
+RUS119	RUS	train	119 	Russian 	Minsk 	 	female 	18 	electrician college student	well 	smoking 	Natalia MIKHAILIOUK 	September 01, 1997		B15_4 	Arbeitszimmer 	quiet 	Man lachte im Zimmer drueben 	 
+RUS050	RUS	train	050 	Russian 	Minsk 	 	male 	24 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		b7-2 	normales Zimmer 	middle 	aleine 	im Stress 
+RUS052	RUS	train	052 	Russian 	Minsk 	 	male 	25 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B7_4 	ruhiges Zimmer 	middle 	kleine Geraeusche von draussen 	 
+RUS016	RUS	train	016 	Russian 	Minsk 	 	female 	49 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B2 - 8 	Zimmer nicht besonders gross 	middle 	 	gute Aussprache( ehemalige Moderatorin), TextIDkann verkehrt sein,musz nachgeprueft werden!!! 
+RUS046	RUS	train	046 	Russian 	Minsk 	 	male 	20 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B6_6 	kleines Zimmer 	middle 	zu schnell 	gefaellt nicht, obwohl..... 
+RUS018	RUS	train	018 	Russian 	Beresino 	-? 	male 	21 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B3 - 02 	ruhigesmittelgrosses Zimmer 	middle 	 	 
+RUS096	RUS	train	096 	Russian 	Malorita 	 	female 	25 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B12-10 	grosses Zimmer 	quiet 	 	 
+RUS022	RUS	train	022 	Russian 	Minsk 	 	male 	21 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B3_6 	mittelgrosses Zimmer 	middle 	ungestoert 	 
+RUS013	RUS	train	013 	Russian 	Minsk 	 	male 	24 	qualified engineer	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B2 -05 	moebliertes Zimmer 	quiet 	 	ab und zu schnell. 
+RUS112	RUS	train	112 	Russian 	Ishevsk 	 	female 	36 	architect	well 	nonsmoking 	Natalia MIKHAILIOUK 	August 28, 1997		B14_12 	Arbeitszimmer 	loud 	viele Menschen sind im Fluer, auserhalb des Zimmers, rumgelaufen 	 
+RUS075	RUS	train	075 	Russian 	Minsk 	 	male 	22 	student	well 	nonsmoking 	Orest MIKHAILIOUK 	July 1997 		B10-3 	kleines Zimmer  	middle 	 	 
+RUS061	RUS	train	061 	Russian 	Bobrujsk 	 	male 	21 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B8_5 	kleines Zimmer 	middle 	aleine 	 
+RUS026	RUS	train	026 	Russian 	Borissov 	 	female 	21 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B4-2 	mittelgrosses Zimmer 	middle 	 	 
+RUS034	RUS	train	034 	Russian 	Minsk 	 	male 	21 	student	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B5-2 	mittelgrosses Zimmer 	middle 	 	 
+RUS100	RUS	train	100 	Russian 	Ufa 	 	female 	24 	qualified engineer	well 	smoking 	Orest MIKHAILIOUK 	July 1997 		B13-4 	kleines Zimmer 	quiet 	 	 
+UKR079	UKR	train	079	Russian	Belarus	East Ukrainian	male	51	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR053	UKR	train	053	Russian	Donetsk	NaN	female	40	nurse	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR043	UKR	train	043	Russian	Donetsk	NaN	male	24	administrator	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR089	UKR	train	089	Ukrainian	Kyiv	NaN	female	24	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR063	UKR	train	063	Russian	Russia	East Ukrainian	female	49	doctor	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR074	UKR	eval	074	Ukrainian	Lviv	West Ukrainian	female	23	employee	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	middle	middle	Andrea NC-185VM	NaN
+UKR058	UKR	train	058	Ukrainian	Krasnohorivka	NaN	female	20	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR108	UKR	train	108	Russian	Kherson	East Ukrainian	male	62	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR109	UKR	train	109	Russian	Kharkiv	East Ukrainian	female	21	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR006	UKR	train	006	Russian	Donetsk	East Ukrainian	female	57	housewife	NaN	nonsmoking	Nikolay Volovyk	16.08.2011		 --new prompting tool--	NaN	NaN	Anrdea NC-185VM	NaN
+UKR022	UKR	train	022	Ukrainian	Konotop	NaN	female	17	pupil	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR028	UKR	train	028	Russian	Konotop	East Ukrainian	male	42	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR115	UKR	train	115	Ukrainian	Mukachevo (Zakarpattia Region)	Hungarian influence	male	31	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR076	UKR	train	076	Russian	Donetsk	East Ukrainian	female	24	employee	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR003	UKR	eval	003	Russian	Donetsk	NaN	male	24	Ph.D. in Religion Science	NaN	nonsmoking	Nikolay Volovyk	04.08.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR050	UKR	train	050	Russian	Donetsk	NaN	female	41	doctor	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR017	UKR	train	017	Ukrainian	Konotop	NaN	female	64	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR082	UKR	eval	082	Russian	Kyiv	NaN	male	30	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR023	UKR	train	023	Ukrainian	Konotop	NaN	female	48	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR011	UKR	train	011	Russian	Konotop	East Ukrainian	male	47	doctor	NaN	nonsmoking	Nikolay Volovyk	20.08.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR094	UKR	train	094	Russian	Odessa	East Ukrainian	male	43	NaN	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR044	UKR	train	044	Russian	Donetsk	East Ukrainian	female	35	doctor	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR097	UKR	train	097	Russian	Poltava	East Ukrainian	female	27	public officer	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR019	UKR	train	019	Russian	Konotop	East Ukrainian	male	24	NaN	NaN	smoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR015	UKR	train	015	Ukrainian	Konotop	NaN	female	18	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR065	UKR	eval	065	Russian	Khartsyzk	East Ukrainian	female	46	manager	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR027	UKR	train	027	Russian	Konotop	East Ukrainian	female	49	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR038	UKR	train	038	Russian	Donetsk	East Ukrainian	male	24	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR091	UKR	train	091	Russian	Donetsk	East Ukrainian	female	24	engineer	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR041	UKR	train	041	Russian	Donetsk	NaN	male	24	content manager	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR012	UKR	train	012	Ukrainian	Nadvirna	West Ukrainian	female	18	student	NaN	nonsmoking	Nikolay Volovyk	20.08.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR103	UKR	train	103	Ukrainian	Kyiv	NaN	male	30	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR033	UKR	train	033	Russian	Donetsk	East Ukrainian	male	22	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR111	UKR	train	111	Russian	Kyiv	East Ukrainian	male	22	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR002	UKR	eval	002	Russian	Donetsk	East Ukrainian	male	24	post-graduate student at the faculty of Mathematics	NaN	nonsmoking	Nikolay Volovyk	04.08.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR085	UKR	train	085	Ukrainian	Lviv	NaN	male	67	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR077	UKR	train	077	Russian	Zhytomyr	East Ukrainian	female	36	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR066	UKR	dev	066	Russian	Khartsyzk	East Ukrainian	male	20	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR039	UKR	eval	039	Russian	Donetsk	East Ukrainian	male	22	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR007	UKR	dev	007	Russian	Donetsk	East Ukrainian	female	16	pupil	NaN	nonsmoking	Nikolay Volovyk	16.08.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR078	UKR	train	078	Russian	Belarus	East Ukrainian	female	32	NaN	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR049	UKR	train	049	Russian	Donetsk	East Ukrainian	female	52	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR073	UKR	train	073	Russian	Kharkiv	East Ukrainian	male	26	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR029	UKR	dev	029	Ukrainian	Konotop	NaN	female	41	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR030	UKR	train	030	Ukrainian	Konotop	NaN	female	36	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR016	UKR	dev	016	Russian	Konotop	East Ukrainian	female	18	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR112	UKR	dev	112	Russian	Kherson	East Ukrainian	female	41	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR040	UKR	train	040	Russian	Donetsk	NaN	male	23	manager	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR024	UKR	train	024	Ukrainian	Konotop	NaN	female	55	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR055	UKR	train	055	Russian	Donetsk	East Ukrainian	female	34	doctor	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR021	UKR	train	021	Russian	Konotop	East Ukrainian	male	45	NaN	NaN	smoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR110	UKR	train	110	Ukrainian	Kherson	NaN	female	24	student	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR068	UKR	eval	068	Russian	Kyiv	East Ukrainian	male	40	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR061	UKR	train	061	Russian	Donetsk	East Ukrainian	female	16	pupil	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR093	UKR	train	093	Russian	Crimea	East Ukrainian	female	24	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR005	UKR	train	005	Russian	Donetsk	NaN	female	21	student	NaN	nonsmoking	Nikolay Volovyk	15.08.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR102	UKR	dev	102	Russian	Zhytomyr	East Ukrainian	female	40	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR051	UKR	train	051	Russian	Donetsk	East Ukrainian	female	30	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR026	UKR	train	026	Ukrainian	Konotop	NaN	female	38	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR100	UKR	train	100	Russian	Zhytomyr	East Ukrainian	male	68	teacher	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR054	UKR	train	054	Russian	Donetsk	East Ukrainian	female	47	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR064	UKR	dev	064	Ukrainian	Ivano-Frankivsk	West Ukrainian	female	34	housewife	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR056	UKR	train	056	Russian	Donetsk	NaN	male	20	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	loud	NaN	Andrea NC-185VM	NaN
+UKR048	UKR	train	048	Russian	Donetsk	NaN	female	48	doctor	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR080	UKR	train	080	Russian	Kyiv	East Ukrainian	male	33	programmer	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR047	UKR	train	047	Russian	Donetsk	East Ukrainian	male	26	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR001	UKR	train	001	Russian	Donetsk	East Ukrainian	male	24	Student of Computer Science	NaN	nonsmoking	Nikolay Volovyk	02.11.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR032	UKR	train	032	Russian	Donetsk	East Ukrainian	male	22	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR090	UKR	train	090	Russian	Donetsk	East Ukrainian	female	24	engineer	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR096	UKR	train	096	Ukrainian	Kirovohrad	NaN	female	29	student	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR025	UKR	dev	025	Russian	Konotop	East Ukrainian	male	40	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR113	UKR	train	113	Ukrainian	Kyiv	NaN	male	67	table tennis player	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR034	UKR	train	034	Russian	Donetsk	NaN	female	16	pupil	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR117	UKR	train	117	Ukrainian	Lviv	West Ukrainian	female	28	musician	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR059	UKR	eval	059	Russian	Russia	East Ukrainian	female	24	teacher	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR008	UKR	train	008	Russian	Donetsk	NaN	female	17	student	NaN	nonsmoking	Nikolay Volovyk	16.08.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR105	UKR	train	105	Ukrainian	Rivne	NaN	male	28	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR062	UKR	train	062	Russian	Donetsk	East Ukrainian	male	15	pupil	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR070	UKR	eval	070	Russian	Donetsk	East Ukrainian	female	38	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR101	UKR	train	101	Ukrainian	Kremenchuk	NaN	male	45	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR052	UKR	train	052	Russian	Donetsk	East Ukrainian	female	63	nurse	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR060	UKR	train	060	Russian	Donetsk	NaN	female	50	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR107	UKR	eval	107	Ukrainian	Kherson	NaN	female	58	teacher	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR020	UKR	train	020	Ukrainian	Konotop	NaN	female	48	NaN	NaN	smoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR081	UKR	train	081	Ukrainian	Lviv	NaN	female	37	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR104	UKR	train	104	Ukrainian	Kherson	NaN	male	29	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR069	UKR	train	069	Ukrainian	Kyiv	NaN	female	36	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR071	UKR	train	071	Russian	Donetsk	East Ukrainian	male	44	welder	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR045	UKR	train	045	Russian	Donetsk	East Ukrainian	female	22	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR057	UKR	dev	057	Russian	Donetsk	East Ukrainian	female	29	criminalist	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR116	UKR	train	116	Russian	Kherson	East Ukrainian	female	31	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR118	UKR	train	118	Ukrainian	Rivne	NaN	female	23	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR014	UKR	train	014	Russian	Odessa	East Ukrainian	female	47	NaN	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR018	UKR	dev	018	Ukrainian	Konotop	NaN	male	50	NaN	NaN	smoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR013	UKR	eval	013	Ukrainian	Konotop	NaN	male	50 	doctor	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR009	UKR	train	009	Russian	Donetsk	East Ukrainian	male	22	student	NaN	nonsmoking	Nikolay Volovyk	18.08.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR035	UKR	train	035	Russian	Donetsk	East Ukrainian	female	22	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR075	UKR	dev	075	Ukrainian	Lutsk	NaN	female	25	employee	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	middle	middle	Andrea NC-185VM	NaN
+UKR095	UKR	train	095	Russian	Kharkiv	East Ukrainian	male	22	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR036	UKR	dev	036	Russian	Donetsk	East Ukrainian	male	20	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR098	UKR	train	098	Ukrainian	Lviv	West Ukrainian	female	23	student	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR114	UKR	eval	114	Ukrainian	Sumy	NaN	female	29	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR004	UKR	train	004	Russian	Donetsk	East Ukrainian	male	22	engeneer	NaN	nonsmoking	Nikolay Volovyk	14.08.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR087	UKR	dev	087	Ukrainian	Lviv	West Ukrainian	female	23	student	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	quiet	quiet	Andrea NC-185VM	NaN
+UKR084	UKR	train	084	Russian	Ukraine	NaN	male	37	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR072	UKR	train	072	Russian	Donetsk	NaN	female	32	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR046	UKR	train	046	Russian	Donetsk	NaN	female	23	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR092	UKR	eval	092	Ukrainian	Kharkiv	NaN	male	28	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR067	UKR	train	067	Ukrainian	Kyiv	NaN	female	55	NaN	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	middle	quiet	Andrea NC-185VM	NaN
+UKR088	UKR	train	088	Ukrainian	Ivano-Frankivsk	West Ukrainian	female	23	student	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR037	UKR	train	037	Russian	Donetsk	NaN	female	22	teacher	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR106	UKR	train	106	Ukrainian	Cherkasy	NaN	female	32	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR083	UKR	train	083	Russian	Odessa	East Ukrainian	female	40	scientist	NaN	nonsmoking	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR042	UKR	train	042	Russian	Donetsk	NaN	female	25	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR119	UKR	train	119	Russian	Donetsk	East Ukrainian	female	47	nurse	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR031	UKR	train	031	Russian	Donetsk	NaN	male	24	musician	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR099	UKR	train	099	Russian	Zhytomyr	East Ukrainian	male	56	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR086	UKR	train	086	Russian	Sloviansk	East Ukrainian	female	65	NaN	NaN	NaN	Nikolay Volovyk	NaN		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+UKR010	UKR	dev	010	Ukrainian	Konotop	NaN	male	50	doctor	NaN	nonsmoking	Nikolay Volovyk	20.08.2011		 --new prompting tool--	NaN	NaN	Andrea NC-185VM	NaN
+VIE028	VIE	train	028	vietnamese	vietnam	Northern Vietnam	female	18	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE058	VIE	train	058	Vietnamese	Vietnam	Southern Vietnam	female	23	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE112	VIE	train	112	Vietnamese	Not Specified	Northern Vietnam	male	29	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.20.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE046	VIE	train	046	Vietnam	Vietnam	Southern Vietnam	male	23	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE099	VIE	train	099	Vietnamese	Vietnam	Southern Vietnam	male	18	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE088	VIE	train	088	Vietnamese	Vietnam	Southern Vietnam	female	21	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE012	VIE	train	012	Vietnamese	Vietnam	Northern Vietnam	male	30	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE019	VIE	train	019	Vietnamese	Vietnam	Northern Vietnam	male	31	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE090	VIE	train	090	Vietnamese	Vietnam	Southern Vietnam	female	31	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE031	VIE	train	031	Vietnamese	Vietnam	Southern Vietnam	female	25	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE001	VIE	train	001	Vietnamese	Vietnam	Northern Vietnam	female	17	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE034	VIE	train	034	Vietnamese	Vietnam	Southern Vietnam	female	25	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE208	VIE	dev	208	Vietnamese	Vietnam	Southern Vietnam	female	44	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE126	VIE	train	126	Vietnamese	Not Specified	Northern Vietnam	female	41	Speaker's Occupation	Unknown	Unspecified	Thang Vu	1.1.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE057	VIE	train	057	Vietnamese	Vietnam	Southern Vietnam	male	23	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE003	VIE	train	003	Vietnamese	Vietnam	Northern Vietnam	male	57	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE093	VIE	train	093	Vietnamese	Vietnam	Southern Vietnam	female	20	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE096	VIE	eval	096	Vietnamese	Vietnam	Southern Vietnam	female	57	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE115	VIE	train	115	Vietnamese	Not Specified	Northern Vietnam	female	24	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.21.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE043	VIE	train	043	Vietnamese	Vietnam	Northern Vietnam	male	67	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE109	VIE	train	109	Vietnamese	Vietnam	Southern Vietnam	male	17	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE095	VIE	train	095	Vietnamese	Vietnam	Southern Vietnam	male	21	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE040	VIE	train	040	Vietnamese	Vietnam	Northern Vietnam	male	70	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE047	VIE	train	047	Vietnamese	Vietnam	Northern Vietnam	male	24	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE008	VIE	train	008	Vietnamese	Vietnam	Northern Vietnam	male	33	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE059	VIE	train	059	Vietnamese	Vietnam	Southern Vietnam	male	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE061	VIE	train	061	Vietnamese	Vietnam	Southern Vietnam	male	16	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE205	VIE	dev	205	Vietnamese	Vietnam	Northern Vietnam	male	24	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE011	VIE	train	011	Vietnamese	Vietnam	Northern Vietnam	male	25	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE106	VIE	eval	106	Vietnamese	Vietnam	Southern Vietnam	male	20	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE207	VIE	dev	207	Vietnamese	Vietnam	Northern Vietnam	male	30	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE002	VIE	train	002	Vietnamese	Vietnam	Northern Vietnam	female	46	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE070	VIE	train	070	Vietnamese	Vietnam	Northern Vietnam	male	25	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE092	VIE	eval	092	Vietnamese	Vietnam	Southern Vietnam	male	20	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE051	VIE	train	051	Vietnamese	Vietnam	Southern Vietnam	male	53	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE020	VIE	train	020	vietnamese	vietnam	Northern Vietnam	female	37	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE049	VIE	train	049	Vietnamese	Vietnam	Southern Vietnam	male	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE105	VIE	train	105	Vietnamese	Vietnam	Southern Vietnam	male	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE122	VIE	train	122	Vietnamese	Not Specified	Northern Vietnam	female	25	Speaker's Occupation	Unknown	Unspecified	Thang Vu	1.1.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE005	VIE	train	005	Vietnamese	Vietnam	Northern Vietnam	male	50	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE102	VIE	eval	102	Vietnamese	Vietnam	Southern Vietnam	male	23	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE030	VIE	train	030	Vietnamese	Vietnam	Northern Vietnam	male	40	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE123	VIE	train	123	Vietnamese	Not Specified	Northern Vietnam	male	24	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.23.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE080	VIE	train	080	Vietnamese	Vietnam	Southern Vietnam	female	25	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE004	VIE	train	004	Vietnamese	Vietnam	Northern Vietnam	X	40	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE091	VIE	train	091	Vietnamese	Vietnam	Southern Vietnam	female	21	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE068	VIE	train	068	Vietnamese	Vietnam	Northern Vietnam	female	33	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE201	VIE	dev	201	Vietnamese	Vietnam	Southern Vietnam	female	25	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE041	VIE	train	041	Vietnamese	Vietnam	Southern Vietnam	male	24	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE116	VIE	train	116	Vietnam	Not Specified	Southern Vietnam	male	24	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.21.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE042	VIE	train	042	Vietnamese	Vietnam	Southern Vietnam	male	23	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE029	VIE	train	029	Vietnamese	Vietnam	Northern Vietnam	female	35	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE119	VIE	train	119	Vietnamese	Not Specified	Northern Vietnam	male	26	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.23.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE104	VIE	train	104	Vietnamese	Vietnam	Southern Vietnam	male	21	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE055	VIE	train	055	Vietnamese	Vietnam	Southern Vietnam	female	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE111	VIE	train	111	Vietnamese	Not Specified	Northern Vietnam	male	24	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.17.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE022	VIE	train	022	Vietnamese	Vietnam	Northern Vietnam	female	40	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE060	VIE	train	060	Vietnamese	Vietnam	Southern Vietnam	female	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE014	VIE	train	014	Vietnamese	Vietnam	Northern Vietnam	female	29	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE063	VIE	train	063	Vietnamese	Vietnam	Southern Vietnam	male	25	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE101	VIE	train	101	Vietnamese	Vietnam	Southern Vietnam	male	18	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE121	VIE	train	121	Vietnamese	Not Specified	Southern Vietnam	male	28	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.31.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE067	VIE	train	067	Vietnamese	Vietnam	Southern Vietnam	male	63	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE066	VIE	train	066	Vietnamese	Vietnam	Southern Vietnam	male	25	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE013	VIE	train	013	Vietnamese	Vietnam	Northern Vietnam	female	24	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE108	VIE	train	108	Vietnamese	Vietnam	Southern Vietnam	male	17	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE113	VIE	eval	113	Vietnamese	Not Specified	Northern Vietnam	female	21	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.21.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE114	VIE	train	114	Vietnamese	Not Specified	Northern Vietnam	male	24	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.21.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE033	VIE	train	033	Vietnam	Vietnam	Northern Vietnam	female	64	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE083	VIE	train	083	Vietnamese	Vietnam	Southern Vietnam	male	56	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE044	VIE	train	044	Vietnamese	Vietnam	Southern Vietnam	male	30	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE054	VIE	train	054	Vietnamese	Vietnam	Southern Vietnam	female	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE073	VIE	train	073	Vietnamese	Vietnam	Northern Vietnam	male	40	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE015	VIE	train	015	Vietnamese	Vietnam	Northern Vietnam	female	27	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE084	VIE	train	084	Vietnamese	Vietnam	Southern Vietnam	male	25	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE085	VIE	train	085	Vietnamese	Vietnam	Southern Vietnam	female	29	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE010	VIE	train	010	Vietnamese	Vietnam	Northern Vietnam	X	31	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE074	VIE	train	074	Vietnamese	Vietnam	Northern Vietnam	male	43	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE075	VIE	train	075	Vietnamese	Vietnam	Southern Vietnam	male	39	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE125	VIE	train	125	Vietnamese	Not Specified	Northern Vietnam	male	25	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.23.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE025	VIE	train	025	Vietnamese	Vietnam	Northern Vietnam	female	18	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE007	VIE	train	007	Vietnamese	Vietnam	Northern Vietnam	male	33	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE052	VIE	train	052	Vietnamese	Vietnam	Southern Vietnam	female	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE071	VIE	train	071	Vietnamese	Vietnam	Northern Vietnam	female	29	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE021	VIE	train	021	Vietnamese	Vietnam	Northern Vietnam	male	30	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE064	VIE	train	064	Vietnamese	Vietnam	Southern Vietnam	male	24	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE048	VIE	train	048	Vietnamese	Vietnam	Northern Vietnam	female	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE087	VIE	train	087	Vietnamese	Vietnam	Southern Vietnam	female	24	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE036	VIE	train	036	Vietnamese	Vietnam	Southern Vietnam	male	41	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE024	VIE	train	024	vietnamese	vietnam	Northern Vietnam	female	18	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE009	VIE	train	009	Vietnamese	Vietnam	Northern Vietnam	male	32	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE081	VIE	train	081	Vietnamese	Vietnam	Southern Vietnam	female	24	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE202	VIE	dev	202	Vietnamese	Vietnam	Northern Vietnam	female	23	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE200	VIE	dev	200	Vietnamese	Vietnam	Northern Vietnam	male	27	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE094	VIE	eval	094	Vietnamese	Vietnam	Southern Vietnam	female	42	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE117	VIE	train	117	Vietnamese	Not Specified	Northern Vietnam	female	21	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.21.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE127	VIE	train	127	Vietnamese	Not Specified	Northern Vietnam	male	29	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.31.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE118	VIE	train	118	Vietnamese	Not Specified	Northern Vietnam	female	42	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.24.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE016	VIE	train	016	Vietnamese	Vietnam	Northern Vietnam	female	30	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE097	VIE	train	097	Vietnamese	Vietnam	Southern Vietnam	male	15	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE103	VIE	eval	103	Vietnamese	Vietnam	Southern Vietnam	female	23	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE050	VIE	train	050	Vietnamese	Vietnam	Northern Vietnam	male	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE120	VIE	train	120	Vietnamese	Not Specified	Northern Vietnam	male	48	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.24.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE100	VIE	train	100	Vietnamese	Vietnam	Southern Vietnam	male	25	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE077	VIE	train	077	Vietnamese	Vietnam	Southern Vietnam	female	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE038	VIE	train	038	Vietnamese	Vietnam	Southern Vietnam	female	30	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE082	VIE	train	082	Vietnamese	Vietnam	Southern Vietnam	female	50	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE086	VIE	train	086	Vietnamese	Vietnam	Southern Vietnam	female	30	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE128	VIE	train	128	Vietnames	Not Specified	Northern Vietnam	male	28	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.31.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE027	VIE	train	027	vietnamese	vietnam	Northern Vietnam	male	23	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE098	VIE	eval	098	Vietnamese	Vietnam	Southern Vietnam	female	17	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE006	VIE	train	006	Vietnamese	Vietnam	Northern Vietnam	female	45	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE023	VIE	train	023	Vietnamese	Vietnam	Northern Vietnam	male	33	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE206	VIE	dev	206	Vietnamese	Vietnam	Southern Vietnam	male	24	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE039	VIE	train	039	Vietnamese	Vietnam	Southern Vietnam	female	41	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE037	VIE	train	037	Vietnamese	Vietnam	Southern Vietnam	male	46	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE017	VIE	train	017	vietnamese	Vietnam	Northern Vietnam	male	52	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE076	VIE	train	076	Vietnamese	Vietnam	Southern Vietnam	male	22	NaN	NaN	smoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE053	VIE	train	053	Vietnamese	Vietnam	Southern Vietnam	male	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE026	VIE	train	026	vietnamese	vietnam	Northern Vietnam	female	18	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE035	VIE	train	035	Vietnamese	Vietnam	Northern Vietnam	male	34	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE204	VIE	dev	204	Vietnamese	Vietnam	Northern Vietnam	male	25	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE062	VIE	train	062	Vietnamese	Vietnam	Southern Vietnam	female	25	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE056	VIE	train	056	Vietnamese	Vietnam	Southern Vietnam	female	26	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE203	VIE	dev	203	Vietnamese	Vietnam	Southern Vietnam	male	27	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE110	VIE	eval	110	Vietnamese	Vietnam	Southern Vietnam	male	17	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE124	VIE	train	124	Vietnamese	Not Specified	Northern Vietnam	male	26	Speaker's Occupation	Unknown	Unspecified	Thang Vu	0.23.2009		1	Not Specified	Not Specified	Not Specified	Remarks if any
+VIE089	VIE	train	089	Vietnamese	Vietnam	Southern Vietnam	female	22	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
+VIE065	VIE	train	065	Vietnamese	Vietnam	Southern Vietnam	male	24	NaN	NaN	nonsmoking	Thang Vu	NaN		 --new prompting tool--	quiet	quiet	Sennheiser HM420	NaN
