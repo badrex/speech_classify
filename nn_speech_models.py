@@ -536,7 +536,12 @@ class FeedforwardClassifier(nn.Module):
         # iterate over number of layers and add layer to task classifier
         for i in range(self.num_layers - 1):
             layer__dim = self.input_dim if i == 0 else self.hidden_dim
-            layer_tag = 'fc' + str(i + 1)
+
+            # for the last layer, name it last_relu so it can be obtained
+            if i < self.num_layers - 2:
+                layer_tag = 'fc' + str(i + 1)
+            else:
+                layer_tag = 'fc_last'
 
             # add a linear transformation
             self._classifier.add_module(layer_tag,
@@ -557,7 +562,7 @@ class FeedforwardClassifier(nn.Module):
         x_in,
         apply_softmax=False,
         return_vector=False,
-        target_layer
+        target_layer='last_fc_relu'
     ):
         """
         The forward pass of the feedforward network.
@@ -606,17 +611,24 @@ class SpeechClassifier(nn.Module):
         self.speech_encoder = speech_segment_encoder
         self.task_classifier = task_classifier
 
-    def forward(self, x_in):
+    def forward(self, x_in, apply_softmax=False, return_vector=False):
         """
         The forward pass of the end-to-end classifier. Given x_in (torch.Tensor),
-            return output tensor y_hat (torch.Tensor)
+            return output tensor y_hat or out_vec (torch.Tensor)
         """
 
         conv_features = self.speech_encoder(x_in, apply_softmax=False)
 
-        y_hat = self.task_classifier(conv_features)
+        if return_vector:
+            out_vec =  self.task_classifier(conv_features, apply_softmax=False,
+                return_vector=True)
 
-        return y_hat
+            return out_vec
+
+        else:
+            y_hat = self.task_classifier(conv_features, apply_softmax)
+
+            return y_hat
 
 
 
