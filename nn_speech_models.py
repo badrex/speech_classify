@@ -1,12 +1,12 @@
 # coding: utf-8
 
+import math
 import numpy as np
 import random
 
 import torch
 from torch import Tensor
 import torch.nn as nn
-import torch.nn.functional as F
 
 from torch.utils.data import DataLoader
 from torch.utils.data.dataset import Dataset
@@ -21,8 +21,8 @@ class SpeechFeaturizer(object):
         data_dir,
         feature_type,
         label_set,
-        max_num_frames,
         num_frames,
+        max_num_frames,
         spectral_dim=13,
         start_index=0,
         end_index=13
@@ -234,7 +234,7 @@ class SpeechDataset(Dataset):
         """
         Given batch size (int), return the number of dataset batches (int)
         """
-        return len(self) // batch_size
+        return math.ceil((len(self) / batch_size))
 
 
 ##### A METHOD TO GENERATE BATCHES WITH A DATALOADER WRAPPER
@@ -449,7 +449,7 @@ class ConvSpeechEncoder(nn.Module):
 
         if self.pooling_type == 'max':
             # determine the output dimensionality of the resulting tensor
-            shrinking_dims = sum([(i - 1) for i filter_sizes])
+            shrinking_dims = sum([(i - 1) for i in filter_sizes])
             out_dim = self.max_num_frames - shrinking_dims
 
             self.PoolLayer = nn.MaxPool1d(kernel_size=out_dim, stride=1) # 362
@@ -458,50 +458,50 @@ class ConvSpeechEncoder(nn.Module):
             raise NotImplementedError
 
 
-        def forward(self,
-            x_in,
-            frame_dropout=False,
-            feature_dropout=False,
-            frame_reverse=False,
-            frame_shuffle=False,
-            shuffle_bag_size= 1
-        ):
-            """The forward pass of the speech encoder
+    def forward(self,
+        x_in,
+        frame_dropout=False,
+        feature_dropout=False,
+        frame_reverse=False,
+        shuffle_frames=False,
+        shuffle_bag_size= 1
+    ):
+        """The forward pass of the speech encoder
 
-            Args:
-                x_in (torch.Tensor): an input data tensor with the shape
-                    (batch_size, spectral_dim, max_num_frames)
-                frame_dropout (bool): whether to mask out frames (inference)
-                feature_dropout (bool): whether to mask out features (inference)
-                frame_reverse (bool): whether to reverse frames (inference)
-                frame_shuffle (bool): whether to shuffle frames (train & inf.)
-            Returns:
-                the resulting tensor. tensor.shape should be (batch, )
-            """
+        Args:
+            x_in (torch.Tensor): an input data tensor with the shape
+                (batch_size, spectral_dim, max_num_frames)
+            frame_dropout (bool): whether to mask out frames (inference)
+            feature_dropout (bool): whether to mask out features (inference)
+            frame_reverse (bool): whether to reverse frames (inference)
+            shuffle_frames (bool): whether to shuffle frames (train & inf.)
+        Returns:
+            the resulting tensor. tensor.shape should be (batch, )
+        """
 
-            # apply signal dropout on the input (if any)
-            # signal dropout, disabled on evaluating unless explicitly asked for
-            if self.training:
-                x_in = self.signal_dropout(x_in)
+        # apply signal dropout on the input (if any)
+        # signal dropout, disabled on evaluating unless explicitly asked for
+        if self.training:
+            x_in = self.signal_dropout(x_in)
 
-            # signal masking during inference (explicit)
-            if self.eval and self.mask_signal:
-                x_in = self.signal_dropout(x_in)
+        # signal masking during inference (explicit)
+        if self.eval and self.mask_signal:
+            x_in = self.signal_dropout(x_in)
 
-            # signal distortion during inference
-            if self.eval and frame_reverse: x_in = self.frame_reverse(x_in)
-            if self.eval and frame_shuffle:
-                x_in = self.frame_shuffle(x_in, shuffle_bag_size)
+        # signal distortion during inference
+        if self.eval and frame_reverse: x_in = self.frame_reverse(x_in)
+        if self.eval and shuffle_frames:
+            x_in = self.frame_shuffle(x_in, shuffle_bag_size)
 
-            # apply the convolutional transformations on the signal
-            conv1_f = self.conv1(x_in)
-            conv2_f = self.conv2(conv1_f)
-            conv3_f = self.conv3(conv2_f)
+        # apply the convolutional transformations on the signal
+        conv1_f = self.conv1(x_in)
+        conv2_f = self.conv2(conv1_f)
+        conv3_f = self.conv3(conv2_f)
 
-            # max pooling
-            conv_features = self.PoolLayer(conv3_f).squeeze(dim=2)
+        # max pooling
+        conv_features = self.PoolLayer(conv3_f).squeeze(dim=2)
 
-            return conv_features
+        return conv_features
 
 
 ##### CLASS FeedforwardClassifier: multi-layer feed-forward classifier
@@ -513,7 +513,7 @@ class FeedforwardClassifier(nn.Module):
         hidden_dim=512,
         num_layers=3,
         unit_dropout=False,
-        dropout_prob=0.2
+        dropout_prob=0.0
     ):
         """
         Args:
@@ -535,7 +535,7 @@ class FeedforwardClassifier(nn.Module):
 
         # iterate over number of layers and add layer to task classifier
         for i in range(self.num_layers - 1):
-            layer__dim = self.input_dim if i == 0 else self.hidden_dim
+            layer_dim = self.input_dim if i == 0 else self.hidden_dim
 
             # for the last layer, name it last_relu so it can be obtained
             if i < self.num_layers - 2:
@@ -545,7 +545,7 @@ class FeedforwardClassifier(nn.Module):
 
             # add a linear transformation
             self._classifier.add_module(layer_tag,
-                nn.Linear((layer_dim, self.hidden_dim))
+                nn.Linear(layer_dim, self.hidden_dim))
             # add non-linearity
             self._classifier.add_module(layer_tag + "_relu", nn.ReLU())
 
@@ -555,7 +555,7 @@ class FeedforwardClassifier(nn.Module):
 
         # output layer, logits
         self._classifier.add_module("logits",
-            nn.Linear(self.output_dim, num_classes))
+            nn.Linear(self.hidden_dim, self.num_classes))
 
 
     def forward(self,
@@ -611,13 +611,13 @@ class SpeechClassifier(nn.Module):
         self.speech_encoder = speech_segment_encoder
         self.task_classifier = task_classifier
 
-    def forward(self, x_in, apply_softmax=False, return_vector=False):
+    def forward(self, x_in, apply_softmax=False, return_vector=False,
+        shuffle_frames=False):
         """
         The forward pass of the end-to-end classifier. Given x_in (torch.Tensor),
             return output tensor y_hat or out_vec (torch.Tensor)
         """
-
-        conv_features = self.speech_encoder(x_in, apply_softmax=False)
+        conv_features = self.speech_encoder(x_in)
 
         if return_vector:
             out_vec =  self.task_classifier(conv_features, apply_softmax=False,
@@ -660,7 +660,7 @@ class ConvNet_LID(nn.Module):
             filter_sizes (list): size of filter/kernel per each Conv layer
             stride_steps (list): strides per each Conv layer
             pooling (str): pooling procedure, either 'max' or 'mean'
-            signal_masking (bool):  whether or no to mask signal during inference
+            signal_masking (bool): whether to mask signal during inference
 
             Usage example:
             model = ConvNet_LID(spectral_dim=13,
