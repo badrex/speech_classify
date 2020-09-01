@@ -23,7 +23,7 @@ class SpeechFeaturizer(object):
         label_set,
         max_num_frames,
         num_frames,
-        feature_dim=13,
+        spectral_dim=13,
         start_index=0,
         end_index=13
     ):
@@ -36,7 +36,7 @@ class SpeechFeaturizer(object):
                 speech signal, e.g., 300 frames is equivalent to 3 seconds
             max_num_frames (int): the max number of acoustic frames in input
                 the diff. (max_num_frames - num_frames) is padded with zeros
-            feature_dim (int): the num of spectral components (default 13)
+            spectral_dim (int): the num of spectral components (default 13)
             start_index (int): the index of the 1st component (default: 0)
             end_index (int): the index of the last component (default: 13)
         """
@@ -44,7 +44,7 @@ class SpeechFeaturizer(object):
         self.feature_type = feature_type
         self.max_num_frames = max_num_frames
         self.num_frames = num_frames
-        self.feature_dim = feature_dim
+        self.spectral_dim = spectral_dim
         self.start_index = start_index
         self.end_index = end_index
 
@@ -64,7 +64,7 @@ class SpeechFeaturizer(object):
         uttr_id,
         num_frames=None,
         max_num_frames=None,
-        feature_dim=None,
+        spectral_dim=None,
         start_index=None,
         end_index=None,
         segment_random=False
@@ -76,7 +76,7 @@ class SpeechFeaturizer(object):
             uttr_id (str): segment ID, i.e., the name of the wav file
             num_frames (int): length of the (MFCC) vector sequence (in frames)
             max_num_frames (int): max length of the (MFCC) vector sequence
-            feature_dim (int): the num of spectral components (default 13)
+            spectral_dim (int): the num of spectral components (default 13)
             start_index (int): the index of the 1st component (default: 0)
             end_index (int): the index of the last component (default: 13)
             segment_random (bool): whether to take a random segment from signal
@@ -87,7 +87,7 @@ class SpeechFeaturizer(object):
         # these were added to enable differet uttr lengths during inference
         if num_frames is None: num_frames = self.num_frames
         if max_num_frames is None: max_num_frames = self.max_num_frames
-        if feature_dim is None: feature_dim = self.feature_dim
+        if spectral_dim is None: spectral_dim = self.spectral_dim
         if start_index is None: start_index = self.start_index
         if end_index is None: end_index = self.end_index
 
@@ -125,7 +125,7 @@ class SpeechFeaturizer(object):
         spectral_tensor = torch.from_numpy(spectral_sample)
 
         # apply padding to the speech sample represenation
-        spectral_tensor_pad = torch.zeros(feature_dim, max_num_frames)
+        spectral_tensor_pad = torch.zeros(spectral_dim, max_num_frames)
 
         # this step controls both x-axis (frames) and y-axis (spectral coefs.)
         # for example, when only 13 coefficients are used, then use
@@ -139,8 +139,8 @@ class SpeechFeaturizer(object):
         # to deal with short utterances in DEV and EVA splits
         num_frames = min(spectral_seq.shape[1], num_frames)
 
-        spectral_tensor_pad[:feature_dim,_start_idx:_start_idx + num_frames] = \
-            spectral_tensor[:feature_dim,:num_frames]
+        spectral_tensor_pad[:spectral_dim,_start_idx:_start_idx + num_frames] = \
+            spectral_tensor[:spectral_dim,:num_frames]
 
 
         return spectral_tensor_pad.float() # convert to float tensor
@@ -152,7 +152,6 @@ class SpeechFeaturizer(object):
         e.g.,  'RUS' --> 4
         """
         return self.label2index[label] # index of the label in the featurizer
-
 
 
 ##### CLASS SpeechDataset: A data loader handles (batch) speech transformation
@@ -219,7 +218,7 @@ class SpeechDataset(Dataset):
         spectral_sequence = self._featurizer.transform_input_X(uttr.uttr_id,
             segment_random = is_training,
             num_frames=None, # it is important to set this to None
-            feature_dim=None
+            spectral_dim=None
         )
 
         label_idx = self._featurizer.transform_label_y(uttr.language)
@@ -275,7 +274,7 @@ class FrameDropout(nn.Module):
         self.dropout_prob = dropout_prob
 
     def forward(self, x_in):
-        batch_size, feature_dim, sequence_dim = x_in.shape
+        batch_size, spectral_dim, sequence_dim = x_in.shape
 
         # randomly sample frame indecies to be dropped
         drop_frame_idx = [i for i in range(sequence_dim) \
@@ -299,10 +298,10 @@ class SpectralDropout(nn.Module):
         self.dropout_prob = dropout_prob
 
     def forward(self, x_in):
-        batch_size, feature_dim, sequence_dim = x_in.shape
+        batch_size, spectral_dim, sequence_dim = x_in.shape
 
         # randomly sample frame indecies to be dropped
-        drop_feature_idx = [i for i in range(feature_dim) \
+        drop_feature_idx = [i for i in range(spectral_dim) \
             if torch.rand(1).item() < self.dropout_prob]
 
         x_in[:, drop_feature_idx, :] = 0
@@ -310,14 +309,14 @@ class SpectralDropout(nn.Module):
         return x_in
 
 
-##### A custome layer for frame sequence reversal
+##### CLASS FrameReverse: A custome layer for frame sequence reversal
 class FrameReverse(nn.Module):
     def __init__(self):
         """Reverses the frame sequence in the input signal. """
         super(FrameReverse, self).__init__()
 
     def forward(self, x_in):
-        batch_size, feature_dim, sequence_dim = x_in.shape
+        batch_size, spectral_dim, sequence_dim = x_in.shape
         # reverse indicies
         reversed_idx = [i for i in reversed(range(sequence_dim))]
         x_in[:, :, reversed_idx] = x_in
@@ -325,14 +324,14 @@ class FrameReverse(nn.Module):
         return x_in
 
 
-##### A custome layer for frame sequence shuflle
+##### CLASS FrameShuffle: A custome layer for frame sequence shuflle
 class FrameShuffle(nn.Module):
     def __init__(self):
         """Shuffle the frame sequence in the input signal, given a bag size. """
         super(FrameShuffle, self).__init__()
 
-    def forward(self, x_in, bag_size):
-        batch_size, feature_dim, seq_dim = x_in.shape
+    def forward(self, x_in, bag_size=1):
+        batch_size, spectral_dim, seq_dim = x_in.shape
 
         # shuffle idicies according to bag of frames size
         # make the bags of frames
@@ -352,10 +351,279 @@ class FrameShuffle(nn.Module):
         return x_in
 
 
+##### CLASS ConvSpeechEncoder: A multi-layer convolutional encoder
+class ConvSpeechEncoder(nn.Module):
+    """A 1D 3-layer convolutional encoder for speech data."""
+    def __init__(self,
+        spectral_dim=13,
+        max_num_frames= 384,
+        num_channels=[128, 256, 512],
+        filter_sizes=[5, 10, 10],
+        stride_steps=[1, 1, 1],
+        output_dim=512,
+        pooling_type='max',
+        signal_dropout_prob=0.2,
+        dropout_frames=False,
+        dropout_spectral_features=False,
+        mask_signal=False
+    ):
+        """
+        Args:
+            spectral_dim (int): number of spectral coefficients
+            max_num_frames (int): max number of acoustic frames in input
+            num_channels (list): number of channels per each Conv layer
+            filter_sizes (list): size of filter/kernel per each Conv layer
+            stride_steps (list): strides per each Conv layer
+            pooling (str): pooling procedure, either 'max' or 'mean'
+            signal_dropout_prob (float): signal dropout probability, either
+                frame dropout or spectral feature dropout
+            signal_masking (bool):  whether to mask signal during inference
+
+            How to use example:
+            speech_enc = ConvSpeechEncoder(
+                spectral_dim=13,
+                num_channels=[128, 256, 512],
+                filter_sizes=[5, 10, 10],
+                stride_steps=[1, 1, 1],
+                pooling_type='max',
+
+                # this will apply frame dropout with 0.2 prob
+                signal_dropout_prob=0.2,
+                dropout_frames=True,
+                dropout_spectral_features=False,
+                mask_signal= False
+            ):
+        """
+        super(ConvSpeechEncoder, self).__init__()
+        self.spectral_dim = spectral_dim
+        self.max_num_frames = max_num_frames
+        self.signal_dropout_prob = signal_dropout_prob
+        self.pooling_type = pooling_type
+        self.dropout_frames = dropout_frames
+        self.dropout_spectral_features = dropout_spectral_features
+        self.mask_signal = mask_signal
+
+        # signal dropout_layer
+        if self.dropout_frames: # if frame dropout is enableed
+            self.signal_dropout = FrameDropout(self.signal_dropout_prob)
+
+        elif self.dropout_spectral_features: # if spectral dropout is enabled
+            self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
+
+        # frame reversal layer
+        self.frame_reverse = FrameReverse()
+
+        # frame reversal layer
+        self.frame_shuffle = FrameShuffle()
+
+
+        # Convolutional layer  1
+        self.conv1 = nn.Sequential(
+            nn.Conv1d(in_channels=self.spectral_dim,
+                out_channels=num_channels[0],
+                kernel_size=filter_sizes[0],
+                stride=stride_steps[0]),
+            nn.BatchNorm1d(num_channels[0]),
+            nn.ReLU()
+        )
+
+        # Convolutional layer  2
+        self.conv2 = nn.Sequential(
+            nn.Conv1d(in_channels=num_channels[0],
+                out_channels=num_channels[1],
+                kernel_size=filter_sizes[1],
+                stride=stride_steps[1]),
+            nn.BatchNorm1d(num_channels[1]),
+            nn.ReLU()
+        )
+
+        # Convolutional layer  3
+        self.conv3 = nn.Sequential(
+            nn.Conv1d(in_channels=num_channels[1],
+                out_channels=num_channels[2],
+                kernel_size=filter_sizes[2],
+                stride=stride_steps[2]),
+            nn.BatchNorm1d(num_channels[2]),
+            nn.ReLU()
+        )
+
+        if self.pooling_type == 'max':
+            # determine the output dimensionality of the resulting tensor
+            shrinking_dims = sum([(i - 1) for i filter_sizes])
+            out_dim = self.max_num_frames - shrinking_dims
+
+            self.PoolLayer = nn.MaxPool1d(kernel_size=out_dim, stride=1) # 362
+        else:
+            #TODO: implement other statistical pooling approaches
+            raise NotImplementedError
+
+
+        def forward(self,
+            x_in,
+            frame_dropout=False,
+            feature_dropout=False,
+            frame_reverse=False,
+            frame_shuffle=False,
+            shuffle_bag_size= 1
+        ):
+            """The forward pass of the speech encoder
+
+            Args:
+                x_in (torch.Tensor): an input data tensor with the shape
+                    (batch_size, spectral_dim, max_num_frames)
+                frame_dropout (bool): whether to mask out frames (inference)
+                feature_dropout (bool): whether to mask out features (inference)
+                frame_reverse (bool): whether to reverse frames (inference)
+                frame_shuffle (bool): whether to shuffle frames (train & inf.)
+            Returns:
+                the resulting tensor. tensor.shape should be (batch, )
+            """
+
+            # apply signal dropout on the input (if any)
+            # signal dropout, disabled on evaluating unless explicitly asked for
+            if self.training:
+                x_in = self.signal_dropout(x_in)
+
+            # signal masking during inference (explicit)
+            if self.eval and self.mask_signal:
+                x_in = self.signal_dropout(x_in)
+
+            # signal distortion during inference
+            if self.eval and frame_reverse: x_in = self.frame_reverse(x_in)
+            if self.eval and frame_shuffle:
+                x_in = self.frame_shuffle(x_in, shuffle_bag_size)
+
+            # apply the convolutional transformations on the signal
+            conv1_f = self.conv1(x_in)
+            conv2_f = self.conv2(conv1_f)
+            conv3_f = self.conv3(conv2_f)
+
+            # max pooling
+            conv_features = self.PoolLayer(conv3_f).squeeze(dim=2)
+
+            return conv_features
+
+
+##### CLASS FeedforwardClassifier: multi-layer feed-forward classifier
+class FeedforwardClassifier(nn.Module):
+    """A fully-connected feedforward classifier. """
+    def __init__(self,
+        num_classes=6,
+        input_dim=512,
+        hidden_dim=512,
+        num_layers=3,
+        unit_dropout=False,
+        dropout_prob=0.2
+    ):
+        """
+        Args:
+            num_classes (int): num of classes or size the softmax layer
+            input_dim (int): dimensionality of input vector
+            hidden_dim (int): dimensionality of hidden layer
+            node_dropout (bool): whether to apply unit dropout
+            dropout_prob (float): unit dropout probability
+        """
+        super(FeedforwardClassifier, self).__init__()
+        self.num_classes = num_classes
+        self.input_dim = input_dim
+        self.hidden_dim = hidden_dim
+        self.num_layers = num_layers
+        self.unit_dropout = unit_dropout
+        self.dropout_prob = dropout_prob
+
+        self._classifier = torch.nn.Sequential()
+
+        # iterate over number of layers and add layer to task classifier
+        for i in range(self.num_layers - 1):
+            layer__dim = self.input_dim if i == 0 else self.hidden_dim
+            layer_tag = 'fc' + str(i + 1)
+
+            # add a linear transformation
+            self._classifier.add_module(layer_tag,
+                nn.Linear((layer_dim, self.hidden_dim))
+            # add non-linearity
+            self._classifier.add_module(layer_tag + "_relu", nn.ReLU())
+
+            if self.unit_dropout:
+                self._classifier.add_module(layer_tag + "_drop",
+                    nn.Dropout(self.dropout_prob))
+
+        # output layer, logits
+        self._classifier.add_module("logits",
+            nn.Linear(self.output_dim, num_classes))
+
+
+    def forward(self,
+        x_in,
+        apply_softmax=False,
+        return_vector=False,
+        target_layer
+    ):
+        """
+        The forward pass of the feedforward network.
+
+        Args:
+            x_in (torch.Tensor): an input tensor, shape (batch_size, input_dim)
+            apply_softmax (bool): a flag for the softmax activation, this should
+                be false if used with the cross-entropy losses
+        Returns:
+            A tensor (torch.Tensor): logits or softmax, shape (num_classes, )
+        """
+
+        # if we need to obtain vectors (for analysis), iterate ...
+        layer_vec = x_in
+        if return_vector:
+            for _tag, nn_layer in self._classifier._modules.items():
+                layer_vec = nn_layer(layer_vec)
+
+                if _tag == target_layer:
+                    return layer_vec
+
+        # otherwise, normal forward pass ...
+        else:
+            y_hat = self._classifier(x_in)
+
+            return torch.softmax(y_hat, dim=1) if apply_softmax else y_hat
+
+
+##### CLASS SpeechClassifier: multi-layer encoder + feed-forward network
+class SpeechClassifier(nn.Module):
+    """A classifier on top of speech encoder. """
+    def __init__(self,
+        speech_segment_encoder,
+        task_classifier
+    ):
+        """
+        Args:
+            num_classes (int): num of classes or size the softmax layer
+            input_dim (int): dimensionality of input vector
+            hidden_dim (int): dimensionality of hidden layer
+            node_dropout (bool): whether to apply unit dropout
+            dropout_prob (float): unit dropout probability
+            *conv_enc_paras (*args): ordered arguments for conv encoder
+        """
+        super(SpeechClassifier, self).__init__()
+        self.speech_encoder = speech_segment_encoder
+        self.task_classifier = task_classifier
+
+    def forward(self, x_in):
+        """
+        The forward pass of the end-to-end classifier. Given x_in (torch.Tensor),
+            return output tensor y_hat (torch.Tensor)
+        """
+
+        conv_features = self.speech_encoder(x_in, apply_softmax=False)
+
+        y_hat = self.task_classifier(conv_features)
+
+        return y_hat
+
+
+
 ##### A Convolutional model: Spoken Language Identifier
 class ConvNet_LID(nn.Module):
     def __init__(self,
-        feature_dim=14,
+        spectral_dim=14,
         num_classes=6,
         bottleneck=False,
         bottleneck_size=64,
@@ -366,11 +634,11 @@ class ConvNet_LID(nn.Module):
         output_dim=512,
         pooling_type='max',
         dropout_frames=False,
-        dropout_features=False,
+        dropout_spectral_features=False,
         mask_signal=False):
         """
         Args:
-            feature_dim (int): size of the feature vector
+            spectral_dim (int): size of the feature vector
             num_classes (int): num of classes or size the softmax layer
             bottleneck (bool): whether or not to have bottleneck layer
             bottleneck_size (int): the dim of the bottleneck layer
@@ -383,7 +651,7 @@ class ConvNet_LID(nn.Module):
             signal_masking (bool):  whether or no to mask signal during inference
 
             Usage example:
-            model = ConvNet_LID(feature_dim=13,
+            model = ConvNet_LID(spectral_dim=13,
                 num_classes=6,
                 bottleneck=False,
                 bottleneck_size=64,
@@ -396,13 +664,13 @@ class ConvNet_LID(nn.Module):
             )
         """
         super(ConvNet_LID, self).__init__()
-        self.feature_dim = feature_dim
+        self.spectral_dim = spectral_dim
         self.signal_dropout_prob = signal_dropout_prob
         self.pooling_type = pooling_type
         self.bottleneck_size = bottleneck_size
         self.output_dim = output_dim
         self.dropout_frames = dropout_frames
-        self.dropout_features = dropout_features
+        self.dropout_spectral_features = dropout_spectral_features
         self.mask_signal = mask_signal
 
 
@@ -410,7 +678,7 @@ class ConvNet_LID(nn.Module):
         if self.dropout_frames: # if frame dropout is enables
             self.signal_dropout = FrameDropout(self.signal_dropout_prob)
 
-        elif self.dropout_features: # if frame dropout is enables
+        elif self.dropout_spectral_features: # if frame dropout is enables
             self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
 
         # frame reversal layer
@@ -419,11 +687,9 @@ class ConvNet_LID(nn.Module):
         # frame reversal layer
         self.frame_shuffle = FrameShuffle()
 
-
-
-        # Convolutional Block 1
-        self.ConvLayer1 = nn.Sequential(
-            nn.Conv1d(in_channels=self.feature_dim,
+        # Convolutional layer  1
+        self.conv1 = nn.Sequential(
+            nn.Conv1d(in_channels=self.spectral_dim,
                 out_channels=num_channels[0],
                 kernel_size=filter_sizes[0],
                 stride=stride_steps[0]),
@@ -431,8 +697,8 @@ class ConvNet_LID(nn.Module):
             nn.ReLU()
         )
 
-        # Convolutional Block 2
-        self.ConvLayer2 = nn.Sequential(
+        # Convolutional layer  2
+        self.conv2 = nn.Sequential(
             nn.Conv1d(in_channels=num_channels[0],
                 out_channels=num_channels[1],
                 kernel_size=filter_sizes[1],
@@ -441,8 +707,8 @@ class ConvNet_LID(nn.Module):
             nn.ReLU()
         )
 
-        # Convolutional Block 3
-        self.ConvLayer3 = nn.Sequential(
+        # Convolutional layer  3
+        self.conv3 = nn.Sequential(
             nn.Conv1d(in_channels=num_channels[1],
                 out_channels=num_channels[2],
                 kernel_size=filter_sizes[2],
@@ -501,7 +767,7 @@ class ConvNet_LID(nn.Module):
 
         Args:
             x_in (torch.Tensor): an input data tensor.
-                x_in.shape should be (batch_size, feature_dim, dataset._max_frames)
+                x_in.shape should be (batch_size, spectral_dim, dataset._max_frames)
             apply_softmax (bool): a flag for the softmax activation
                 should be false if used with the cross-entropy losses
         Returns:
@@ -525,9 +791,9 @@ class ConvNet_LID(nn.Module):
         if self.eval and frame_shuffle: x_in = self.frame_shuffle(x_in, shuffle_bag_size)
 
         # Convo block
-        z1 = self.ConvLayer1(x_in)
-        z2 = self.ConvLayer2(z1)
-        z3 = self.ConvLayer3(z2)
+        z1 = self.conv1(x_in)
+        z2 = self.conv2(z1)
+        z3 = self.conv3(z2)
 
         # max pooling
         #print(z3.shape)
@@ -555,7 +821,7 @@ class ConvNet_LID(nn.Module):
 ##### An LSTM-based recurrent model: Spoken Language Identifier
 class LSTMNet_LID(nn.Module):
     def __init__(self,
-        feature_dim=40,
+        spectral_dim=40,
         output_dim=64,
         hidden_dim=128,
         num_classes=6,
@@ -566,12 +832,12 @@ class LSTMNet_LID(nn.Module):
     ):
         """
         Args:
-            feature_dim (int): size of the feature vector
+            spectral_dim (int): size of the feature vector
             num_classes (int): num of classes or size the softmax layer
 
 
             Usage example:
-            model = LSTM_LID(feature_dim=40,
+            model = LSTM_LID(spectral_dim=40,
                 num_classes=6
             )
         """
@@ -581,7 +847,7 @@ class LSTMNet_LID(nn.Module):
         self.hidden_dim = hidden_dim
 
         #self.embedding = nn.Embedding(vocab_size, embedding_dim)
-        self.lstm = nn.LSTM(feature_dim, hidden_dim, n_layers, dropout=unit_dropout_prob, batch_first=True)
+        self.lstm = nn.LSTM(spectral_dim, hidden_dim, n_layers, dropout=unit_dropout_prob, batch_first=True)
         self.dropout = nn.Dropout(unit_dropout_prob)
 
         # fully connected block
@@ -604,7 +870,7 @@ class LSTMNet_LID(nn.Module):
 
         Args:
             x_in (torch.Tensor): an input data tensor.
-                x_in.shape should be (batch_size, feature_dim, dataset._max_frames)
+                x_in.shape should be (batch_size, spectral_dim, dataset._max_frames)
             apply_softmax (bool): a flag for the softmax activation
                 should be false if used with the cross-entropy losses
         Returns:
@@ -661,12 +927,12 @@ class LSTMNet_LID(nn.Module):
 ##### Diagnostic classifiers
 class LinearLID(torch.nn.Module):
     def __init__(self,
-        feature_dim=40,
+        spectral_dim=40,
         num_frames=300,
         num_classes=6
     ):
         super(LinearLID, self).__init__()
-        self.linear = torch.nn.Linear(feature_dim, num_classes)
+        self.linear = torch.nn.Linear(spectral_dim, num_classes)
 
     def forward(self, x_in, apply_softmax=False):
 
@@ -683,7 +949,7 @@ class LinearLID(torch.nn.Module):
 
 class MLPNetLID(torch.nn.Module):
     def __init__(self,
-        feature_dim=13,
+        spectral_dim=13,
         num_frames=300,
         hidden_dim=512,
         num_layers=2,
@@ -696,7 +962,7 @@ class MLPNetLID(torch.nn.Module):
         for i in range(num_layers):
             layer_id = 'fc_' + str(i + 1)
             if i == 0:
-                self.fc_layers.add_module(layer_id + '_linear', nn.Linear(feature_dim, hidden_dim))
+                self.fc_layers.add_module(layer_id + '_linear', nn.Linear(spectral_dim, hidden_dim))
             else:
                 self.fc_layers.add_module(layer_id + '_linear', nn.Linear(hidden_dim, hidden_dim))
 
@@ -723,7 +989,7 @@ class MLPNetLID(torch.nn.Module):
 
 class MLPNetLID2(torch.nn.Module):
     def __init__(self,
-        feature_dim=13,
+        spectral_dim=13,
         num_frames=300,
         hidden_dim=512,
         num_layers=2,
@@ -788,7 +1054,7 @@ class GradientReversalFn(Function):
 ##### A Convolutional model: Spoken Language Identifier
 class ConvNet_LID_DA(nn.Module):
     def __init__(self,
-        feature_dim=14,
+        spectral_dim=14,
         num_classes=6,
         bottleneck=False,
         bottleneck_size=64,
@@ -799,11 +1065,11 @@ class ConvNet_LID_DA(nn.Module):
         output_dim=512,
         pooling_type='max',
         dropout_frames=False,
-        dropout_features=False,
+        dropout_spectral_features=False,
         mask_signal=False):
         """
         Args:
-            feature_dim (int): size of the feature vector
+            spectral_dim (int): size of the feature vector
             num_classes (int): num of classes or size the softmax layer
             bottleneck (bool): whether or not to have bottleneck layer
             bottleneck_size (int): the dim of the bottleneck layer
@@ -816,7 +1082,7 @@ class ConvNet_LID_DA(nn.Module):
             signal_masking (bool):  whether or no to mask signal during inference
 
             Usage example:
-            model = ConvNet_LID(feature_dim=13,
+            model = ConvNet_LID(spectral_dim=13,
                 num_classes=6,
                 bottleneck=False,
                 bottleneck_size=64,
@@ -829,13 +1095,13 @@ class ConvNet_LID_DA(nn.Module):
             )
         """
         super(ConvNet_LID_DA, self).__init__()
-        self.feature_dim = feature_dim
+        self.spectral_dim = spectral_dim
         self.signal_dropout_prob = signal_dropout_prob
         self.pooling_type = pooling_type
         self.bottleneck_size = bottleneck_size
         self.output_dim = output_dim
         self.dropout_frames = dropout_frames
-        self.dropout_features = dropout_features
+        self.dropout_spectral_features = dropout_spectral_features
         self.mask_signal = mask_signal
 
 
@@ -843,7 +1109,7 @@ class ConvNet_LID_DA(nn.Module):
         if self.dropout_frames: # if frame dropout is enables
             self.signal_dropout = FrameDropout(self.signal_dropout_prob)
 
-        elif self.dropout_features: # if frame dropout is enables
+        elif self.dropout_spectral_features: # if frame dropout is enables
             self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
 
         # frame reversal layer
@@ -852,9 +1118,9 @@ class ConvNet_LID_DA(nn.Module):
         # frame reversal layer
         self.frame_shuffle = FrameShuffle()
 
-        # Convolutional Block 1
-        self.ConvLayer1 = nn.Sequential(
-            nn.Conv1d(in_channels=self.feature_dim,
+        # Convolutional layer  1
+        self.conv1 = nn.Sequential(
+            nn.Conv1d(in_channels=self.spectral_dim,
                 out_channels=num_channels[0],
                 kernel_size=filter_sizes[0],
                 stride=stride_steps[0]),
@@ -862,8 +1128,8 @@ class ConvNet_LID_DA(nn.Module):
             nn.ReLU()
         )
 
-        # Convolutional Block 2
-        self.ConvLayer2 = nn.Sequential(
+        # Convolutional layer  2
+        self.conv2 = nn.Sequential(
             nn.Conv1d(in_channels=num_channels[0],
                 out_channels=num_channels[1],
                 kernel_size=filter_sizes[1],
@@ -872,8 +1138,8 @@ class ConvNet_LID_DA(nn.Module):
             nn.ReLU()
         )
 
-        # Convolutional Block 3
-        self.ConvLayer3 = nn.Sequential(
+        # Convolutional layer  3
+        self.conv3 = nn.Sequential(
             nn.Conv1d(in_channels=num_channels[1],
                 out_channels=num_channels[2],
                 kernel_size=filter_sizes[2],
@@ -936,7 +1202,7 @@ class ConvNet_LID_DA(nn.Module):
 
         Args:
             x_in (torch.Tensor): an input data tensor.
-                x_in.shape should be (batch_size, feature_dim, dataset._max_frames)
+                x_in.shape should be (batch_size, spectral_dim, dataset._max_frames)
             apply_softmax (bool): a flag for the softmax activation
                 should be false if used with the cross-entropy losses
         Returns:
@@ -960,9 +1226,9 @@ class ConvNet_LID_DA(nn.Module):
         if self.eval and frame_shuffle: x_in = self.frame_shuffle(x_in, shuffle_bag_size)
 
         # Convo block
-        z1 = self.ConvLayer1(x_in)
-        z2 = self.ConvLayer2(z1)
-        z3 = self.ConvLayer3(z2)
+        z1 = self.conv1(x_in)
+        z2 = self.conv2(z1)
+        z3 = self.conv3(z2)
 
         # max pooling
         features = self.PoolLayer(z3).squeeze(dim=2)
@@ -994,7 +1260,7 @@ class ConvNet_LID_DA(nn.Module):
 ##### A Convolutional model: Spoken Language Identifier, with unit dropout
 class ConvNet_LID_DA_wDropout(nn.Module):
     def __init__(self,
-        feature_dim=14,
+        spectral_dim=14,
         num_classes=6,
         bottleneck=False,
         bottleneck_size=64,
@@ -1005,12 +1271,12 @@ class ConvNet_LID_DA_wDropout(nn.Module):
         output_dim=512,
         pooling_type='max',
         dropout_frames=False,
-        dropout_features=False,
+        dropout_spectral_features=False,
         unit_dropout_prob=0.5,
         mask_signal=False):
         """
         Args:
-            feature_dim (int): size of the feature vector
+            spectral_dim (int): size of the feature vector
             num_classes (int): num of classes or size the softmax layer
             bottleneck (bool): whether or not to have bottleneck layer
             bottleneck_size (int): the dim of the bottleneck layer
@@ -1023,7 +1289,7 @@ class ConvNet_LID_DA_wDropout(nn.Module):
             signal_masking (bool):  whether or no to mask signal during inference
 
             Usage example:
-            model = ConvNet_LID(feature_dim=13,
+            model = ConvNet_LID(spectral_dim=13,
                 num_classes=6,
                 bottleneck=False,
                 bottleneck_size=64,
@@ -1036,14 +1302,14 @@ class ConvNet_LID_DA_wDropout(nn.Module):
             )
         """
         super(ConvNet_LID_DA_wDropout, self).__init__()
-        self.feature_dim = feature_dim
+        self.spectral_dim = spectral_dim
         self.signal_dropout_prob = signal_dropout_prob
         self.unit_dropout_prob = unit_dropout_prob
         self.pooling_type = pooling_type
         self.bottleneck_size = bottleneck_size
         self.output_dim = output_dim
         self.dropout_frames = dropout_frames
-        self.dropout_features = dropout_features
+        self.dropout_spectral_features = dropout_spectral_features
         self.mask_signal = mask_signal
 
 
@@ -1051,7 +1317,7 @@ class ConvNet_LID_DA_wDropout(nn.Module):
         if self.dropout_frames: # if frame dropout is enables
             self.signal_dropout = FrameDropout(self.signal_dropout_prob)
 
-        elif self.dropout_features: # if frame dropout is enables
+        elif self.dropout_spectral_features: # if frame dropout is enables
             self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
 
         # frame reversal layer
@@ -1060,9 +1326,9 @@ class ConvNet_LID_DA_wDropout(nn.Module):
         # frame reversal layer
         self.frame_shuffle = FrameShuffle()
 
-        # Convolutional Block 1
-        self.ConvLayer1 = nn.Sequential(
-            nn.Conv1d(in_channels=self.feature_dim,
+        # Convolutional layer  1
+        self.conv1 = nn.Sequential(
+            nn.Conv1d(in_channels=self.spectral_dim,
                 out_channels=num_channels[0],
                 kernel_size=filter_sizes[0],
                 stride=stride_steps[0]),
@@ -1070,8 +1336,8 @@ class ConvNet_LID_DA_wDropout(nn.Module):
             nn.ReLU()
         )
 
-        # Convolutional Block 2
-        self.ConvLayer2 = nn.Sequential(
+        # Convolutional layer  2
+        self.conv2 = nn.Sequential(
             nn.Conv1d(in_channels=num_channels[0],
                 out_channels=num_channels[1],
                 kernel_size=filter_sizes[1],
@@ -1080,8 +1346,8 @@ class ConvNet_LID_DA_wDropout(nn.Module):
             nn.ReLU()
         )
 
-        # Convolutional Block 3
-        self.ConvLayer3 = nn.Sequential(
+        # Convolutional layer  3
+        self.conv3 = nn.Sequential(
             nn.Conv1d(in_channels=num_channels[1],
                 out_channels=num_channels[2],
                 kernel_size=filter_sizes[2],
@@ -1141,7 +1407,7 @@ class ConvNet_LID_DA_wDropout(nn.Module):
 
         Args:
             x_in (torch.Tensor): an input data tensor.
-                x_in.shape should be (batch_size, feature_dim, dataset._max_frames)
+                x_in.shape should be (batch_size, spectral_dim, dataset._max_frames)
             apply_softmax (bool): a flag for the softmax activation
                 should be false if used with the cross-entropy losses
         Returns:
@@ -1165,9 +1431,9 @@ class ConvNet_LID_DA_wDropout(nn.Module):
         if self.eval and frame_shuffle: x_in = self.frame_shuffle(x_in, shuffle_bag_size)
 
         # Convo block
-        z1 = self.ConvLayer1(x_in)
-        z2 = self.ConvLayer2(z1)
-        z3 = self.ConvLayer3(z2)
+        z1 = self.conv1(x_in)
+        z2 = self.conv2(z1)
+        z3 = self.conv3(z2)
 
         # max pooling
         features = self.PoolLayer(z3).squeeze(dim=2)
@@ -1199,7 +1465,7 @@ class ConvNet_LID_DA_wDropout(nn.Module):
 ##### A Convolutional model: Spoken Language Identifier, with unit dropout
 class ConvNet_LID_DA_2(nn.Module):
     def __init__(self,
-        feature_dim=14,
+        spectral_dim=14,
         num_classes=6,
         bottleneck=False,
         bottleneck_size=64,
@@ -1210,12 +1476,12 @@ class ConvNet_LID_DA_2(nn.Module):
         output_dim=512,
         pooling_type='max',
         dropout_frames=False,
-        dropout_features=False,
+        dropout_spectral_features=False,
         #unit_dropout_prob=0.5,
         mask_signal=False):
         """
         Args:
-            feature_dim (int): size of the feature vector
+            spectral_dim (int): size of the feature vector
             num_classes (int): num of classes or size the softmax layer
             bottleneck (bool): whether or not to have bottleneck layer
             bottleneck_size (int): the dim of the bottleneck layer
@@ -1228,7 +1494,7 @@ class ConvNet_LID_DA_2(nn.Module):
             signal_masking (bool):  whether or no to mask signal during inference
 
             Usage example:
-            model = ConvNet_LID(feature_dim=13,
+            model = ConvNet_LID(spectral_dim=13,
                 num_classes=6,
                 bottleneck=False,
                 bottleneck_size=64,
@@ -1241,14 +1507,14 @@ class ConvNet_LID_DA_2(nn.Module):
             )
         """
         super(ConvNet_LID_DA_2, self).__init__()
-        self.feature_dim = feature_dim
+        self.spectral_dim = spectral_dim
         self.signal_dropout_prob = signal_dropout_prob
         #self.unit_dropout_prob = unti_dropout_prob
         self.pooling_type = pooling_type
         self.bottleneck_size = bottleneck_size
         self.output_dim = output_dim
         self.dropout_frames = dropout_frames
-        self.dropout_features = dropout_features
+        self.dropout_spectral_features = dropout_spectral_features
         self.mask_signal = mask_signal
 
 
@@ -1256,7 +1522,7 @@ class ConvNet_LID_DA_2(nn.Module):
         if self.dropout_frames: # if frame dropout is enables
             self.signal_dropout = FrameDropout(self.signal_dropout_prob)
 
-        elif self.dropout_features: # if frame dropout is enables
+        elif self.dropout_spectral_features: # if frame dropout is enables
             self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
 
         # frame reversal layer
@@ -1265,9 +1531,9 @@ class ConvNet_LID_DA_2(nn.Module):
         # frame reversal layer
         self.frame_shuffle = FrameShuffle()
 
-        # Convolutional Block 1
-        self.ConvLayer1 = nn.Sequential(
-            nn.Conv1d(in_channels=self.feature_dim,
+        # Convolutional layer  1
+        self.conv1 = nn.Sequential(
+            nn.Conv1d(in_channels=self.spectral_dim,
                 out_channels=num_channels[0],
                 kernel_size=filter_sizes[0],
                 stride=stride_steps[0]),
@@ -1275,8 +1541,8 @@ class ConvNet_LID_DA_2(nn.Module):
             nn.ReLU()
         )
 
-        # Convolutional Block 2
-        self.ConvLayer2 = nn.Sequential(
+        # Convolutional layer  2
+        self.conv2 = nn.Sequential(
             nn.Conv1d(in_channels=num_channels[0],
                 out_channels=num_channels[1],
                 kernel_size=filter_sizes[1],
@@ -1285,8 +1551,8 @@ class ConvNet_LID_DA_2(nn.Module):
             nn.ReLU()
         )
 
-        # Convolutional Block 3
-        self.ConvLayer3 = nn.Sequential(
+        # Convolutional layer  3
+        self.conv3 = nn.Sequential(
             nn.Conv1d(in_channels=num_channels[1],
                 out_channels=num_channels[2],
                 kernel_size=filter_sizes[2],
@@ -1353,7 +1619,7 @@ class ConvNet_LID_DA_2(nn.Module):
 
         Args:
             x_in (torch.Tensor): an input data tensor.
-                x_in.shape should be (batch_size, feature_dim, dataset._max_frames)
+                x_in.shape should be (batch_size, spectral_dim, dataset._max_frames)
             apply_softmax (bool): a flag for the softmax activation
                 should be false if used with the cross-entropy losses
         Returns:
@@ -1377,9 +1643,9 @@ class ConvNet_LID_DA_2(nn.Module):
         if self.eval and frame_shuffle: x_in = self.frame_shuffle(x_in, shuffle_bag_size)
 
         # Convo block
-        z1 = self.ConvLayer1(x_in)
-        z2 = self.ConvLayer2(z1)
-        z3 = self.ConvLayer3(z2)
+        z1 = self.conv1(x_in)
+        z2 = self.conv2(z1)
+        z3 = self.conv3(z2)
 
         # max pooling
         conv_features = self.PoolLayer(z3).squeeze(dim=2)
@@ -1418,7 +1684,7 @@ class ConvNet_LID_DA_2(nn.Module):
 ##### A Convolutional model: Spoken Language Identifier
 class ConvNet_LID_DA_3(nn.Module):
     def __init__(self,
-        feature_dim=13,
+        spectral_dim=13,
         num_classes=6,
         bottleneck=True,
         bottleneck_size=512,
@@ -1429,11 +1695,11 @@ class ConvNet_LID_DA_3(nn.Module):
         output_dim=512,
         pooling_type='max',
         dropout_frames=False,
-        dropout_features=False,
+        dropout_spectral_features=False,
         mask_signal=False):
         """
         Args:
-            feature_dim (int): size of the feature vector
+            spectral_dim (int): size of the feature vector
             num_classes (int): num of classes or size the softmax layer
             bottleneck (bool): whether or not to have bottleneck layer
             bottleneck_size (int): the dim of the bottleneck layer
@@ -1446,7 +1712,7 @@ class ConvNet_LID_DA_3(nn.Module):
             signal_masking (bool):  whether or no to mask signal during inference
 
             Usage example:
-            model = ConvNet_LID(feature_dim=13,
+            model = ConvNet_LID(spectral_dim=13,
                 num_classes=6,
                 bottleneck=False,
                 bottleneck_size=64,
@@ -1459,13 +1725,13 @@ class ConvNet_LID_DA_3(nn.Module):
             )
         """
         super(ConvNet_LID_DA_3, self).__init__()
-        self.feature_dim = feature_dim
+        self.spectral_dim = spectral_dim
         self.signal_dropout_prob = signal_dropout_prob
         self.pooling_type = pooling_type
         self.bottleneck_size = bottleneck_size
         self.output_dim = output_dim
         self.dropout_frames = dropout_frames
-        self.dropout_features = dropout_features
+        self.dropout_spectral_features = dropout_spectral_features
         self.mask_signal = mask_signal
 
 
@@ -1473,7 +1739,7 @@ class ConvNet_LID_DA_3(nn.Module):
         #if self.dropout_frames: # if frame dropout is enables
             #self.signal_dropout = FrameDropout(self.signal_dropout_prob)
 
-        #elif self.dropout_features: # if frame dropout is enables
+        #elif self.dropout_spectral_features: # if frame dropout is enables
             #self.signal_dropout = SpectralDropout(self.signal_dropout_prob)
 
         # frame reversal layer
@@ -1482,9 +1748,9 @@ class ConvNet_LID_DA_3(nn.Module):
         # frame reversal layer
         #self.frame_shuffle = FrameShuffle()
 
-        # Convolutional Block 1
-        self.ConvLayer1 = nn.Sequential(
-            nn.Conv1d(in_channels=self.feature_dim,
+        # Convolutional layer  1
+        self.conv1 = nn.Sequential(
+            nn.Conv1d(in_channels=self.spectral_dim,
                 out_channels=num_channels[0],
                 kernel_size=filter_sizes[0],
                 stride=stride_steps[0]),
@@ -1492,8 +1758,8 @@ class ConvNet_LID_DA_3(nn.Module):
             nn.ReLU()
         )
 
-        # Convolutional Block 2
-        self.ConvLayer2 = nn.Sequential(
+        # Convolutional layer  2
+        self.conv2 = nn.Sequential(
             nn.Conv1d(in_channels=num_channels[0],
                 out_channels=num_channels[1],
                 kernel_size=filter_sizes[1],
@@ -1502,8 +1768,8 @@ class ConvNet_LID_DA_3(nn.Module):
             nn.ReLU()
         )
 
-        # Convolutional Block 3
-        self.ConvLayer3 = nn.Sequential(
+        # Convolutional layer  3
+        self.conv3 = nn.Sequential(
             nn.Conv1d(in_channels=num_channels[1],
                 out_channels=num_channels[2],
                 kernel_size=filter_sizes[2],
@@ -1559,7 +1825,7 @@ class ConvNet_LID_DA_3(nn.Module):
 
         Args:
             x_in (torch.Tensor): an input data tensor.
-                x_in.shape should be (batch_size, feature_dim, dataset._max_frames)
+                x_in.shape should be (batch_size, spectral_dim, dataset._max_frames)
             apply_softmax (bool): a flag for the softmax activation
                 should be false if used with the cross-entropy losses
         Returns:
@@ -1583,9 +1849,9 @@ class ConvNet_LID_DA_3(nn.Module):
         #if self.eval and frame_shuffle: x_in = self.frame_shuffle(x_in, shuffle_bag_size)
 
         # Convo block
-        z1 = self.ConvLayer1(x_in)
-        z2 = self.ConvLayer2(z1)
-        z3 = self.ConvLayer3(z2)
+        z1 = self.conv1(x_in)
+        z2 = self.conv2(z1)
+        z3 = self.conv3(z2)
 
         # max pooling
         f1 = self.PoolLayer(z3).squeeze(dim=2)
@@ -1619,7 +1885,7 @@ class ConvNet_LID_DA_3(nn.Module):
 ##### An LSTM-based recurrent model: Spoken Language Identifier
 class BiLSTM_LID_DA(nn.Module):
     def __init__(self,
-        feature_dim=13,
+        spectral_dim=13,
         output_dim=512,
         hidden_dim=256,
         num_classes=6,
@@ -1631,12 +1897,12 @@ class BiLSTM_LID_DA(nn.Module):
     ):
         """
         Args:
-            feature_dim (int): size of the feature vector
+            spectral_dim (int): size of the feature vector
             num_classes (int): num of classes or size the softmax layer
 
 
             Usage example:
-            model = LSTM_LID(feature_dim=40,
+            model = LSTM_LID(spectral_dim=40,
                 num_classes=6
             )
         """
@@ -1645,7 +1911,7 @@ class BiLSTM_LID_DA(nn.Module):
         self.n_layers = n_layers
         self.hidden_dim = hidden_dim
 
-        self.lstm = nn.LSTM(feature_dim, hidden_dim, n_layers, dropout=unit_dropout_prob, bidirectional=True)#, batch_first=True
+        self.lstm = nn.LSTM(spectral_dim, hidden_dim, n_layers, dropout=unit_dropout_prob, bidirectional=True)#, batch_first=True
         #self.dropout = nn.Dropout(unit_dropout_prob)
 
         # task classifier
@@ -1675,7 +1941,7 @@ class BiLSTM_LID_DA(nn.Module):
 
         Args:
             x_in (torch.Tensor): an input data tensor.
-                x_in.shape should be (batch_size, feature_dim, dataset._max_frames)
+                x_in.shape should be (batch_size, spectral_dim, dataset._max_frames)
             apply_softmax (bool): a flag for the softmax activation
                 should be false if used with the cross-entropy losses
         Returns:

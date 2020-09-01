@@ -228,7 +228,7 @@ speech_featurizer = SpeechFeaturizer(
     label_set=config_args['language_set'].split(), # split str into list of str
     max_num_frames=config_args['input_signal_params']['max_num_frames'],
     num_frames=config_args['input_signal_params']['num_frames'],
-    feature_dim=config_args['model_arch']['feature_dim'],
+    spectral_dim=config_args['model_arch']['spectral_dim'],
     start_index=config_args['input_signal_params']['start_index'],
     end_index=config_args['input_signal_params']['end_index']
 )
@@ -242,12 +242,12 @@ speech_dataset = SpeechDataset(sess_speech_df, speech_featurizer)
 
 if config_args['model_arch']['nn_model'] == 'ConvNet':
     nn_LID_model = ConvNet_LID(
-        feature_dim=config_args['model_arch']['feature_dim'],
+        spectral_dim=config_args['model_arch']['spectral_dim'],
         bottleneck=config_args['model_arch']['bottleneck'],
         bottleneck_size=config_args['model_arch']['bottleneck_size'],
         output_dim=config_args['model_arch']['output_dim'],
         dropout_frames=config_args['model_arch']['frame_dropout'],
-        dropout_features=config_args['model_arch']['feature_dropout'],
+        dropout_spectral_features=config_args['model_arch']['feature_dropout'],
         signal_dropout_prob=config_args['model_arch']['signal_dropout_prob'],
         num_channels=config_args['model_arch']['num_channels'],
         num_classes= len(label_set),   # or config_args['model_arch']['num_classes'],
@@ -258,19 +258,19 @@ if config_args['model_arch']['nn_model'] == 'ConvNet':
 
 elif config_args['model_arch']['nn_model'] == 'Linear':
     nn_LID_model = LinearLID(
-    feature_dim=config_args['model_arch']['feature_dim'],
+    spectral_dim=config_args['model_arch']['spectral_dim'],
     num_classes= len(label_set)
     )
 
 elif config_args['model_arch']['nn_model'] == 'MLP':
     nn_LID_model = MLPNetLID(
-    feature_dim=config_args['model_arch']['feature_dim'],
+    spectral_dim=config_args['model_arch']['spectral_dim'],
     num_classes= len(label_set)
     )
 
 elif config_args['model_arch']['nn_model'] == 'MLP2':
     nn_LID_model = MLPNetLID2(
-    feature_dim=config_args['model_arch']['feature_dim'],
+    spectral_dim=config_args['model_arch']['spectral_dim'],
     num_classes= len(label_set)
     )
 

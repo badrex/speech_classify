@@ -18,7 +18,7 @@ input_signal_params:
     end_index: 13
 model_arch:
     nn_model: ConvNet
-    feature_dim: 13
+    spectral_dim: 13
     num_classes: 2
     bottleneck: True
     bottleneck_size: 512
