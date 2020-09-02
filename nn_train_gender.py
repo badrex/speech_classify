@@ -93,17 +93,9 @@ speech_df = pd.read_csv(config_args['speech_metadata'],
 
 label_set=config_args['language_set'].split()
 
-# make sure no utterances with 0 duration such as
-speech_df = speech_df[(speech_df.duration!=0)]
-
-speech_df = speech_df[(speech_df['language'].isin(label_set))]
-
-##### HERE IT ALL STARTS ...
-# source featurizer ...
-speech_df = pd.read_csv(config_args['speech_metadata'],
-    delimiter="\t", encoding='utf-8')
-
-label_set = config_args['language_set'].split()
+# sample only target labels and more than 3.0 seconds
+speech_df = speech_df[(speech_df.language.isin(label_set)) &
+    (speech_df.duration>3.0) ]
 
 pos_label, neg_label = label_set
 
@@ -111,9 +103,6 @@ num_train_samples = config_args['train_samples']
 num_eval_samples = config_args['eval_samples']
 
 # make and sample dataset splits for the experiment ...
-# select all speech segments more than 3-second duration ...
-speech_df = speech_df[(speech_df.duration>3.0)]
-
 experiment_df_list = []
 
 # make splits for training and matched eval set
@@ -298,10 +287,10 @@ try:
 
             # forward pass through net
             y_hat = LID_classifier(x_in=batch_dict['x_data'], shuffle_frames=False) # shuffle_frames
-            y_tgt = batch_dict['y_target']
+            y_tar = batch_dict['y_target']
 
             # compute the loss between predicted label and target label
-            loss = loss_func(y_hat, y_tgt)
+            loss = loss_func(y_hat, y_tar)
             loss_t = loss.item()
             running_loss += (loss_t - running_loss) / (batch_index + 1)
 
@@ -312,7 +301,7 @@ try:
             optimizer.step()
 
             # compute the accuracy
-            acc_t = train_utils.compute_accuracy(y_hat, y_tgt)
+            acc_t = train_utils.compute_accuracy(y_hat, y_tar)
             running_acc += (acc_t - running_acc) / (batch_index + 1)
 
             print(f"{config_args['model_str']}    "
@@ -345,26 +334,26 @@ try:
 
             LID_classifier.eval()
 
-            y_hat_list, y_tgt_list = [], []
+            y_hat_list, y_tar_list = [], []
 
             for batch_index, batch_dict in enumerate(batch_generator):
 
                 y_hat = LID_classifier(x_in=batch_dict['x_data'])
-                y_tgt = batch_dict['y_target']
+                y_tar = batch_dict['y_target']
 
-                loss = loss_func(y_hat, y_tgt)
+                loss = loss_func(y_hat, y_tar)
                 loss_t = loss.item()
                 running_loss += (loss_t - running_loss) / (batch_index + 1)
 
-                acc_t = train_utils.compute_accuracy(y_hat, y_tgt)
+                acc_t = train_utils.compute_accuracy(y_hat, y_tar)
                 running_acc += (acc_t - running_acc) / (batch_index + 1)
 
                 # get labels and compute balanced acc.
-                y_hat_batch, y_tgt_batch = train_utils.get_predictions(
-                    y_hat, y_tgt)
+                y_hat_batch, y_tar_batch = train_utils.get_predictions(
+                    y_hat, y_tar)
 
                 y_hat_list.extend(y_hat_batch)
-                y_tgt_list.extend(y_tgt_batch)
+                y_tar_list.extend(y_tar_batch)
 
                 print(f"{config_args['model_str']}    "
                     f"{_split} epoch [{epoch_index + 1:>2}"
@@ -375,7 +364,7 @@ try:
                 )
 
 
-            acc_score = balanced_accuracy_score(y_hat_list, y_tgt_list)*100
+            acc_score = balanced_accuracy_score(y_hat_list, y_tar_list)*100
             balanced_acc_scores[_split].append(acc_score)
 
         train_state['val_loss'].append(running_loss)

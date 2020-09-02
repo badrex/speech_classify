@@ -245,7 +245,7 @@ def generate_batches(speech_dataset, batch_size, shuffle_batches=True,
       each tensor is on the right device (i.e., CPU or GPU).
     """
     dataloader = DataLoader(dataset=speech_dataset, batch_size=batch_size,
-        shuffle=shuffle_batches, drop_last=drop_last_batch)
+        shuffle=shuffle_batches, drop_last=True)#drop_last_batch
 
     # for each batch, yield a dictionay with keys: x_data, y_target
     for data_dict in dataloader:
