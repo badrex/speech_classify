@@ -591,6 +591,26 @@ class FeedforwardClassifier(nn.Module):
             return torch.softmax(y_hat, dim=1) if apply_softmax else y_hat
 
 
+##### CLASS GradientReversal: Gradient Reversal layer for adversarial adaptation
+class GradientReversal(Function):
+    """GRL: forward pass --> identitiy, backward pass --> - lambda x grad """
+    @staticmethod
+    def forward(ctx, x_in, adap_para):
+        # Store context for backprop
+        ctx.adap_para = adap_para
+
+        # Forward pass is a no-op
+        return x_in.view_as(x_in)
+
+    @staticmethod
+    def backward(ctx, grad_output):
+        # Backward pass is just to  - adap_para the gradient
+        grad_reverse = grad_output.neg() * ctx.adap_para
+
+        # Must return same number as inputs to forward()
+        return grad_reverse, None
+
+
 ##### CLASS SpeechClassifier: multi-layer encoder + feed-forward network
 class SpeechClassifier(nn.Module):
     """A classifier on top of speech encoder. """
@@ -600,12 +620,8 @@ class SpeechClassifier(nn.Module):
     ):
         """
         Args:
-            num_classes (int): num of classes or size the softmax layer
-            input_dim (int): dimensionality of input vector
-            hidden_dim (int): dimensionality of hidden layer
-            node_dropout (bool): whether to apply unit dropout
-            dropout_prob (float): unit dropout probability
-            *conv_enc_paras (*args): ordered arguments for conv encoder
+            speech_segment_encoder (ConvSpeechEncoder): speech encoder model
+            task_classifier (FeedforwardClassifier): n-way classifier
         """
         super(SpeechClassifier, self).__init__()
         self.speech_encoder = speech_segment_encoder
@@ -617,7 +633,7 @@ class SpeechClassifier(nn.Module):
         The forward pass of the end-to-end classifier. Given x_in (torch.Tensor),
             return output tensor y_hat or out_vec (torch.Tensor)
         """
-        conv_features = self.speech_encoder(x_in)
+        conv_features = self.speech_encoder(x_in, shuffle_frames=shuffle_frames)
 
         if return_vector:
             out_vec =  self.task_classifier(conv_features, apply_softmax=False,
@@ -1041,26 +1057,26 @@ class MLPNetLID2(torch.nn.Module):
 
         return y_out
 
-
-# Autograd Function objects are what record operation history on tensors,
-# and define formulas for the forward and backprop.
-
-class GradientReversalFn(Function):
-    @staticmethod
-    def forward(ctx, x, alpha):
-        # Store context for backprop
-        ctx.alpha = alpha
-
-        # Forward pass is a no-op
-        return x.view_as(x)
-
-    @staticmethod
-    def backward(ctx, grad_output):
-        # Backward pass is just to -alpha the gradient
-        output = grad_output.neg() * ctx.alpha
-
-        # Must return same number as inputs to forward()
-        return output, None
+#
+# # Autograd Function objects are what record operation history on tensors,
+# # and define formulas for the forward and backprop.
+#
+# class GradientReversal(Function):
+#     @staticmethod
+#     def forward(ctx, x, adap_para):
+#         # Store context for backprop
+#         ctx.adap_para = adap_para
+#
+#         # Forward pass is a no-op
+#         return x.view_as(x)
+#
+#     @staticmethod
+#     def backward(ctx, grad_output):
+#         # Backward pass is just to -adap_para the gradient
+#         output = grad_output.neg() * ctx.adap_para
+#
+#         # Must return same number as inputs to forward()
+#         return output, None
 
 
 ##### A Convolutional model: Spoken Language Identifier
@@ -1256,7 +1272,7 @@ class ConvNet_LID_DA(nn.Module):
 
         # else:
 
-        reverse_features = GradientReversalFn.apply(features, grl_lambda)
+        reverse_features = GradientReversal.apply(features, grl_lambda)
 
         class_pred = self.language_classifier(features)
         domain_pred = self.domain_classifier(reverse_features)
@@ -1461,7 +1477,7 @@ class ConvNet_LID_DA_wDropout(nn.Module):
 
         # else:
 
-        reverse_features = GradientReversalFn.apply(features, grl_lambda)
+        reverse_features = GradientReversal.apply(features, grl_lambda)
 
         class_pred = self.language_classifier(features)
         domain_pred = self.domain_classifier(reverse_features)
@@ -1678,7 +1694,7 @@ class ConvNet_LID_DA_2(nn.Module):
 
 
 
-        reverse_fc_features = GradientReversalFn.apply(fc_features, grl_lambda)
+        reverse_fc_features = GradientReversal.apply(fc_features, grl_lambda)
 
         class_pred = self.label_classifier(fc_features)
         domain_pred = self.domain_classifier(reverse_fc_features)
@@ -1883,7 +1899,7 @@ class ConvNet_LID_DA_3(nn.Module):
 
         # else:
 
-        f_reverse = GradientReversalFn.apply(torch.cat((f1, f3), dim=1), grl_lambda)
+        f_reverse = GradientReversal.apply(torch.cat((f1, f3), dim=1), grl_lambda)
 
         #class_pred = y_out #self.task_classifier(f1)
         domain_pred = self.domain_classifier(f_reverse)
@@ -1988,7 +2004,7 @@ class BiLSTM_LID_DA(nn.Module):
         features = torch.cat((h_n_forward, h_n_backward), dim=1)
         #print('featues ', features.shape)
 
-        reverse_features = GradientReversalFn.apply(features, grl_lambda)
+        reverse_features = GradientReversal.apply(features, grl_lambda)
 
 
         if return_vector:

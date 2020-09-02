@@ -82,11 +82,13 @@ def get_predictions(y_pred, y_target):
 
 	return (pred_labels, true_labels)
 
+
 def set_seed_everywhere(seed, cuda):
     np.random.seed(seed)
     torch.manual_seed(seed)
     if cuda:
         torch.cuda.manual_seed_all(seed)
+        
 
 def handle_dirs(dirpath):
     if not os.path.exists(dirpath):

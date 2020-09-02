@@ -26,7 +26,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 from nn_speech_models import *
-import training_functions
+import train_utils
 
 # Training Routine
 
@@ -70,7 +70,7 @@ if config_args['expand_filepaths_to_save_dir']:
     print("\t{}".format(config_args['model_state_file']))
 
 # if dir does not exits on desk, make it
-training_functions.handle_dirs(config_args['model_save_dir'])
+train_utils.handle_dirs(config_args['model_save_dir'])
 
 
  # Check CUDA
@@ -83,7 +83,7 @@ print("Using CUDA: {}".format(config_args['cuda']))
 
 
 # Set seed for reproducibility
-training_functions.set_seed_everywhere(config_args['seed'], config_args['cuda'])
+train_utils.set_seed_everywhere(config_args['seed'], config_args['cuda'])
 
 
 ##### HERE IT ALL STARTS ...
@@ -110,43 +110,53 @@ pos_label, neg_label = label_set
 num_train_samples = config_args['train_samples']
 num_eval_samples = config_args['eval_samples']
 
-# make sure no utterances with 3 duration such as
-train_df = speech_df[(speech_df.duration>3.0) & (speech_df.split=='TRA')]
+# make and sample dataset splits for the experiment ...
+# select all speech segments more than 3-second duration ...
+speech_df = speech_df[(speech_df.duration>3.0)]
 
-pos_df = train_df[((train_df.gender=='male') &
-    (train_df.language==pos_label))].sample(n=num_train_samples, random_state=1)
+experiment_df_list = []
 
-neg_df = train_df[((train_df.gender=='female') &
-    (train_df.language==neg_label))].sample(n=num_train_samples, random_state=1)
+# make splits for training and matched eval set
+for _split in ['TRA', 'DEV']:
 
-pos_val_df = speech_df[(speech_df.duration>3.0) &
-    (speech_df.split=='DEV') &
-    (speech_df.gender=='male') &
-    (speech_df.language==pos_label)].sample(n=num_eval_samples, random_state=1)
+    num_samples = num_train_samples if _split == 'TRA' else num_eval_samples
 
-neg_val_df = speech_df[(speech_df.duration>3.0) &
-    (speech_df.split=='DEV') &
-    (speech_df.gender=='female') &
-    (speech_df.language==neg_label)].sample(n=num_eval_samples, random_state=1)
+    pos_df = speech_df[((speech_df.gender=='male') &
+        (speech_df.split==_split) &
+        (speech_df.language==pos_label))].sample(
+        n=num_samples, random_state=1
+    )
 
-pos_eval_df = speech_df[(speech_df.duration>3.0) &
-   (speech_df.split=='EVA') &
-   #(speech_df.gender=='female') &
+    neg_df = speech_df[((speech_df.gender=='female') &
+        (speech_df.split==_split) &
+        (speech_df.language==neg_label))].sample(
+        n=num_samples, random_state=1
+    )
+
+    experiment_df_list.extend([pos_df, neg_df])
+
+# mismtached eval set
+pos_eval_df = speech_df[(speech_df.split=='EVA') &
+   (speech_df.gender=='female') &
    (speech_df.language==pos_label)].sample(n=num_eval_samples, random_state=1)
 
-neg_eval_df = speech_df[(speech_df.duration>3.0) &
-   (speech_df.split=='EVA') &
-   #(speech_df.gender=='male') &
+neg_eval_df = speech_df[(speech_df.split=='EVA') &
+   (speech_df.gender=='male') &
    (speech_df.language==neg_label)].sample(n=num_eval_samples, random_state=1)
 
-sess_speech_df = pd.concat([
-    pos_df, neg_df, pos_val_df, neg_val_df, pos_eval_df, neg_eval_df])
+
+experiment_df_list.extend([pos_eval_df, neg_eval_df])
+
+# make a single dataframe
+sess_speech_df = pd.concat(experiment_df_list)
 
 
-#print(sess_speech_df.columns.values.tolist())
-#print(sess_speech_df.head())
+print(sess_speech_df.columns.values.tolist())
+print(sess_speech_df.head())
 
 sess_speech_df.rename(columns={0:'uttr_id'}, inplace=True)
+
+print(sess_speech_df.head())
 
 speech_featurizer = SpeechFeaturizer(
     data_dir=config_args['speech_data_dir'],
@@ -202,7 +212,7 @@ LID_classifier = SpeechClassifier(
     task_classifier=nn_task_classifier
 )
 
-print('\n End-to-end LID classifier was initialized ...\n', LID_classifier)
+print('\nEnd-to-end LID classifier was initialized ...\n', LID_classifier)
 
 # if config_args['encoder_arch']['encoder_model'] == 'ConvNet':
 #     nn_LID_model = ConvNet_LID(
@@ -251,7 +261,7 @@ scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer,
                 mode='min', factor=0.5,
                 patience=1)
 
-train_state = training_functions.make_train_state(config_args)
+train_state = train_utils.make_train_state(config_args)
 
 # this line was added due to RunTimeError
 LID_classifier.cuda()
@@ -288,7 +298,7 @@ try:
             optimizer.zero_grad()
 
             # forward pass through net
-            y_hat = LID_classifier(x_in=batch_dict['x_data']) # shuffle_frames
+            y_hat = LID_classifier(x_in=batch_dict['x_data'], shuffle_frames=False) # shuffle_frames
             y_tgt = batch_dict['y_target']
 
             # compute the loss between predicted label and target label
@@ -303,7 +313,7 @@ try:
             optimizer.step()
 
             # compute the accuracy
-            acc_t = training_functions.compute_accuracy(y_hat, y_tgt)
+            acc_t = train_utils.compute_accuracy(y_hat, y_tgt)
             running_acc += (acc_t - running_acc) / (batch_index + 1)
 
             print(f"{config_args['model_str']}    "
@@ -347,11 +357,11 @@ try:
                 loss_t = loss.item()
                 running_loss += (loss_t - running_loss) / (batch_index + 1)
 
-                acc_t = training_functions.compute_accuracy(y_hat, y_tgt)
+                acc_t = train_utils.compute_accuracy(y_hat, y_tgt)
                 running_acc += (acc_t - running_acc) / (batch_index + 1)
 
                 # get labels and compute balanced acc.
-                y_hat_batch, y_tgt_batch = training_functions.get_predictions(
+                y_hat_batch, y_tgt_batch = train_utils.get_predictions(
                     y_hat, y_tgt)
 
                 y_hat_list.extend(y_hat_batch)
@@ -372,7 +382,7 @@ try:
         train_state['val_loss'].append(running_loss)
         train_state['val_acc'].append(running_acc)
 
-        train_state = training_functions.update_train_state(args=config_args,
+        train_state = train_utils.update_train_state(args=config_args,
             model=LID_classifier,
             train_state=train_state
         )
