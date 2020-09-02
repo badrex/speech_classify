@@ -151,12 +151,11 @@ experiment_df_list.extend([pos_eval_df, neg_eval_df])
 sess_speech_df = pd.concat(experiment_df_list)
 
 
-print(sess_speech_df.columns.values.tolist())
-print(sess_speech_df.head())
+#print(sess_speech_df.columns.values.tolist())
+#print(sess_speech_df.head())
 
 sess_speech_df.rename(columns={0:'uttr_id'}, inplace=True)
 
-print(sess_speech_df.head())
 
 speech_featurizer = SpeechFeaturizer(
     data_dir=config_args['speech_data_dir'],
