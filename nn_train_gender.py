@@ -349,7 +349,7 @@ try:
                 running_acc += (acc_t - running_acc) / (batch_index + 1)
 
                 # get labels and compute balanced acc.
-                y_hat_batch, y_tar_batch = train_utils.get_predictions(
+                y_hat_batch, y_tar_batch = train_utils.get_predictions_and_trues(
                     y_hat, y_tar)
 
                 y_hat_list.extend(y_hat_batch)

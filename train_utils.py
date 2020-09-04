@@ -73,7 +73,7 @@ def compute_accuracy(y_pred, y_target):
     return n_correct / len(y_pred_indices) * 100
 
 
-def get_predictions(y_pred, y_target):
+def get_predictions_and_trues(y_pred, y_target):
 	"""Return indecies of predictions. """
 	_, y_pred_indices = y_pred.max(dim=1)
 
@@ -88,7 +88,7 @@ def set_seed_everywhere(seed, cuda):
     torch.manual_seed(seed)
     if cuda:
         torch.cuda.manual_seed_all(seed)
-        
+
 
 def handle_dirs(dirpath):
     if not os.path.exists(dirpath):
