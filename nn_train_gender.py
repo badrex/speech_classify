@@ -286,7 +286,7 @@ try:
             optimizer.zero_grad()
 
             # forward pass through net
-            y_hat = LID_classifier(x_in=batch_dict['x_data'], shuffle_frames=False) # shuffle_frames
+            y_hat = LID_classifier(x_in=batch_dict['x_data'], shuffle_frames=True) # shuffle_frames
             y_tar = batch_dict['y_target']
 
             # compute the loss between predicted label and target label

@@ -321,11 +321,12 @@ try:
             # print summary
             print(f"{config_args['model_str']}    "
                 f"TRA epoch [{epoch_index + 1:>2}/{num_epochs}]"
-                f"[{batch_index + 1:>4}/{num_batches}]    "
-                f"cls-loss: {run_cls_loss:1.4f} :: "
-                f"cls-acc: {run_cls_acc:2.2f}    "
-                f"aux-loss: {run_aux_loss:1.4f} :: "
-                f"aux-acc: {run_aux_acc:2.2f}"
+                f"[{batch_index + 1:>4}/{num_batches:>4}]    "
+                f"cls - loss: {run_cls_loss:1.4f} :: "
+                f"acc: {run_cls_acc:2.2f}    "
+                f"aux - loss: {run_aux_loss:1.4f} :: "
+                f"acc: {run_aux_acc:2.2f}    "
+                f"Beta: {beta:1.3f}"
             )
 
 
@@ -412,11 +413,12 @@ try:
             # print summary
             print(f"{config_args['model_str']}    "
                 f"VAL epoch [{epoch_index + 1:>2}/{num_epochs}]"
-                f"[{batch_index + 1:>4}/{num_batches}]    "
-                f"cls-loss: {run_cls_loss:1.4f} :: "
-                f"cls-acc: {run_cls_acc:2.2f}    "
-                f"aux-loss: {run_aux_loss:1.4f} :: "
-                f"aux-acc: {run_aux_acc:2.2f}"
+                f"[{batch_index + 1:>4}/{num_batches:>4}]    "
+                f"cls - loss: {run_cls_loss:1.4f} :: "
+                f"acc: {run_cls_acc:2.2f}    "
+                f"aux - loss: {run_aux_loss:1.4f} :: "
+                f"acc: {run_aux_acc:2.2f}    "
+                f"Beta: {beta:1.3f}"
             )
 
             # compute balanced acc calc

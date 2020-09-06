@@ -1,13 +1,13 @@
 # CONFIG FILE FOR AN LID EXPERIMENT
-source_data_dir: '/data/SBC_FBANK_NORM_1_13/'
-target_data_dir: '/data/GP_FBANK_NORM_1_13/'
-source_speech_metadata: '/speech_cls/metadata/sbc_metadata_slavic.csv'
-target_speech_metadata: '/speech_cls/metadata/gp_metadata_slavic.csv'
+source_data_dir: '/data/GP_FBANK_NORM_1_13/'
+target_data_dir: '/data/SBC_FBANK_NORM_1_13/'
+source_speech_metadata: '/speech_cls/metadata/gp_metadata_slavic.csv'
+target_speech_metadata: '/speech_cls/metadata/sbc_metadata_slavic.csv'
 model_save_dir: '/speech_cls/in_progress/'
 seed: 1337
 source_language_set: 'BUL HRV CZE POL RUS UKR'
 target_language_set: 'BUL HRV CZE POL RUS UKR'
-experiment_name: 'domain_LID_sbc_gps'
+experiment_name: 'domain_LID_gps_sbc'
 #
 input_signal_params:
     feature_type: 'FBANK'
