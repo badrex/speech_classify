@@ -712,13 +712,15 @@ class AdaptiveSpeechClassifierII(nn.Module):
         """
         super(AdaptiveSpeechClassifierII, self).__init__()
         self.speech_encoder = speech_segment_encoder
-        self.task_classifier = task_classifier
-        self._aux_classifier = adversarial_classifier
 
         self.fc_layer = nn.Sequential(
             nn.Linear(fc_input_dim, fc_output_dim),
             nn.ReLU()
         )
+        
+        self.task_classifier = task_classifier
+        self._aux_classifier = adversarial_classifier
+
 
     def forward(self, x_in, apply_softmax=False, return_vector=False,
         shuffle_frames=False, grl_lambda=1.0):
