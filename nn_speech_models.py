@@ -239,13 +239,13 @@ class SpeechDataset(Dataset):
 
 ##### A METHOD TO GENERATE BATCHES WITH A DATALOADER WRAPPER
 def generate_batches(speech_dataset, batch_size, shuffle_batches=True,
-    drop_last_batch=False, device="cpu"):
+    drop_last_batch=True, device="cpu"):
     """
     A generator function which wraps the PyTorch DataLoader and ensures that
       each tensor is on the right device (i.e., CPU or GPU).
     """
     dataloader = DataLoader(dataset=speech_dataset, batch_size=batch_size,
-        shuffle=shuffle_batches, drop_last=True)#drop_last_batch
+        shuffle=shuffle_batches, drop_last=drop_last_batch)#drop_last_batch
 
     # for each batch, yield a dictionay with keys: x_data, y_target
     for data_dict in dataloader:
@@ -717,7 +717,7 @@ class AdaptiveSpeechClassifierII(nn.Module):
             nn.Linear(fc_input_dim, fc_output_dim),
             nn.ReLU()
         )
-        
+
         self.task_classifier = task_classifier
         self._aux_classifier = adversarial_classifier
 
