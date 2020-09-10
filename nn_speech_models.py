@@ -52,11 +52,11 @@ class SpeechFeaturizer(object):
         self.label_set = label_set
 
         # obtain index --> label dict
-        self.index2label = {idx:lbl for (lbl, idx) in enumerate(self.label_set)}
+        self.index2label = {idx:lbl for (idx, lbl) in enumerate(self.label_set)}
 
 
         # obtain label --> index dict
-        self.label2index = {idx: lbl for (idx, lbl) in self.index2label.items()}
+        self.label2index = {lbl:idx for (idx, lbl) in self.index2label.items()}
 
 
 

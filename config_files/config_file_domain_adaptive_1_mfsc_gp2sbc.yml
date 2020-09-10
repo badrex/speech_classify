@@ -7,7 +7,7 @@ model_save_dir: '/speech_cls/in_progress/'
 seed: 1337
 source_language_set: 'BUL HRV CZE POL RUS UKR'
 target_language_set: 'BUL HRV CZE POL RUS UKR'
-experiment_name: 'domain_LID_gps_sbc'
+experiment_name: 'domain_LID_1_gps2sbc'
 #
 input_signal_params:
     feature_type: 'FBANK'

@@ -1,10 +1,15 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
+# get parent directory to be visible
 import os
+import sys
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.append(parentdir)
+
 import yaml
 import pprint
-import sys
 import collections
 
 # to get time model was trained
@@ -113,37 +118,9 @@ src_speech_featurizer = SpeechFeaturizer(
 print('Source SpeechFeaturizer was initialized: ',
     src_speech_featurizer.index2label)
 
-# target dataset & featurizer ...
-tgt_speech_df = pd.read_csv(config_args['target_speech_metadata'],
-    delimiter="\t", encoding='utf-8')
 
-tgt_label_set=config_args['target_language_set'].split()
-
-# get only target labels and more than 3.0 seconds
-tgt_speech_df = tgt_speech_df[
-    (tgt_speech_df.language.isin(tgt_label_set)) &
-    (tgt_speech_df.duration>3.0)
-]#.sample(n=500, random_state=1)
-
-
-tgt_speech_featurizer = SpeechFeaturizer(
-    data_dir=config_args['target_data_dir'],
-    feature_type= config_args['input_signal_params']['feature_type'],
-    label_set=config_args['target_language_set'].split(), # split str into list of str
-    num_frames=config_args['input_signal_params']['num_frames'],
-    max_num_frames=config_args['input_signal_params']['max_num_frames'],
-    spectral_dim=config_args['encoder_arch']['spectral_dim'],
-    start_index=config_args['input_signal_params']['start_index'],
-    end_index=config_args['input_signal_params']['end_index']
-)
-
-print('Target SpeechFeaturizer was initialized: ',
-    tgt_speech_featurizer.index2label)
-
-
-# src & tgt data loader ...
+#  data loader ...
 src_speech_dataset = SpeechDataset(src_speech_df, src_speech_featurizer)
-tgt_speech_dataset = SpeechDataset(tgt_speech_df, tgt_speech_featurizer)
 
 
 # initialize speech encoder
@@ -173,33 +150,22 @@ nn_task_classifier = FeedforwardClassifier(
     dropout_prob=config_args['classifier_arch']['dropout_prob']
 )
 
-# initialize main task classifier ...
-nn_aux_classifier = FeedforwardClassifier(
-    num_classes= config_args['aux_classifier_arch']['num_classes'],
-    input_dim=config_args['aux_classifier_arch']['input_dim'],
-    hidden_dim=config_args['aux_classifier_arch']['hidden_dim'],
-    num_layers=config_args['aux_classifier_arch']['num_layers'],
-    unit_dropout=config_args['aux_classifier_arch']['unit_dropout'],
-    dropout_prob=config_args['aux_classifier_arch']['dropout_prob']
-)
 
-
-# initialize end-2-end adaptive LID classifier ...
-adaptive_LID_classifier = AdaptiveSpeechClassifierI(
+# initialize end-2-end LID classifier ...
+baseline_LID_classifier = SpeechClassifier(
     speech_segment_encoder=nn_speech_encoder,
-    task_classifier=nn_task_classifier,
-    adversarial_classifier=nn_aux_classifier
+    task_classifier=nn_task_classifier
 )
 
 print('\nEnd-to-end LID classifier was initialized ...\n',
-    adaptive_LID_classifier)
+    baseline_LID_classifier)
 
 
-# define classification loss and auxiliary loss
+# define classification loss
 cls_loss = nn.CrossEntropyLoss()
-aux_loss = nn.CrossEntropyLoss()
 
-optimizer = optim.Adam(adaptive_LID_classifier.parameters(), \
+
+optimizer = optim.Adam(baseline_LID_classifier.parameters(), \
     lr=config_args['training_hyperparams']['learning_rate'])
 
 scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer,
@@ -209,7 +175,7 @@ scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer=optimizer,
 train_state = train_utils.make_train_state(config_args)
 
 # this line was added due to RunTimeError
-adaptive_LID_classifier.cuda()
+baseline_LID_classifier.cuda()
 
 
 num_epochs = config_args['training_hyperparams']['num_epochs']
@@ -227,69 +193,33 @@ try:
         ### TRAINING ...
         train_state['epoch_index'] = epoch_index
 
-        # Iterate over training dataset, set loss and acc to 0 for
-        # both src & tgt, set train mode on, generate batch
-        run_cls_loss, run_aux_loss = 0.0, 0.0
-        run_cls_acc,  run_aux_acc  = 0.0, 0.0
+        # Iterate over training dataset, set loss and acc to 0
+        # set train mode on, generate batch
+        run_cls_loss, run_cls_acc = 0.0, 0.0
 
-        adaptive_LID_classifier.train()
+        baseline_LID_classifier.train()
 
         src_speech_dataset.set_mode('TRA')
         src_batch_generator = generate_batches(src_speech_dataset,
             batch_size=batch_size, device=config_args['device']
         )
 
-        tgt_speech_dataset.set_mode('TRA')
-        tgt_batch_generator = generate_batches(tgt_speech_dataset,
-            batch_size=batch_size, device=config_args['device']
-        )
 
-        src_num_batches = src_speech_dataset.get_num_batches(batch_size)
-        tgt_num_batches = tgt_speech_dataset.get_num_batches(batch_size)
-
-        num_batches = min(src_num_batches, tgt_num_batches)
+        num_batches = src_speech_dataset.get_num_batches(batch_size)
 
         # iterate over training batches
-        dataset = zip(src_batch_generator, tgt_batch_generator)
-        for batch_index, (src_batch_dict, tgt_batch_dict) in enumerate(dataset):
+        for batch_index, src_batch_dict in enumerate(src_batch_generator):
             # zero the gradients
             optimizer.zero_grad()
 
-            # compute adaptation hyperparameter beta
-            n = float(batch_index + epoch_index * num_batches)
-            d =  (num_epochs * num_batches)
-            p = (n/d)
-            beta = 2.0 / (1. + np.exp(-10 * p)) - 1
-
-
             # forward pass and compute loss on source domain
-            # generate source domain labels
-            src_aux_tar = torch.zeros(batch_size, dtype=torch.long,
-                device=config_args['device'])
 
             src_cls_tar = src_batch_dict['y_target']
 
             # forward pass
-            src_cls_hat, src_aux_hat = adaptive_LID_classifier(
-                x_in=src_batch_dict['x_data'], grl_lambda=beta
-            )
+            src_cls_hat = baseline_LID_classifier(x_in=src_batch_dict['x_data'])
 
-            src_cls_loss = cls_loss(src_cls_hat, src_cls_tar)
-            src_aux_loss = aux_loss(src_aux_hat, src_aux_tar)
-
-            # forward pass and compute aux loss on target domain
-            # generate source domain labels
-            tgt_aux_tar = torch.ones(batch_size, dtype=torch.long,
-                device=config_args['device'])
-
-            _, tgt_aux_hat = adaptive_LID_classifier(
-                x_in=tgt_batch_dict['x_data'], grl_lambda=beta
-            )
-
-            tgt_aux_loss = aux_loss(tgt_aux_hat, tgt_aux_tar)
-
-            # add all losses
-            loss = src_cls_loss + src_aux_loss + tgt_aux_loss
+            loss = cls_loss(src_cls_hat, src_cls_tar)
 
             # use loss to produce gradients
             loss.backward()
@@ -298,35 +228,19 @@ try:
             optimizer.step()
 
             # compute different cls & aux losses
-            batch_cls_loss = src_cls_loss.item()
+            batch_cls_loss = loss.item()
             run_cls_loss += (batch_cls_loss - run_cls_loss)/(batch_index + 1)
-
-            batch_aux_loss = src_aux_loss.item() + tgt_aux_loss.item()
-            run_aux_loss += (batch_aux_loss - run_aux_loss)/(batch_index + 1)
 
             #  compute running source cls accuracy
             src_cls_acc = train_utils.compute_accuracy(src_cls_hat, src_cls_tar)
             run_cls_acc += (src_cls_acc - run_cls_acc)/(batch_index + 1)
-
-            # compute running aux prediction acc. (domain prediction)
-            src_aux_acc = train_utils.compute_accuracy(src_aux_hat, src_aux_tar)
-            run_src_aux_acc = src_aux_acc /(batch_index + 1)
-            tgt_aux_acc = train_utils.compute_accuracy(tgt_aux_hat, tgt_aux_tar)
-            run_tgt_aux_acc = tgt_aux_acc /(batch_index + 1)
-
-            run_aux_acc += ((run_src_aux_acc + run_tgt_aux_acc)/2) - \
-                run_aux_acc / (batch_index + 1)
-
 
             # print summary
             print(f"{config_args['model_str']}    "
                 f"TRA epoch [{epoch_index + 1:>2}/{num_epochs}]"
                 f"[{batch_index + 1:>4}/{num_batches:>4}]    "
                 f"cls - loss: {run_cls_loss:1.4f} :: "
-                f"acc: {run_cls_acc:2.2f}    "
-                f"aux - loss: {run_aux_loss:1.4f} :: "
-                f"acc: {run_aux_acc:2.2f}    "
-                f"Beta: {beta:1.3f}"
+                f"acc: {run_cls_acc:2.2f}"
             )
 
 
@@ -336,117 +250,64 @@ try:
 
         ### VALIDATION ...
         # run one validation pass over the validation split
-        adaptive_LID_classifier.eval()
+        baseline_LID_classifier.eval()
 
         src_speech_dataset.set_mode('DEV')
         src_batch_generator = generate_batches(src_speech_dataset,
             batch_size=batch_size, device=config_args['device']
         )
 
-        tgt_speech_dataset.set_mode('DEV')
-        tgt_batch_generator = generate_batches(tgt_speech_dataset,
-            batch_size=batch_size, device=config_args['device']
-        )
-
-        src_num_batches = src_speech_dataset.get_num_batches(batch_size)
-        tgt_num_batches = tgt_speech_dataset.get_num_batches(batch_size)
-
-        num_batches = min(src_num_batches, tgt_num_batches)
-
+        num_batches = src_speech_dataset.get_num_batches(batch_size)
 
         # iterate over validation batches
         # list to maintain model predictions on val set
         y_src_tar, y_src_hat = [], []
-        y_tgt_tar, y_tgt_hat = [], []
 
-        dataset = zip(src_batch_generator, tgt_batch_generator)
-        for batch_index, (src_batch_dict, tgt_batch_dict) in enumerate(dataset):
+
+        for batch_index, src_batch_dict in enumerate(src_batch_generator):
             # forward pass and compute loss on source domain
-            # generate source domain labels
-            src_aux_tar = torch.zeros(batch_size, dtype=torch.long,
-                device=config_args['device'])
 
             src_cls_tar = src_batch_dict['y_target']
 
             # forward pass
-            src_cls_hat, src_aux_hat = adaptive_LID_classifier(
-                x_in=src_batch_dict['x_data'], grl_lambda=beta
-            )
+            src_cls_hat = baseline_LID_classifier(x_in=src_batch_dict['x_data'])
 
             src_cls_loss = cls_loss(src_cls_hat, src_cls_tar)
-            src_aux_loss = aux_loss(src_aux_hat, src_aux_tar)
-
-            # forward pass and compute aux loss on target domain
-            # generate source domain labels
-            tgt_aux_tar = torch.ones(batch_size, dtype=torch.long,
-                device=config_args['device'])
-
-            tgt_cls_tar = tgt_batch_dict['y_target']
-
-            tgt_cls_hat, tgt_aux_hat = adaptive_LID_classifier(
-                x_in=tgt_batch_dict['x_data'], grl_lambda=beta
-            )
-
-            tgt_aux_loss = aux_loss(tgt_aux_hat, tgt_aux_tar)
 
             # compute different cls & aux losses
             batch_cls_loss = src_cls_loss.item()
             run_cls_loss += (batch_cls_loss - run_cls_loss)/(batch_index + 1)
 
-            batch_aux_loss = src_aux_loss.item() + tgt_aux_loss.item()
-            run_aux_loss += (batch_aux_loss - run_aux_loss)/(batch_index + 1)
-
             #  compute running source cls accuracy
             src_cls_acc = train_utils.compute_accuracy(src_cls_hat, src_cls_tar)
             run_cls_acc += (src_cls_acc - run_cls_acc)/(batch_index + 1)
-
-            # compute running aux prediction acc. (domain prediction)
-            src_aux_acc = train_utils.compute_accuracy(src_aux_hat, src_aux_tar)
-            run_src_aux_acc = src_aux_acc /(batch_index + 1)
-            tgt_aux_acc = train_utils.compute_accuracy(tgt_aux_hat, tgt_aux_tar)
-            run_tgt_aux_acc = tgt_aux_acc /(batch_index + 1)
-
-            run_aux_acc += ((run_src_aux_acc + run_tgt_aux_acc)/2) - \
-                run_aux_acc / (batch_index + 1)
-
 
             # print summary
             print(f"{config_args['model_str']}    "
                 f"VAL epoch [{epoch_index + 1:>2}/{num_epochs}]"
                 f"[{batch_index + 1:>4}/{num_batches:>4}]    "
                 f"cls - loss: {run_cls_loss:1.4f} :: "
-                f"acc: {run_cls_acc:2.2f}    "
-                f"aux - loss: {run_aux_loss:1.4f} :: "
-                f"acc: {run_aux_acc:2.2f}    "
-                f"Beta: {beta:1.3f}"
+                f"acc: {run_cls_acc:2.2f}"
             )
 
-            # compute balanced acc calc
-            y_src_tar, y_src_hat = train_utils.get_predictions_and_trues(
-                src_cls_hat, src_cls_tar)
-
-            y_tgt_tar, y_tgt_hat = train_utils.get_predictions_and_trues(
-                tgt_cls_hat, tgt_cls_tar)
-
-            y_src_tar.extend(y_src_tar); y_src_hat.extend(y_src_hat)
-            y_tgt_tar.extend(y_tgt_tar); y_tgt_hat.extend(y_tgt_hat)
-
+			# get predictions
+            batch_y_src_hat, batch_y_src_tar = train_utils.get_predictions_and_trues(
+				src_cls_hat, src_cls_tar
+			)
+            y_src_tar.extend(batch_y_src_tar); y_src_hat.extend(batch_y_src_hat)
 
         # TRAIN & VAL iterations for one epoch is over ...
         train_state['val_loss'].append(run_cls_loss)
         train_state['val_acc'].append(run_cls_acc)
 
-        # compute val performance on this epoch
+        # compute val performance on this epoch using balanced acc
         src_cls_acc_ep = balanced_accuracy_score(y_src_tar, y_src_hat)*100
-        tgt_cls_acc_ep = balanced_accuracy_score(y_tgt_tar, y_tgt_hat)*100
 
         # update data strucutre for val perforamce metric
         balanced_acc_scores['src'].append(src_cls_acc_ep)
-        balanced_acc_scores['tgt'].append(tgt_cls_acc_ep)
-
 
         train_state = train_utils.update_train_state(args=config_args,
-            model=adaptive_LID_classifier,
+            model=baseline_LID_classifier,
             train_state=train_state
         )
 
@@ -456,17 +317,19 @@ try:
         if train_state['stop_early']:
             break
 
-
 except KeyboardInterrupt:
     print("Exiting loop")
 
 
 # once training is over for the number of batches specified, check best epoch
-for dataset in ['src', 'tgt']:
+for dataset in ['src']:
     acc_scores = balanced_acc_scores[dataset]
     for i, acc in enumerate(acc_scores):
         print("Validation Acc {} {:.3f}".format(i+1, acc))
 
 
-    print('Best epoch by balanced acc: {:.3f} epoch {}'.format(max(acc_scores),
-        1 + np.argmax(acc_scores)))
+    print('Best {} model by balanced acc: {:.3f} epoch {}'.format(
+		config_args['model_str'],
+		max(acc_scores),
+        1 + np.argmax(acc_scores))
+	)

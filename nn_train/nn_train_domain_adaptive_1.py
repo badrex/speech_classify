@@ -1,10 +1,15 @@
 #! /usr/bin/env python3
 # coding: utf-8
 
+# get parent directory to be visible
 import os
+import sys
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.append(parentdir)
+
 import yaml
 import pprint
-import sys
 import collections
 
 # to get time model was trained
@@ -185,12 +190,10 @@ nn_aux_classifier = FeedforwardClassifier(
 
 
 # initialize end-2-end adaptive LID classifier ...
-adaptive_LID_classifier = AdaptiveSpeechClassifierII(
+adaptive_LID_classifier = AdaptiveSpeechClassifierI(
     speech_segment_encoder=nn_speech_encoder,
     task_classifier=nn_task_classifier,
-    adversarial_classifier=nn_aux_classifier,
-    fc_input_dim=config_args['encoder_arch']['num_channels'][2],
-    fc_output_dim=config_args['classifier_arch']['input_dim']
+    adversarial_classifier=nn_aux_classifier
 )
 
 print('\nEnd-to-end LID classifier was initialized ...\n',
@@ -423,15 +426,16 @@ try:
                 f"Beta: {beta:1.3f}"
             )
 
-            # compute balanced acc calc
-            y_src_tar, y_src_hat = train_utils.get_predictions_and_trues(
+            # get predictions
+            batch_y_src_hat, batch_y_src_tar = train_utils.get_predictions_and_trues(
                 src_cls_hat, src_cls_tar)
 
-            y_tgt_tar, y_tgt_hat = train_utils.get_predictions_and_trues(
+            y_src_tar.extend(batch_y_src_tar); y_src_hat.extend(batch_y_src_hat)
+
+            batch_y_tgt_hat, batch_y_tgt_tar = train_utils.get_predictions_and_trues(
                 tgt_cls_hat, tgt_cls_tar)
 
-            y_src_tar.extend(y_src_tar); y_src_hat.extend(y_src_hat)
-            y_tgt_tar.extend(y_tgt_tar); y_tgt_hat.extend(y_tgt_hat)
+            y_tgt_tar.extend(batch_y_tgt_tar); y_tgt_hat.extend(batch_y_tgt_hat)
 
 
         # TRAIN & VAL iterations for one epoch is over ...
@@ -470,5 +474,9 @@ for dataset in ['src', 'tgt']:
         print("Validation Acc {} {:.3f}".format(i+1, acc))
 
 
-    print('Best epoch by balanced acc: {:.3f} epoch {}'.format(max(acc_scores),
-        1 + np.argmax(acc_scores)))
+    print('Best {} model by balanced acc: {:.3f} epoch {} on {}'.format(
+		config_args['model_str'],
+		max(acc_scores),
+        1 + np.argmax(acc_scores),
+		dataset)
+	)
