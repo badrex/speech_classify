@@ -1,4 +1,5 @@
 # coding: utf-8
+# edited from remote client! :D
 
 import math
 import numpy as np
@@ -175,8 +176,8 @@ class SpeechDataset(Dataset):
         self.test_df = self.speech_df[self.speech_df.split=='EVA']
         self.test_size = len(self.test_df)
 
-        print('Size of the splits (train, val, test): ',  \
-            self.train_size, self.val_size, self.test_size)
+        # print('Size of the splits (train, val, test): ',  \
+        #     self.train_size, self.val_size, self.test_size)
 
         self._lookup_dict = {
             'TRA': (self.train_df, self.train_size),
@@ -491,7 +492,7 @@ class ConvSpeechEncoder(nn.Module):
         # signal distortion during inference
         if self.eval and frame_reverse: x_in = self.frame_reverse(x_in)
         if self.eval and shuffle_frames:
-            x_in = self.frame_shuffle(x_in, shuffle_bag_size)
+            x_in = self.frame_shuffle(x_in, bag_size=shuffle_bag_size)
 
         # apply the convolutional transformations on the signal
         conv1_f = self.conv1(x_in)
@@ -562,7 +563,7 @@ class FeedforwardClassifier(nn.Module):
         x_in,
         apply_softmax=False,
         return_vector=False,
-        target_layer='last_fc_relu'
+        target_layer='fc_last_relu'
     ):
         """
         The forward pass of the feedforward network.
@@ -628,12 +629,14 @@ class SpeechClassifier(nn.Module):
         self.task_classifier = task_classifier
 
     def forward(self, x_in, apply_softmax=False, return_vector=False,
-        shuffle_frames=False):
+        shuffle_frames=False, shuffle_bag_size=1):
         """
         The forward pass of the end-to-end classifier. Given x_in (torch.Tensor),
             return output tensor y_hat or out_vec (torch.Tensor)
         """
-        conv_features = self.speech_encoder(x_in, shuffle_frames=shuffle_frames)
+        conv_features = self.speech_encoder(x_in,
+            shuffle_frames=shuffle_frames,
+            shuffle_bag_size=shuffle_bag_size)
 
         if return_vector:
             out_vec =  self.task_classifier(conv_features, apply_softmax=False,

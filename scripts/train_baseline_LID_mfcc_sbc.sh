@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # specify which GPU to work on ...
-export CUDA_VISIBLE_DEVICES=2
+export CUDA_VISIBLE_DEVICES=0
 
 nvidia-smi
 
@@ -11,25 +11,25 @@ DIR=$(cd $(dirname $0); pwd)
 python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
 python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
 python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
-python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
+# python -u $DIR/../nn_train/nn_train_baseline.py $DIR/../config_files/config_file_baseline_mfcc_sbc.yml
