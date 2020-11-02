@@ -1,4 +1,4 @@
-preprocessed_data_dir: '/data/GP_FBANK_NORM_1_13/'
+speech_data_dir: '/data/GP_FBANK_NORM_1_13/'
 speech_metadata: '/speech_cls/metadata/gp_speech_data.csv'
 model_state_file: '31082020_1800'
 model_save_dir: 'in_progress/'
@@ -16,8 +16,8 @@ input_signal_params:
     sample_segment: True
     start_index: 0
     end_index: 13
-model_arch:
-    nn_model: ConvNet
+encoder_arch:
+    encoder_model: ConvNet
     spectral_dim: 13
     num_classes: 2
     bottleneck: True

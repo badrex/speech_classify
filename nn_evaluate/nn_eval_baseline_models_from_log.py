@@ -36,15 +36,41 @@ import torch.optim as optim
 from nn_speech_models import *
 import train_utils
 
+# helper function
+def read_log_file(file_name):
+    """From a log file, return dict with val acc scores"""
+
+    with open(file_name) as f:
+        log_file_text = f.readlines()
+
+    model_strings = []
+
+    for i, line in enumerate(log_file_text):
+        # get all model names
+        if line[:4] == 'Best':
+
+            line_tokens = line.split()
+
+            best_model_str = line_tokens[1] + '_' + line_tokens[-1] + '.pth'
+
+            model_strings.append(best_model_str)
+
+    return model_strings
+
+# Training Routine
+
 # obtain yml config file from cmd line and print out content
 if len(sys.argv) != 2:
 	sys.exit("\nUsage: " + sys.argv[0] + " <config YAML file>\n")
 
 config_file_path = sys.argv[1] # e.g., '/speech_cls/config_1.yml'
 config_args = yaml.safe_load(open(config_file_path))
-print('YML configuration file content:')
+#print('YML configuration file content:')
 pp = pprint.PrettyPrinter(indent=4)
-pp.pprint(config_args)
+#pp.pprint(config_args)
+
+models_to_eval = read_log_file(config_args['log_file'])
+#print(models_to_eval)
 
 
  # Check CUDA
@@ -53,7 +79,7 @@ if not torch.cuda.is_available():
 
 config_args['device'] = torch.device("cuda" if config_args['cuda'] else "cpu")
 
-print("Using CUDA: {}".format(config_args['cuda']))
+#print("Using CUDA: {}".format(config_args['cuda']))
 
 
 # Set seed for reproducibility
@@ -69,8 +95,8 @@ src_label_set=config_args['source_language_set'].split()
 
 # get only target labels and more than 3.0 seconds
 src_speech_df = src_speech_df[
-    (src_speech_df.language.isin(src_label_set)) &
-    (src_speech_df.duration>3.0)
+    (src_speech_df.language.isin(src_label_set)) #&
+    #(src_speech_df.duration>3.0)
 ]#.sample(n=500, random_state=1)
 
 src_speech_featurizer = SpeechFeaturizer(
@@ -84,8 +110,8 @@ src_speech_featurizer = SpeechFeaturizer(
     end_index=config_args['input_signal_params']['end_index']
 )
 
-print('Source SpeechFeaturizer was initialized: ',
-    src_speech_featurizer.index2label)
+#print('Source SpeechFeaturizer was initialized: ',
+	#src_speech_featurizer.index2label)
 
 
 #  data loader ...
@@ -128,95 +154,99 @@ baseline_LID_classifier = SpeechClassifier(
     task_classifier=nn_task_classifier
 )
 
-print('\nEnd-to-end LID classifier was initialized ...\n',
-    baseline_LID_classifier)
+# print('\nEnd-to-end LID classifier was initialized ...\n',
+    # baseline_LID_classifier)
+
+# iterate over all models
+for _i, pretrained_model in enumerate(models_to_eval):
+	state_dict = torch.load(config_args['model_save_dir'] + pretrained_model)
+	baseline_LID_classifier.load_state_dict(state_dict)
+
+	# this line was added due to RunTimeError
+	baseline_LID_classifier.cuda()
 
 
-state_dict = torch.load(config_args['model_save_dir'] + config_args['pretrained_model'])
-baseline_LID_classifier.load_state_dict(state_dict)
-
-# this line was added due to RunTimeError
-baseline_LID_classifier.cuda()
+	batch_size = config_args['batch_size']
 
 
-batch_size = config_args['batch_size']
+	try:
+		### VALIDATION ...
+		# run one validation pass over the validation split
+		baseline_LID_classifier.eval()
 
+		src_speech_dataset.set_mode(config_args['eval_split'])
 
-try:
-	### VALIDATION ...
-	# run one validation pass over the validation split
-	baseline_LID_classifier.eval()
-
-	src_speech_dataset.set_mode(config_args['eval_split'])
-
-	src_batch_generator = generate_batches(src_speech_dataset,
-	    batch_size=batch_size,
-		device=config_args['device'],
-		drop_last_batch=False
-	)
-
-	num_batches = src_speech_dataset.get_num_batches(batch_size)
-
-	# iterate over validation batches
-	# list to maintain model predictions on val set
-	y_src_tar, y_src_hat = [], []
-
-	run_cls_acc = 0
-
-
-	for batch_index, src_batch_dict in enumerate(src_batch_generator):
-		# forward pass and compute loss on source domain
-
-		src_cls_tar = src_batch_dict['y_target']
-
-		# forward pass
-		src_cls_hat = baseline_LID_classifier(x_in=src_batch_dict['x_data'],
-			shuffle_frames=False,
-			shuffle_bag_size=1)
-
-
-		#  compute running source cls accuracy
-		src_cls_acc = train_utils.compute_accuracy(src_cls_hat, src_cls_tar)
-		run_cls_acc += (src_cls_acc - run_cls_acc)/(batch_index + 1)
-
-		# print summary
-		print(f"{config_args['pretrained_model']}    "
-		    f"[{batch_index + 1:>4}/{num_batches:>4}]    "
-		    f"acc: {run_cls_acc:2.2f}"
+		src_batch_generator = generate_batches(src_speech_dataset,
+		    batch_size=batch_size,
+			device=config_args['device'],
+			drop_last_batch=False
 		)
 
-		# compute balanced acc calc
-		batch_y_src_hat, batch_y_src_tar = train_utils.get_predictions_and_trues(
-		    src_cls_hat, src_cls_tar)
+		num_batches = src_speech_dataset.get_num_batches(batch_size)
 
-		y_src_tar.extend(batch_y_src_tar); y_src_hat.extend(batch_y_src_hat)
+		# iterate over validation batches
+		# list to maintain model predictions on val set
+		y_src_tar, y_src_hat = [], []
+
+		run_cls_acc = 0
 
 
-	# compute val performance on this epoch
-	#print(y_src_tar, y_src_hat)
-	print(collections.Counter(y_src_tar))
-	print(collections.Counter(y_src_hat))
-	src_cls_acc = balanced_accuracy_score(y_src_tar, y_src_hat)*100
-	print(f"balanced acc: {src_cls_acc:2.2f}")
+		for batch_index, src_batch_dict in enumerate(src_batch_generator):
+			# forward pass and compute loss on source domain
 
-	src_cls_acc = accuracy_score(y_src_tar, y_src_hat)*100
-	print(f"  normal acc: {src_cls_acc:2.2f}")
+			src_cls_tar = src_batch_dict['y_target']
 
-	task_labels = list(src_speech_featurizer.index2label.keys())
+			# forward pass
+			src_cls_hat = baseline_LID_classifier(x_in=src_batch_dict['x_data'],
+				shuffle_frames=False,
+				shuffle_bag_size=1)
 
-	P, R, F, _ = precision_recall_fscore_support(y_src_tar, y_src_hat, average=None, labels=task_labels)
 
-	print("{:>15}\t{:>10}\t{:>10}\t{:>10}".format('Language', 'P', 'R', 'F'))
+			#  compute running source cls accuracy
+			src_cls_acc = train_utils.compute_accuracy(src_cls_hat, src_cls_tar)
+			run_cls_acc += (src_cls_acc - run_cls_acc)/(batch_index + 1)
 
-	for i, c in enumerate(task_labels):
-		lang = src_speech_featurizer.index2label[c]
-		print("{:>15}\t{:10.2f}\t{:10.2f}\t{:10.2f}".format(lang, P[i]*100, R[i]*100, F[i]*100))
+			# print summary
+			# print(f"{config_args['pretrained_model']}    "
+			#     f"[{batch_index + 1:>4}/{num_batches:>4}]    "
+			#     f"acc: {run_cls_acc:2.2f}"
+			# )
 
-	mP, mR, mF, _ = precision_recall_fscore_support(y_src_tar, y_src_hat, average='macro')
-	print("{:>15}\t{:10.2f}\t{:10.2f}\t{:10.2f}".format('Macro Avg', mP*100, mR*100, mF*100))
+			# compute balanced acc calc
+			batch_y_src_hat, batch_y_src_tar = train_utils.get_predictions_and_trues(
+			    src_cls_hat, src_cls_tar)
 
-	uP, uR, uF, _ = precision_recall_fscore_support(y_src_tar, y_src_hat, average='micro')
-	print("{:>15}\t{:10.2f}\t{:10.2f}\t{:10.2f}".format('Micro Avg', uP*100, uR*100, uF*100))
+			y_src_tar.extend(batch_y_src_tar); y_src_hat.extend(batch_y_src_hat)
 
-except KeyboardInterrupt:
-    print("Exiting loop")
+
+		# compute val performance on this epoch
+		#print(y_src_tar, y_src_hat)
+		# print(collections.Counter(y_src_tar))
+		# print(collections.Counter(y_src_hat))
+		src_cls_acc = balanced_accuracy_score(y_src_tar, y_src_hat)*100
+
+		_str_len = len(pretrained_model) + 10
+		# print(_str_len)
+		print(f"{1+_i:>2} {pretrained_model:<75} acc: {src_cls_acc:2.2f}")
+
+		src_cls_acc = accuracy_score(y_src_tar, y_src_hat)*100
+		# print(f"  normal acc: {src_cls_acc:2.2f}")
+
+		# task_labels = list(src_speech_featurizer.index2label.keys())
+
+		# P, R, F, _ = precision_recall_fscore_support(y_src_tar, y_src_hat, average=None, labels=task_labels)
+		#
+		# print("{:>15} {:>10} {:>10} {:>10}".format('Language', 'P', 'R', 'F'))
+		#
+		# for i, c in enumerate(task_labels):
+		# 	lang = src_speech_featurizer.index2label[c]
+		# 	print("{:>15} {:10.2f} {:10.2f} {:10.2f}".format(lang, P[i]*100, R[i]*100, F[i]*100))
+		#
+		# mP, mR, mF, _ = precision_recall_fscore_support(y_src_tar, y_src_hat, average='macro')
+		# print("{:>15} {:10.2f} {:10.2f} {:10.2f}".format('Macro Avg', mP*100, mR*100, mF*100))
+		#
+		# uP, uR, uF, _ = precision_recall_fscore_support(y_src_tar, y_src_hat, average='micro')
+		# print("{:>15} {:10.2f} {:10.2f} {:10.2f}".format('Micro Avg', uP*100, uR*100, uF*100))
+
+	except KeyboardInterrupt:
+	    print("Exiting loop")

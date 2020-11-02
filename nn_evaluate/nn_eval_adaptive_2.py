@@ -36,6 +36,7 @@ import torch.optim as optim
 from nn_speech_models import *
 import train_utils
 
+
 # obtain yml config file from cmd line and print out content
 if len(sys.argv) != 2:
 	sys.exit("\nUsage: " + sys.argv[0] + " <config YAML file>\n")
@@ -84,8 +85,8 @@ src_speech_featurizer = SpeechFeaturizer(
     end_index=config_args['input_signal_params']['end_index']
 )
 
-print('Source SpeechFeaturizer was initialized: ',
-    src_speech_featurizer.index2label)
+#print('Source SpeechFeaturizer was initialized: ',
+	#src_speech_featurizer.index2label)
 
 
 #  data loader ...
@@ -121,22 +122,35 @@ nn_task_classifier = FeedforwardClassifier(
     dropout_prob=config_args['classifier_arch']['dropout_prob']
 )
 
-
-# initialize end-2-end LID classifier ...
-baseline_LID_classifier = SpeechClassifier(
-    speech_segment_encoder=nn_speech_encoder,
-    task_classifier=nn_task_classifier
+# initialize main task classifier ...
+nn_aux_classifier = FeedforwardClassifier(
+    num_classes= config_args['aux_classifier_arch']['num_classes'],
+    input_dim=config_args['aux_classifier_arch']['input_dim'],
+    hidden_dim=config_args['aux_classifier_arch']['hidden_dim'],
+    num_layers=config_args['aux_classifier_arch']['num_layers'],
+    unit_dropout=config_args['aux_classifier_arch']['unit_dropout'],
+    dropout_prob=config_args['aux_classifier_arch']['dropout_prob']
 )
 
-print('\nEnd-to-end LID classifier was initialized ...\n',
-    baseline_LID_classifier)
 
+# initialize end-2-end adaptive LID classifier ...
+adaptive_LID_classifier = AdaptiveSpeechClassifierII(
+    speech_segment_encoder=nn_speech_encoder,
+    task_classifier=nn_task_classifier,
+    adversarial_classifier=nn_aux_classifier,
+    fc_input_dim=config_args['encoder_arch']['num_channels'][2],
+    fc_output_dim=config_args['classifier_arch']['input_dim']
+)
 
+# print('\nEnd-to-end LID classifier was initialized ...\n',
+    # adaptive_LID_classifier)
+
+# init model
 state_dict = torch.load(config_args['model_save_dir'] + config_args['pretrained_model'])
-baseline_LID_classifier.load_state_dict(state_dict)
+adaptive_LID_classifier.load_state_dict(state_dict)
 
 # this line was added due to RunTimeError
-baseline_LID_classifier.cuda()
+adaptive_LID_classifier.cuda()
 
 
 batch_size = config_args['batch_size']
@@ -145,7 +159,7 @@ batch_size = config_args['batch_size']
 try:
 	### VALIDATION ...
 	# run one validation pass over the validation split
-	baseline_LID_classifier.eval()
+	adaptive_LID_classifier.eval()
 
 	src_speech_dataset.set_mode(config_args['eval_split'])
 
@@ -170,9 +184,8 @@ try:
 		src_cls_tar = src_batch_dict['y_target']
 
 		# forward pass
-		src_cls_hat = baseline_LID_classifier(x_in=src_batch_dict['x_data'],
-			shuffle_frames=False,
-			shuffle_bag_size=1)
+		src_cls_hat, _ = adaptive_LID_classifier(x_in=src_batch_dict['x_data'],
+			shuffle_frames=False)
 
 
 		#  compute running source cls accuracy
@@ -194,8 +207,8 @@ try:
 
 	# compute val performance on this epoch
 	#print(y_src_tar, y_src_hat)
-	print(collections.Counter(y_src_tar))
-	print(collections.Counter(y_src_hat))
+	# print(collections.Counter(y_src_tar))
+	# print(collections.Counter(y_src_hat))
 	src_cls_acc = balanced_accuracy_score(y_src_tar, y_src_hat)*100
 	print(f"balanced acc: {src_cls_acc:2.2f}")
 

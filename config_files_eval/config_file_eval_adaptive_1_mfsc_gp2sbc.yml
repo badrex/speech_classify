@@ -1,13 +1,11 @@
 # CONFIG FILE FOR AN LID EXPERIMENT
 source_data_dir: '/data/SBC_FBANK_NORM_1_13/'
-target_data_dir: '/data/GP_FBANK_NORM_1_13/'
 source_speech_metadata: '/speech_cls/metadata/sbc_metadata_slavic.csv'
-target_speech_metadata: '/speech_cls/metadata/gp_metadata_slavic.csv'
 model_save_dir: '/speech_cls/in_progress/'
+pretrained_model: '10092020_07_03_28_domain_LID_1_gps2sbc_ConvEncoder_512_512_FBANK_15.pth'
+eval_split: 'EVA'
 seed: 1337
 source_language_set: 'BUL HRV CZE POL RUS UKR'
-target_language_set: 'BUL HRV CZE POL RUS UKR'
-experiment_name: 'domain_LID_2_sbc_gps'
 #
 input_signal_params:
     feature_type: 'FBANK'
@@ -42,7 +40,7 @@ classifier_arch:
     num_classes: 6
     input_dim: 512
     hidden_dim: 512
-    num_layers: 2
+    num_layers: 3
     unit_dropout: False
     dropout_prob: 0.0
 #
@@ -54,12 +52,7 @@ aux_classifier_arch:
     unit_dropout: False
     dropout_prob: 0.0
 #
-training_hyperparams:
-    learning_rate: 0.001
-    batch_size: 256
-    num_epochs: 50
-    early_stopping_criteria: 50
+batch_size: 92
 cuda: True
 catch_keyboard_interrupt: True
-reload_from_files: False
-expand_filepaths_to_save_dir: True
+reload_from_files: True

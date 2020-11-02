@@ -1,15 +1,14 @@
 # CONFIG FILE FOR AN LID EXPERIMENT
-speech_data_dir: '/data/GP_FBANK_NORM_1_13/'
-speech_metadata: '/speech_cls/metadata/gp_speech_data.csv'
+source_data_dir: '/data/SBC_MFCC_NORM_1_13/'
+source_speech_metadata: '/speech_cls/metadata/sbc_metadata_slavic.csv'
 model_save_dir: '/speech_cls/in_progress/'
+log_file: '/speech_cls/logs/76035.out.log'
+eval_split: 'EVA'
 seed: 1337
-language_set: 'RUS CZE' # [0] pos is P+ class, [1] pos is N- class
-train_samples: 1000
-eval_samples: 250
-experiment_name: 'gender_LID'
+source_language_set: 'BUL HRV CZE POL RUS UKR'
 #
 input_signal_params:
-    feature_type: 'FBANK'
+    feature_type: 'MFCC'
     max_num_frames: 384
     num_frames: 300
     sampling_rate: 16000
@@ -28,9 +27,9 @@ encoder_arch:
        - 256
        - 512
     filter_sizes:
-       - 1
-       - 1
-       - 1
+       - 5
+       - 10
+       - 10
     stride_steps:
        - 1
        - 1
@@ -38,19 +37,22 @@ encoder_arch:
     pooling_type: 'max'
 #
 classifier_arch:
-    num_classes: 2
+    num_classes: 6
     input_dim: 512
     hidden_dim: 512
     num_layers: 3
     unit_dropout: False
     dropout_prob: 0.0
 #
-training_hyperparams:
-    learning_rate: 0.001
-    batch_size: 128
-    num_epochs: 30
-    early_stopping_criteria: 50
+aux_classifier_arch:
+    num_classes: 2
+    input_dim: 512
+    hidden_dim: 1024
+    num_layers: 3
+    unit_dropout: False
+    dropout_prob: 0.0
+#
+batch_size: 92
 cuda: True
 catch_keyboard_interrupt: True
-reload_from_files: False
-expand_filepaths_to_save_dir: True
+reload_from_files: True

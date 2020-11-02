@@ -45,8 +45,8 @@ classifier_arch:
 #
 training_hyperparams:
     learning_rate: 0.001
-    batch_size: 256
-    num_epochs: 3
+    batch_size: 16
+    num_epochs: 50
     early_stopping_criteria: 50
 cuda: True
 catch_keyboard_interrupt: True

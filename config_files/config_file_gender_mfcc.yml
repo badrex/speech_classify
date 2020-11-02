@@ -1,5 +1,5 @@
 # CONFIG FILE FOR AN LID EXPERIMENT
-speech_data_dir: '/data/GP_FBANK_NORM_1_13/'
+speech_data_dir: '/data/GP_MFCC_NORM_1_13/'
 speech_metadata: '/speech_cls/metadata/gp_speech_data.csv'
 model_save_dir: '/speech_cls/in_progress/'
 seed: 1337
@@ -9,7 +9,7 @@ eval_samples: 250
 experiment_name: 'gender_LID'
 #
 input_signal_params:
-    feature_type: 'FBANK'
+    feature_type: 'MFCC'
     max_num_frames: 384
     num_frames: 300
     sampling_rate: 16000

@@ -4,7 +4,7 @@ source_speech_metadata: '/speech_cls/metadata/sbc_metadata_slavic.csv'
 model_save_dir: '/speech_cls/in_progress/'
 seed: 1337
 source_language_set: 'BUL HRV CZE POL RUS UKR'
-experiment_name: 'baseline_LID_sbc'
+experiment_name: 'baseline_LID_sbc_large_TRL'
 #
 input_signal_params:
     feature_type: 'MFCC'
@@ -26,9 +26,9 @@ encoder_arch:
        - 256
        - 512
     filter_sizes:
-       - 5
-       - 10
-       - 10
+       - 8
+       - 16
+       - 24
     stride_steps:
        - 1
        - 1
